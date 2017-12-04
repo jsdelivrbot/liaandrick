@@ -1,4 +1,6 @@
+<!-- # {%= name %}
 
+> {%= description %}
 
 {%= _.doc('bagdes.md') %}
 
@@ -27,4 +29,4 @@
 {%= _.doc("credits.md") %}
 
 ## Copyright
-{%= copyright %} {%= license %}
+{%= copyright %} {%= license %} -->
