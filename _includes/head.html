@@ -1,0 +1,27 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <meta name="author" content="Jamie Catania">  
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic'
+  rel='stylesheet' type='text/css'>
+  
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="{{ "/assets/plugins/bootstrap/css/bootstrap.min.css" | relative_url }}">
+  <!-- Plugins CSS -->
+  <link rel="stylesheet" href="{{ "/assets/plugins/font-awesome/css/font-awesome.css" | relative_url }}">
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+  
+  {% if jekyll.environment == 'production' and site.google_analytics %}
+  {% include google-analytics.html %}
+  {% endif %}
+</head>
