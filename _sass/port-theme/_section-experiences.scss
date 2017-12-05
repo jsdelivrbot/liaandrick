@@ -106,26 +106,44 @@
       color: $text-color-secondary;
     }
 
+    .related-clients {
+      margin: 15px 0;
+
+      .client-tag {
+        @include box-shadow(0 1px 4px 0 rgba(0, 0, 0, 0.14));
+        padding: 6px 6px;
+        display: inline-block;
+        margin: 3px;
+        border: 1px solid $smoky-white;
+        font-weight: 500;
+        font-size: 12px;
+      }
+    }
+
     [data-toggle="collapse"] p:before {
       content: "Read less";
+      color: $text-grey;
       font-weight: bold;
       display: inline;
     }
 
     [data-toggle="collapse"].collapsed p:before {
       display: inline;
+      color: $text-grey;      
       font-weight: bold;
       content: "Read more";
     }
 
     [data-toggle="collapse"] p i:before {
       display: inline;
+      color: $text-grey;      
       padding-left: 7px;      
       content: "\f146";
     }
 
     [data-toggle="collapse"].collapsed p i:before {
       display: inline;
+      color: $text-grey;      
       padding-left: 0;            
       content: "\f0fe";
     }
