@@ -105,4 +105,28 @@
     .job-desc {
       color: $text-color-secondary;
     }
+
+    [data-toggle="collapse"] p:before {
+      content: "Read less";
+      font-weight: bold;
+      display: inline;
+    }
+
+    [data-toggle="collapse"].collapsed p:before {
+      display: inline;
+      font-weight: bold;
+      content: "Read more";
+    }
+
+    [data-toggle="collapse"] p i:before {
+      display: inline;
+      padding-left: 7px;      
+      content: "\f146";
+    }
+
+    [data-toggle="collapse"].collapsed p i:before {
+      display: inline;
+      padding-left: 0;            
+      content: "\f0fe";
+    }
   }
