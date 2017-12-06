@@ -1,5 +1,5 @@
 .header {
-    background: $top-bar-color;
+    background: darken($theme-color, 20%);
     color: #fff;
     a {
       color: #fff;
@@ -153,33 +153,94 @@
             opacity: 0;
         }
     }
-  
-    .contact-info {
-      background: darken($theme-color, 10%);
-      padding-top: 30px;
-      padding-bottom: 30px;
-      font-size: 16px;
-  
-      ul {
-        margin-bottom: 0;
-      }
-  
-      li {
-        margin-right: 30px;
+  }
+  .contact-info {
+    background: darken($theme-color, 10%);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 16px;
+
+    ul {
+      margin-bottom: 0;
+    }
+
+    li {
+      margin-right: 30px;
+      color: rgba(256, 256, 256, 0.8);
+      a {
         color: rgba(256, 256, 256, 0.8);
-        a {
-          color: rgba(256, 256, 256, 0.8);
-          &:hover {
-            color: $header-text-color-secondary;
-          }
+        &:hover {
+          color: $header-text-color-secondary;
         }
-        &:last-child {
-          margin-right: 0;
-        }
-        .fa {
-          margin-right: 10px;
-        }
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      .fa {
+        margin-right: 10px;
       }
     }
   }
+
+
+/* Page Nav */
+.page-nav-space-holder {
+  height: 60px;
+  position: relative;
+}
+
+.page-nav-wrapper {
+  background: darken($theme-color, 15%);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  @include box-shadow(0 4px 12px rgba(0, 0, 0, .2));
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: $theme-color;
+  }
+  a {
+    color: rgba(256, 256, 256, 0.6);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  .page-nav {
+    margin: 0 auto;
+    display: inline-block;
+    li {
+      margin-right: 30px;
+      display: inline-block;
+      background: none;
+      &:hover, &:active {
+        background: none;
+      }
+
+      a {
+        color: rgba(256, 256, 256, 0.6);
+        padding: inherit;
+        &:hover {
+          color: $header-text-color-secondary;
+        }
+        &:hover, &:active, &:focus {
+          background: none;
+        }
+        &.active {
+          color: #fff;
+          background: none;
+        }
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
 }
