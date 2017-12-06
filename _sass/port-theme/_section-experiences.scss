@@ -20,10 +20,45 @@
         width: 22px;
         height: 22px;
         @include border-radius(50%);
-        // background-image: linear-gradient(45deg, #4CA0B9 0%, #A5D491 100%);
-        background-color: $header-text-color-secondary;
+        background: $header-text-color-secondary;
         border: 3px solid $theme-color;
-  
+      }
+
+      .work-place {
+        position: relative;
+      }
+      .location {
+        position: absolute;
+        right: 0;
+        top: 2px;
+        color: $text-grey;
+        .fa {
+          margin-right: 5px;
+        }
+    
+      }
+      .place {
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-size: 20px;
+        font-weight: 300;
+      }
+      .job-meta {
+        position: absolute;
+        left: -280px;
+        top: 0;
+        .title {
+          font-size: 18px;
+          color: $theme-color;
+    
+        }
+        .time {
+          color: $text-grey;
+        }
+    
+      }
+      .job-desc {
+        color: $text-color-secondary;
       }
   
       // &:after {
@@ -67,43 +102,6 @@
         border: none;
       }
   
-    }
-    .work-place {
-      position: relative;
-  
-    }
-    .location {
-      position: absolute;
-      right: 0;
-      top: 2px;
-      color: $text-grey;
-      .fa {
-        margin-right: 5px;
-      }
-  
-    }
-    .place {
-      margin-top: 0;
-      margin-bottom: 15px;
-      font-size: 20px;
-      font-weight: 300;
-    }
-    .job-meta {
-      position: absolute;
-      left: -280px;
-      top: 0;
-      .title {
-        font-size: 18px;
-        color: $theme-color;
-  
-      }
-      .time {
-        color: $text-grey;
-      }
-  
-    }
-    .job-desc {
-      color: $text-color-secondary;
     }
 
     .related-clients {
