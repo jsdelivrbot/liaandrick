@@ -6,143 +6,132 @@
     padding: 0 30px;
     margin-left: 280px;
     .item {
-      position: relative;
-      margin-bottom: 45px;
-      &:last-child {
-        margin-bottom: 0;
-      }
-      &:before {
-        content: "";
-        position: absolute;
-        left: -43px;
-        top: 0;
-        display: inline-block;
-        width: 22px;
-        height: 22px;
-        @include border-radius(50%);
-        background: $header-text-color-secondary;
-        border: 3px solid $theme-color;
-      }
-
-      .work-place {
         position: relative;
-      }
-      .location {
-        position: absolute;
-        right: 0;
-        top: 2px;
-        color: $text-grey;
-        .fa {
-          margin-right: 5px;
+        margin-bottom: 45px;
+        &:last-child {
+            margin-bottom: 0;
         }
-    
-      }
-      .place {
-        margin-top: 0;
-        margin-bottom: 15px;
-        font-size: 20px;
-        font-weight: 300;
-      }
-      .job-meta {
-        position: absolute;
-        left: -280px;
-        top: 0;
-        .title {
-          font-size: 18px;
-          color: $theme-color;
-    
+        &:before {
+            content: "";
+            position: absolute;
+            left: -43px;
+            top: 0;
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            @include border-radius(50%);
+            background: $header-text-color-secondary;
+            border: 3px solid $theme-color;
         }
-        .time {
-          color: $text-grey;
+        .work-place {
+            position: relative;
         }
-    
-      }
-      .job-desc {
-        color: $text-color-secondary;
-      }
-  
-      // &:after {
-      //   content: "";
-      //   position: absolute;
-      //   left: -37px;
-      //   top: 6px;
-      //   display: inline-block;
-      //   width: 10px;
-      //   height: 10px;
-      //   @include border-radius(50%);
-      //   background: $theme-color;
-      //   z-index: 10;
-      // }
-  
-      .skill-tag {
-        @include box-shadow(0 1px 4px 0 rgba(0, 0, 0, 0.14));
-        padding: 6px 30px;
-        display: inline-block;
-        margin-right: 10px;
-        border: 1px solid $smoky-white;
-        font-weight: 500;
-        margin-bottom: 15px;
-        font-size: 16px;
-      }
-  
-      table {
-        margin-bottom: 0;
-      }
-  
-      .card {
-        border: none;
-      }
-  
-      td {
-        border-top: none;
-        border-bottom: 1px solid #e9ecef;
-      }
-  
-      tr:last-child td {
-        border: none;
-      }
-  
-    }
+        .location {
+            position: absolute;
+            right: 0;
+            top: 2px;
+            color: $text-grey;
+            .fa {
+                margin-right: 5px;
+            }
+        }
+        .place {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 20px;
+            font-weight: 300;
+        }
+        .job-meta {
+            position: absolute;
+            left: -280px;
+            top: 0;
+            .title {
+                font-size: 18px;
+                color: $theme-color;
+            }
+            .time {
+                color: $text-grey;
+            }
+        }
+        .job-desc {
+            color: $text-color-secondary;
+        } // &:after {
+        //   content: "";
+        //   position: absolute;
+        //   left: -37px;
+        //   top: 6px;
+        //   display: inline-block;
+        //   width: 10px;
+        //   height: 10px;
+        //   @include border-radius(50%);
+        //   background: $theme-color;
+        //   z-index: 10;
+        // }
+        .skill-tag {
+            @include box-shadow(0 1px 4px 0 rgba(0, 0, 0, 0.14));
+            padding: 6px 30px;
+            display: inline-block;
+            margin-right: 10px;
+            border: 1px solid $smoky-white;
+            font-weight: 500;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        table {
+            margin-bottom: 0;
+        }
+        .card {
+            border: none;
+            padding: 0;
+        }
+        td {
+            border-top: none;
+            border-bottom: 1px solid #e9ecef;
 
+            p {
+                margin-bottom: 0;
+            }
+        }
+        tr td:first-child {
+            text-align: right;
+            padding-left: 0;
+        }
+    }
     .related-clients {
-      margin: 15px 0;
-
-      .client-tag {
-        @include box-shadow(0 1px 4px 0 rgba(0, 0, 0, 0.14));
-        padding: 6px 6px;
-        display: inline-block;
-        margin: 3px;
-        border: 1px solid $smoky-white;
-        font-weight: 500;
-        font-size: 12px;
-      }
+        .client-tag {
+            @include box-shadow(0 1px 4px 0 rgba(0, 0, 0, 0.14));
+            padding: 6px 6px;
+            display: inline-block;
+            margin: 3px;
+            border: 1px solid $smoky-white;
+            font-weight: 500;
+            font-size: 12px;
+        }
     }
+    [data-toggle="collapse"] {
+        color: $text-color-secondary;
+        display: inline;
 
-    [data-toggle="collapse"] p:before {
-      content: "Read less";
-      color: $text-grey;
-      font-weight: bold;
-      display: inline;
+        &:hover {
+            color: darken($text-color-secondary, 15%);
+        }
+        &.collapsed .more-info {
+            &:after {
+                font-weight: bold;
+                content: "Read more";
+            }
+            i:before {
+                content: "\f0fe";
+            }
+        }
+        .more-info {
+            &:after {
+                content: "Read less";
+                font-weight: bold;
+            }
+            i:before {
+                content: "\f146";
+            }
+        }
     }
-
-    [data-toggle="collapse"].collapsed p:before {
-      display: inline;
-      color: $text-grey;      
-      font-weight: bold;
-      content: "Read more";
-    }
-
-    [data-toggle="collapse"] p i:before {
-      display: inline;
-      color: $text-grey;      
-      padding-left: 7px;      
-      content: "\f146";
-    }
-
-    [data-toggle="collapse"].collapsed p i:before {
-      display: inline;
-      color: $text-grey;      
-      padding-left: 0;            
-      content: "\f0fe";
-    }
-  }
+}

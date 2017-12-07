@@ -50,24 +50,6 @@
         font-size: 20px;
     }
     
-    .timeline {
-        margin-left: 0;
-        padding-right: 0;
-    }
-    
-    .timeline .place {
-        margin-bottom: 5px;
-    }
-    
-    .timeline .item .job-meta {
-        position: static;
-        margin-bottom: 15px;
-    }
-
-    .timeline .item .location {
-        display: none;
-    }
-    
     .education-section .item {
         padding: 0;
     }
@@ -129,13 +111,27 @@
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
 
-        
-    
 }
 
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-        
+/* Up to Medium devices (tablets, up to 992px) */
+@media (max-width: 992px) {
+    .timeline {
+        margin-left: 0;
+        padding-right: 0;
+    }
+    
+    .timeline .place {
+        margin-bottom: 5px;
+    }
+    
+    .timeline .item .job-meta {
+        position: static;
+        margin-bottom: 15px;
+    }
+
+    .timeline .item .location {
+        display: none;
+    }
 }
 
 /* Large devices (large desktops, 1200px and up) */
