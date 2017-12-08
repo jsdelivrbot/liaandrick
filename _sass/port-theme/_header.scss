@@ -155,9 +155,13 @@
     }
     .overview {
         background: darken($theme-color, 10%);
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         font-size: 16px;
+
+        .fullstack-img {
+            width: 100%;
+        }
     }
     /* Page Nav */
     .page-nav-space-holder {
