@@ -1,97 +1,118 @@
 /* ======= Base ======= */
+
 body {
-  font-family: 'Roboto', sans-serif;
-  color: $text-color;
-  background: $smoky-white;
-  font-size: 16px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
-  position: relative;
+    font-family: 'Roboto', sans-serif;
+    color: $text-color;
+    background: $smoky-white;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    position: relative;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 500;
+h1 {
+    font-size: 3.998em;
+}
+
+h2 {
+    font-size: 2.827em;
+}
+
+h3 {
+    font-size: 1.999em;
+}
+
+h4 {
+    font-size: 1.414em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  // font-weight: 500;
 }
 
 a {
-  color: $theme-color;
-  @include transition (all 0.4s ease-in-out);
-  &:hover {
-    text-decoration: none;
-    color: darken($theme-color, 15%);
-  }
-  &:focus {
-    text-decoration: none;
-  }
+    color: $theme-color;
+    @include transition (all 0.4s ease-in-out);
+    &:hover {
+        text-decoration: none;
+        color: darken($theme-color, 15%);
+    }
+    &:focus {
+        text-decoration: none;
+    }
 }
 
 p {
-  line-height: 1.5;
+    line-height: 1.5;
 }
 
-.btn, a.btn {
-  background: darken($theme-color, 10%);
-  color: #fff;
-  padding: 8px 15px;
-  @include border-radius(2px);
-  @include box-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 14px;
-  &:hover {
+.btn,
+a.btn {
+    background: darken($theme-color, 10%);
     color: #fff;
-    background: darken($theme-color, 5%);
-  }
+    padding: 8px 15px;
+    @include border-radius(2px);
+    @include box-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    &:hover {
+        color: #fff;
+        background: darken($theme-color, 5%);
+    }
 }
 
 .wrapper {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  @include drop-shadow(0 4px 12px rgba(0, 0, 0, .2));
-  
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include drop-shadow(0 4px 12px rgba(0, 0, 0, .2));
 }
 
 .section {
-  @include box-shadow(0 1px 4px 0 rgba(0, 0, 0, 0.14));
-  padding: 45px;
-  background: #fff;
-  margin-bottom: 45px;
-  @include border-radius(2px);
-  &:last-child {
-    margin-bottom: 0;
-  }
+    @include box-shadow(0 1px 4px 0 rgba(0, 0, 0, 0.14));
+    padding: 45px;
+    background: #fff;
+    margin-bottom: 45px;
+    @include border-radius(2px);
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .section-title {
-  margin-top: 0;
-  margin-bottom: 45px;
-  font-size: 24px;
-  text-align: center;
+    margin-top: 0;
+    margin-bottom: 45px;
+    font-size: 24px;
+    text-align: center;
 }
 
 #topcontrol {
-  @include transition (all 0.4s ease-in-out);
-  background: darken($theme-color, 10%);
-  color: #fff;
-  text-align: center;
-  display: inline-block;
-  z-index: 30;
-  width: 36px;
-  height: 36px;
-  @include border-radius(50%);
-  @include box-shadow(0px 6px 10px rgba(0, 0, 0, 0.3));
-  &:hover {
-    background: darken($theme-color, 15%);
+    @include transition (all 0.4s ease-in-out);
+    background: darken($theme-color, 10%);
     color: #fff;
-  }
-  .fa {
-    position: relative;
-    top: 3px;
-    font-size: 25px;
-    font-weight: normal;
-  }
+    text-align: center;
+    display: inline-block;
+    z-index: 30;
+    width: 36px;
+    height: 36px;
+    @include border-radius(50%);
+    @include box-shadow(0px 6px 10px rgba(0, 0, 0, 0.3));
+    &:hover {
+        background: darken($theme-color, 15%);
+        color: #fff;
+    }
+    .fa {
+        position: relative;
+        top: 3px;
+        font-size: 25px;
+        font-weight: normal;
+    }
 }
-
-
-

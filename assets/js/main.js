@@ -74,18 +74,4 @@ $(document).ready(function () {
             $(this).addClass('active');
         });
     });
-
-    var boxHeight = $(".intro").height();
-
-    $(window).scroll(function (e) {
-        currentPos = $(window).scrollTop() + boxHeight;
-        console.log(currentPos);
-        if (currentPos > 270) {
-            $("#overview").slideDown('fast');
-        }
-        if (currentPos <= 270) {
-            $("#overview").slideUp('fast');
-        }
-    });
-
 });
