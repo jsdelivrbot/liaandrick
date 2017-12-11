@@ -6,8 +6,8 @@
     }
     .top-bar {
         position: relative;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: .7rem;
+        padding-bottom: .7rem;
         .social {
             display: inline-block;
             margin-bottom: 0;
@@ -61,7 +61,7 @@
         }
     }
     .name {
-        letter-spacing: 0.5px;
+        // letter-spacing: 0.5px;
         #name {
             min-width: 90%;
             font-weight: 700;
