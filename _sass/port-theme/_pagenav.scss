@@ -1,0 +1,63 @@
+/* Page Nav */
+
+.page-nav-space-holder {
+    height: 35px;
+    position: relative;
+}
+
+.page-nav-wrapper {
+    background: darken($theme-color, 15%);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -10px;
+    @include box-shadow(0 4px 12px rgba(0, 0, 0, .2));
+    &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        background: $theme-color;
+    }
+    a {
+        color: rgba(256, 256, 256, 0.6);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 18px;
+    }
+    .page-nav {
+        margin: 0 auto;
+        display: inline-block;
+        li {
+            margin-right: 30px;
+            display: inline-block;
+            background: none;
+            &:hover,
+            &:active {
+                background: none;
+            }
+            a {
+                color: rgba(256, 256, 256, 0.6);
+                padding: inherit;
+                &:hover {
+                    color: $header-text-color-secondary;
+                }
+                &:hover,
+                &:active,
+                &:focus {
+                    background: none;
+                }
+                &.active {
+                    color: #fff;
+                    background: none;
+                }
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
