@@ -7,34 +7,9 @@
         text-align: center;
     }
     
-    .header .actions {
-        position: static;
-        margin: 0 auto;
-        margin-bottom: 30px;
-        text-align: center;
-        .btn {
-            margin-bottom: 15px;
-            font-size: 12px;
-            display: inline-block;
-            width: 100%;
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-    }
-    
-    .header .name {
-        font-size: 36px;
-    }
-    
-    .header .title {
-        font-size: 22px;
-    }
-    
     .header .contact-info li {
         margin-right: 0;
         margin-bottom: 15px;
-        font-size: 14px;
         width: 100%;
         display: inline-block;
         &:last-child {
@@ -109,7 +84,10 @@
 }
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;    
+    }
 
 }
 

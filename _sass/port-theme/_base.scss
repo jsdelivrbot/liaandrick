@@ -4,7 +4,7 @@ body {
     font-family: 'Roboto', sans-serif;
     color: $text-color;
     background: $smoky-white;
-    font-size: 18px;
+    font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
@@ -35,6 +35,7 @@ h5,
 h6 {
   font-family: 'Rubik', sans-serif;
   font-style: normal;
+  margin: 0;
   // font-weight: 500;
 }
 
@@ -96,8 +97,8 @@ a.btn {
 
 #topcontrol {
     @include transition (all 0.4s ease-in-out);
-    background: darken($theme-color, 10%);
-    color: #fff;
+    background: $header-text-color-secondary;
+    color: $theme-color;
     text-align: center;
     display: inline-block;
     z-index: 30;
@@ -106,8 +107,7 @@ a.btn {
     @include border-radius(50%);
     @include box-shadow(0px 6px 10px rgba(0, 0, 0, 0.3));
     &:hover {
-        background: darken($theme-color, 15%);
-        color: #fff;
+        background: darken($header-text-color-secondary, 15%);
     }
     .fa {
         position: relative;
@@ -115,4 +115,12 @@ a.btn {
         font-size: 25px;
         font-weight: normal;
     }
+}
+
+.slide {
+    width: calc(100vw);
+    /*vw is viewport width*/
+    height: calc(100vh);
+    /*vw is viewport height*/
+    position: absolute;
 }
