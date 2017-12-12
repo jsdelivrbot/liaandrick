@@ -75,12 +75,20 @@ $(document).ready(function () {
         });
     });
 
-    // scroll body to 0px on click
+    // scroll body to overview on click
     $('#to-overview').click(function () {
         $('body,html').animate({
             scrollTop: $("#overview").offset().top
         }, 800);
         return false;
     });
-    
+
+    // scroll body to header on click
+    $('#to-header').click(function () {
+        $('body,html').animate({
+            scrollTo: $("#overview").offset().top
+        }, 800);
+        return false;
+    });
+
 });
