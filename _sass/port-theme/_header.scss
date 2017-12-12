@@ -1,5 +1,4 @@
 .header {
-    min-width: 80%;
     color: #fff;
     a {
         color: #fff;
@@ -8,6 +7,7 @@
         background-color: $theme-color;
         padding-top: .7rem;
         padding-bottom: .7rem;
+        display: fixed;
     }
     .social {
         display: inline-block;
@@ -25,6 +25,7 @@
             opacity: 0.4;
             &:hover {
                 opacity: 1;
+                background-color: $theme-color;
                 color: $header-text-color-secondary;
                 border-color: $header-text-color-secondary;
             }
@@ -55,13 +56,9 @@
             }
         }
         .profile-info {
-            .name {
-                // letter-spacing: 0.5px;
-                #name {
-                    min-width: 90%;
-                    font-weight: 700;
-                    color: $theme-color;
-                }
+            #name {
+                font-weight: 700;
+                color: $theme-color;
             }
             .subline {
                 // margin: 0 auto;
@@ -75,6 +72,7 @@
                     display: inline-block;
                     position: absolute;
                     white-space: nowrap;
+                    // min-width: 400px;                    
                     left: 0;
                     top: 0;
                     &.is-visible {
@@ -89,7 +87,7 @@
                 }
             }
             .cd-headline.clip {
-                span {
+                h3 {
                     display: inline-block;
                     padding: .2em 0;
                 }
@@ -104,7 +102,8 @@
                         right: 0;
                         width: 2px;
                         height: 100%;
-                        background-color: $header-text-color-secondary;
+                        background-color: $smoky-white;
+                        opacity: 0.6;
                     }
                 }
                 b {
@@ -115,12 +114,39 @@
                     }
                 }
             }
+
+            @media (max-width: 1200px) {
+                // h2 {
+                //     font-size: 1.5rem;
+                // }
+                // #name {
+                //     font-size: 2rem;
+                // }
+                body {
+                    font-size: 8px;
+                }
+            }
         }
         .to-overview {
             cursor: pointer;
             position: relative;
-            bottom: 60px;
+            bottom: 100px;
             left: 50%;
+            background-color: #ffffff00;
+            color: $smoky-white;
+            text-align: center;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 30%;
+            padding: 2px;
+            font-size: 2.5rem;
+            border: 2px solid $smoky-white;
+            opacity: 0.6;
+            &:hover {
+                opacity: 1;
+                color: $header-text-color-secondary;
+                border-color: $header-text-color-secondary;
+            }
         }
     }
 }
