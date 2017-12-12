@@ -1,18 +1,18 @@
 /* Page Nav */
 
 .page-nav-space-holder {
-    height: 35px;
+    height: 4rem;
     position: relative;
 }
 
 .page-nav-wrapper {
     background: darken($theme-color, 15%);
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     position: absolute;
     width: 100%;
     left: 0;
-    top: -10px;
+    top: -80px;
     @include box-shadow(0 4px 12px rgba(0, 0, 0, .2));
     &.fixed {
         position: fixed;
@@ -40,10 +40,10 @@
                 background: none;
             }
             a {
-                color: rgba(256, 256, 256, 0.6);
+                color: $header-text-color-secondary;
                 padding: inherit;
                 &:hover {
-                    color: $header-text-color-secondary;
+                    color: darken($header-text-color-secondary, 30%);
                 }
                 &:hover,
                 &:active,
