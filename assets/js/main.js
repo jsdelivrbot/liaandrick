@@ -78,7 +78,6 @@ $(document).ready(function () {
     // scroll body to overview on click
     $('.scroll-to').click(function () {
         var target = $(this).data("target");
-        console.log(target);
 
         $('body,html').animate({
             scrollTop: $(target).offset().top

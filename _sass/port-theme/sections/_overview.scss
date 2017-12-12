@@ -5,4 +5,36 @@
     .fullstack-img {
         width: 100%;
     }
+    .scroll-to {
+        cursor: pointer;
+        position: relative;
+        padding: 2px;
+        top: 2rem;
+        left: 50%; // @include transition (all 0.4s ease-in-out);
+        background: #79BAA5;
+        border: none;
+        color: $smoky-white;
+        text-align: center;
+        display: inline-block;
+        z-index: 30;
+        width: 36px;
+        height: 36px;
+        @include border-radius(50%); // @include box-shadow(0px 6px 10px rgba(0, 0, 0, 0.3));
+        &:hover {
+            background: darken(#79BAA5, 10%);
+        }
+        &#intro-btn:active {
+            color: $smoky-white;
+            background-color: darken(#79BAA5, 20%);
+            border: none;
+            @include box-shadow(0px 6px 10px rgba(0, 0, 0, 0.3));
+        }
+        .fa {
+            font: normal normal normal 14px/1 FontAwesome;
+            position: relative;
+            top: 2px;
+            font-size: 25px;
+            font-weight: normal;
+        }
+    }
 }

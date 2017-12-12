@@ -97,8 +97,8 @@ a.btn {
 
 #topcontrol {
     @include transition (all 0.4s ease-in-out);
-    background: $header-text-color-secondary;
-    color: $theme-color;
+    background: #79BAA5;
+    color: $smoky-white;
     text-align: center;
     display: inline-block;
     z-index: 30;
@@ -107,7 +107,7 @@ a.btn {
     @include border-radius(50%);
     @include box-shadow(0px 6px 10px rgba(0, 0, 0, 0.3));
     &:hover {
-        background: darken($header-text-color-secondary, 15%);
+        background: darken(#79BAA5, 15%);
     }
     .fa {
         position: relative;

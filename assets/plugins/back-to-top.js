@@ -33,6 +33,13 @@ var scrolltotop={
 		this.$control.css({left:controlx+'px', top:controly+'px'})
 	},
 
+	keepfixedoverview:function(){
+		var $window=jQuery(window)
+		var controlx=$window.scrollLeft() + $window.width() - this.$control.width() - this.controlattrs.offsetx
+		var controly=$window.scrollTop() + $window.height() - this.$control.height() - this.controlattrs.offsety
+		this.$control.css({left:controlx+'px', top:controly+'px'})
+	},
+
 	togglecontrol:function(){
 		var scrolltop=jQuery(window).scrollTop()
 		if (!this.cssfixedsupport)
