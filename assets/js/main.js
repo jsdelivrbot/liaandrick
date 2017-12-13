@@ -80,7 +80,7 @@ $(document).ready(function () {
         var target = $(this).data("target");
 
         $('body,html').animate({
-            scrollTop: $(target).offset().top
+            scrollTop: $(target).offset().top,
         }, 800);
         return false;
     });
