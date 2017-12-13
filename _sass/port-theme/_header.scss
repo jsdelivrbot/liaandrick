@@ -18,10 +18,10 @@
             border: 2px solid $smoky-white;
             opacity: 0.4;
             &:hover {
-                opacity: 1;
+                opacity: .8;
                 background-color: $theme-color;
-                color: #79BAA5;
-                border-color: #79BAA5;
+                color: $smoky-white;
+                border-color: $smoky-white;
             }
         }
     }
