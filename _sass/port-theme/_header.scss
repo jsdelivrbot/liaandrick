@@ -3,12 +3,6 @@
     a {
         color: #fff;
     }
-    .top-bar {
-        padding-top: .7rem;
-        padding-bottom: .7rem;
-        display: fixed;
-        padding-left: 0;
-    }
     .social {
         display: inline-block;
         margin-bottom: 0;
@@ -34,6 +28,14 @@
     .intro {
         background-size: cover;
         position: relative;
+        .top-bar {
+            padding-top: .7rem;
+            padding-bottom: .7rem;
+            display: fixed;
+            ul.social {
+                padding-left: 0; 
+            }
+        }
         .vertical-center {
             position: absolute;
             top: 40%;
@@ -119,7 +121,7 @@
             position: relative;
             padding: 2px;
             bottom: 4rem;
-            transform: translate(-50%, 0);                        
+            transform: translate(-50%, 0);
             left: 50%;
             @include transition (all 0.4s ease-in-out);
             background: darken($theme-color, 10%);
@@ -142,12 +144,9 @@
                 font-size: 25px;
                 font-weight: normal;
             }
-
             @media (max-width: 1200px) {
-                bottom: 8rem;                
-
+                bottom: 8rem;
             }
-
         }
     }
 }
