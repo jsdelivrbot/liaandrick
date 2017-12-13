@@ -119,6 +119,7 @@
             position: relative;
             padding: 2px;
             bottom: 4rem;
+            transform: translate(-50%, 0);                        
             left: 50%;
             @include transition (all 0.4s ease-in-out);
             background: darken($theme-color, 10%);

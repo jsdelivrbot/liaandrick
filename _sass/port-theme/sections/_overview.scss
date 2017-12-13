@@ -10,7 +10,10 @@
         position: relative;
         padding: 2px;
         top: 2rem;
-        left: 50%; // @include transition (all 0.4s ease-in-out);
+        transform: translate(-50%, 0);                        
+    
+        left: 50%; 
+        @include transition (all 0.4s ease-in-out);
         background: #79BAA5;
         border: none;
         color: $smoky-white;
