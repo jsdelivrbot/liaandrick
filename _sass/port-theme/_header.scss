@@ -4,10 +4,10 @@
         color: #fff;
     }
     .top-bar {
-        background-color: $theme-color;
         padding-top: .7rem;
         padding-bottom: .7rem;
         display: fixed;
+        padding-left: 0;
     }
     .social {
         display: inline-block;
@@ -26,8 +26,8 @@
             &:hover {
                 opacity: 1;
                 background-color: $theme-color;
-                color: $header-text-color-secondary;
-                border-color: $header-text-color-secondary;
+                color: #79BAA5;
+                border-color: #79BAA5;
             }
         }
     }
@@ -113,7 +113,6 @@
                     }
                 }
             }
-            @media (max-width: 1200px) {}
         }
         .scroll-to {
             cursor: pointer;
@@ -142,6 +141,12 @@
                 font-size: 25px;
                 font-weight: normal;
             }
+
+            @media (max-width: 1200px) {
+                bottom: 8rem;                
+
+            }
+
         }
     }
 }

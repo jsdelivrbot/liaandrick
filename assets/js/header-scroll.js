@@ -21,6 +21,9 @@ jQuery(document).ready(function ($) {
             newWidth = spanWrapper.width() + 10;
             spanWrapper.css('width', newWidth);
 
+            // spanWrapper.css('max-width', window.innerWidth - 20);
+            
+
             //trigger animation
             setTimeout(function () { hideWord(headline.find('.is-visible').eq(0)) }, duration);
         });
