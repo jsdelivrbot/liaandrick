@@ -23,7 +23,7 @@
         &:hover {
             background: darken(#79BAA5, 10%);
         }
-        &#intro-btn:active {
+        &#intro-btn:active, &#intro-btn:focus {
             color: $smoky-white;
             background-color: darken(#79BAA5, 20%);
             border: none;
