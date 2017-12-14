@@ -1,33 +1,64 @@
-<div class="intro">
-    <div class="container text-center text-lg-left">
-        <div class="row justify-content-between">
-            <div class="profile-info col-12 col-lg-8 my-5">
-                <h1 class="name">Hi! I'm
-                    <span class="d-block d-lg-inline" id="name">Jamie Catania.</span>
-                </h1>
-                <section class="cd-intro">
-                    <h2 class="cd-headline clip is-full-width">
-                        <span>I'm a</span>
-                        <span class="cd-words-wrapper">
+<div id="intro" class="intro slide">        
+    <div class="bg"></div>
+    {% include header/topbar.html %}    
+    <div class="container h-100">
+        <div class="row justify-content-center align-items-end vertical-center">
+            <div class="profile-image d-none d-lg-block col-4 align-self-center">
+                <img class="headshot" src="assets/images/Catania_headshot_sq_bw.png" alt="My headshot!">
+                <ul class="social list-inline d-none d-lg-inline d-lg-flex justify-content-center pt-3">
+                    <li class="list-inline-item">
+                        <a href="https://www.linkedin.com/in/jamiecatania/">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://twitter.com/jamiecatania">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://github.com/jamiecatania">
+                            <i class="fa fa-github-alt" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="email list-inline-item align-middle phone">
+                        <a href="mailto:jamie@cataniainteractive.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item align-middle email">
+                        <a href="tel: 2192422687">
+                            <i class="fa fa-phone"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="profile-info col-12 col-lg-8 text-center text-lg-left pl-lg-4">
+                <h2>Hi! My name is</h2>
+                <h1 class="name d-inline-block mb-lg-4" id="name">Jamie Catania.</h1>
+                <div class="cd-intro">
+                    <h3 class="cd-headline clip d-inline-block mb-lg-3 text-nowrap">
+                        I'm a
+                        <div class="cd-words-wrapper">
                             <b class="is-visible">Fullstack Designer.</b>
                             <b>Instructional Designer.</b>
                             <b>UX Designer.</b>
                             <b>Web Developer.</b>
                             <b>Lifelong Learner.</b>
-                        </span>
-                    </h2>
-                </section>
+                        </div>
+                    </h3>
+                </div>
                 <!-- cd-intro -->
-                <div class="profile mt-4">
-                    <h5>I create authentic, unique digital experiences that solve business problems.</h5>
+                <div class="subline">
+                    <h5>I create unique digital experiences that solve problems.</h5>
                 </div>
             </div>
             <!--//profile-->
-            <div class="headshot col-md-3 ml-3 d-none d-lg-block">
-                <img class="profile-image" src="assets/images/Catania_headshot_sq_bw.png" alt="My headshot!">
-            </div>
         </div>
         <!--//container-->
     </div>
     <!--//intro-->
+    <a href="#" class="btn btn-primary btn-lg scroll-to" data-target="#overview" role="button">
+        <span class="fa fa-chevron-down"></span>
+    </a>
 </div>

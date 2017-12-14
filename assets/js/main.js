@@ -74,4 +74,15 @@ $(document).ready(function () {
             $(this).addClass('active');
         });
     });
+
+    // scroll body to overview on click
+    $('.scroll-to').click(function () {
+        var target = $(this).data("target");
+
+        $('body,html').animate({
+            scrollTop: $(target).offset().top,
+        }, 800);
+        return false;
+    });
+
 });
