@@ -23,17 +23,23 @@
                 color: $smoky-white;
                 border-color: $smoky-white;
             }
+            i {
+                margin-top: .3rem;
+            }
         }
     }
     .intro {
         background-size: cover;
         position: relative;
         .top-bar {
-            padding-top: .7rem;
-            padding-bottom: .7rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
             display: fixed;
             ul.social {
-                padding-left: 0; 
+                padding-left: 0;
+                .list-inline-item a i {
+                    margin-top: .3rem;
+                }
             }
         }
         .vertical-center {
@@ -58,13 +64,16 @@
             }
         }
         .profile-info {
-            #name {
-                font-weight: 700;
-                color: $theme-color;
+            .my-name-is {
+                margin-bottom: 0;
+                margin-top: 0; // font-size: 2.618rem;
+                padding: .5rem 0;
             }
-            .subline {
-                // margin: 0 auto;
-                color: $smoky-white;
+            #name {
+                // font-weight: 700;
+                margin-bottom: 1rem;
+                margin-top: 0;
+                color: $theme-color;
             }
             .cd-words-wrapper {
                 display: inline-block;
@@ -89,8 +98,7 @@
             }
             .cd-headline.clip {
                 h3 {
-                    display: inline-block;
-                    padding: .2em 0;
+                    display: inline-block; // padding: .2em 0;
                     max-width: 100%;
                 }
                 .cd-words-wrapper {
@@ -116,6 +124,19 @@
                     }
                 }
             }
+        }
+        .subline {
+            position: absolute;
+            line-height: 1.55rem;
+            bottom: 8%;
+            margin-bottom: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 60%;
+            /* X-Large devices (large desktops, 1400px and up) */
+            // @include media-breakpoint-up(sm) {
+            //     font-size: 4rem;
+            //  }
         }
         .scroll-to {
             cursor: pointer;
