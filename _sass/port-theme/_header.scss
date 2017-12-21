@@ -61,11 +61,11 @@
                 height: auto;
                 -webkit-filter: drop-shadow(3px 0 3px rgba(0, 0, 0, .3));
                 filter: drop-shadow(3px 0 3px rgba(0, 0, 0, .3));
-                border-radius: 30%;                
-
+                border-radius: 30%;
                 @media (min-width: 700px) {
                     width: 80%;
-                };
+                }
+                ;
             }
         }
         #profile-info {
@@ -76,7 +76,7 @@
             #name {
                 margin-top: 0;
                 color: $theme-color;
-                line-height: 1;                
+                line-height: 1;
             }
             .cd-words-wrapper {
                 display: inline-block;
@@ -85,7 +85,7 @@
                 b {
                     display: inline-block;
                     position: absolute;
-                    white-space: nowrap;                
+                    white-space: nowrap;
                     left: 0;
                     top: 0;
                     &.is-visible {
@@ -127,13 +127,14 @@
                     }
                 }
             }
-            @media (min-width: 700px) {
+            @media (min-width: 767px) {
+                margin-top: 7rem;
                 #my-name-is {
                     font-size: 3.375em;
                 }
                 #name {
                     font-size: 5.063em;
-                } 
+                }
                 #rotating-titles {
                     font-size: 2.25em;
                 }
