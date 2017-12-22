@@ -7,9 +7,10 @@
     }
     .scroll-to {
         cursor: pointer;
+        font-weight: 200;
         position: relative;
         padding: 2px;
-        top: 2rem;
+        top: .1rem;
         transform: translate(-50%, 0);
         left: 50%;
         @include transition (all 0.4s ease-in-out);
@@ -72,9 +73,18 @@
         }
     }
 
-    #myTabContent {
-        position: absolute;
-        left: 0;
-        top: 30%;
+    #tabContent {
+        width: 85%;
+        .tab-pane {
+            width: 100%;
+            max-width: 685px;
+            padding: 1rem;
+            background-color: #546A76;
+            border: 1px solid $smoky-white;
+
+            .carousel {
+                width: 100%;
+            }
+        }
     }
 }

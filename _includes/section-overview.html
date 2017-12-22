@@ -1,65 +1,67 @@
-<div id="overview" class="overview slide">
+<div id="overview" class="overview full-frame">
     <a href="#" id="intro-btn" class="btn btn-primary btn-lg scroll-to" data-target="#intro" role="button">
         <span class="fa fa-chevron-up"></span>
     </a>
     <div class="container d-flex flex-column align-items-center h-100 pt-4">
-        <div class="row justify-content-center align-items-around">
-            <div class="col-18 text-center m-2 pt-4">
-                <p>Typical work products that I produce:</p>
+        <div class="row">
+            <div class="col-12 text-center m-2 pt-4">
+                <h4>The kind of deliverables that get me going:</h4>
             </div>
         </div>
         <ul class="process nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" id="user-research-tab" data-toggle="tab" href="#user-research" role="tab" aria-controls="home"
+                <a class="nav-link active py-3" id="user-research-tab" data-toggle="tab" href="#user-research" role="tab" aria-controls="home"
                     aria-selected="true">
                     <i class="fa fa-users fa-2x"></i>
-                    <h5 class="d-none d-md-inline-block text-center">User Research</h5>
+                    <h5 class="d-none d-md-inline-block text-center mb-0">User Research</h5>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="journey-maps-tab" data-toggle="tab" href="#journey-maps" role="tab" aria-controls="profile" aria-selected="false">
+                <a class="nav-link py-3" id="journey-maps-tab" data-toggle="tab" href="#journey-maps" role="tab" aria-controls="profile" aria-selected="false">
                     <i class="fa fa-map fa-2x"></i>
-                    <h5 class="d-none d-md-inline-block text-center">Journey Maps</h5>
+                    <h5 class="d-none d-md-inline-block text-center mb-0">Journey Maps</h5>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="ui-wireframes-tab" data-toggle="tab" href="#ui-wireframes" role="tab" aria-controls="contact" aria-selected="false">
+                <a class="nav-link py-3" id="ui-wireframes-tab" data-toggle="tab" href="#ui-wireframes" role="tab" aria-controls="contact" aria-selected="false">
                     <i class="fa fa-drivers-license fa-2x"></i>
-                    <h5 class="d-none d-md-inline-block text-center">UI Wireframes</h5>
+                    <h5 class="d-none d-md-inline-block text-center mb-0">UI Wireframes</h5>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="prototypes-tab" data-toggle="tab" href="#prototypes" role="tab" aria-controls="contact" aria-selected="false">
+                <a class="nav-link py-3" id="prototypes-tab" data-toggle="tab" href="#prototypes" role="tab" aria-controls="contact" aria-selected="false">
                     <i class="fa fa-code fa-2x"></i>
-                    <h5 class="d-none d-md-inline-block text-center">Interactive Prototypes</h5>
+                    <h5 class="d-none d-md-inline-block text-center mb-0">Interactive Prototypes</h5>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="elearning-tab" data-toggle="tab" href="#elearning" role="tab" aria-controls="contact" aria-selected="false">
+                <a class="nav-link py-3" id="elearning-tab" data-toggle="tab" href="#elearning" role="tab" aria-controls="contact" aria-selected="false">
                     <i class="fa fa-film fa-2x"></i>
-                    <h5 class="d-none d-md-inline-block text-center">Online Learning</h5>
+                    <h5 class="d-none d-md-inline-block text-center mb-0">Online Learning</h5>
                 </a>
             </li>
         </ul>
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="user-research" role="tabpanel" aria-labelledby="user-research-tab">
-                {% include overview-sections/user-research.html %}
-            </div>
-            <div class="tab-pane fade" id="journey-maps" role="tabpanel" aria-labelledby="journey-maps-tab">
-                <h3>Journey Maps</h3>
-                <p>Some content in menu 1.</p>
-            </div>
-            <div class="tab-pane fade" id="ui-wireframes" role="tabpanel" aria-labelledby="ui-wireframes-tab">
-                <h3>UI Wireframes</h3>
-                <p>Some content in menu 1.</p>
-            </div>
-            <div class="tab-pane fade" id="prototypes" role="tabpanel" aria-labelledby="prototypes-tab">
-                <h3>Interactive Prototypes</h3>
-                <p>Some content in menu 1.</p>
-            </div>
-            <div class="tab-pane fade" id="elearning" role="tabpanel" aria-labelledby="elearning-tab">
-                <h3>eLearning Content</h3>
-                <p>Some content in menu 1.</p>
+        <div class="row">
+            <div class="tab-content col-sm-12 d-block mx-auto" id="tabContent">
+                <div class="tab-pane fade show active" id="user-research" role="tabpanel" aria-labelledby="user-research-tab">
+                    {% include overview-sections/user-research.html %}
+                </div>
+                <div class="tab-pane fade" id="journey-maps" role="tabpanel" aria-labelledby="journey-maps-tab">
+                    <h3 class="d-inline-block d-md-none text-center">Journey Maps</h3>
+                    <p>Some content in menu 1.</p>
+                </div>
+                <div class="tab-pane fade" id="ui-wireframes" role="tabpanel" aria-labelledby="ui-wireframes-tab">
+                    <h3 class="d-inline-block d-md-none text-center">UI Wireframes</h3>
+                    <p>Some content in menu 1.</p>
+                </div>
+                <div class="tab-pane fade" id="prototypes" role="tabpanel" aria-labelledby="prototypes-tab">
+                    <h3 class="d-inline-block d-md-none text-center">Production Code</h3>
+                    <p>Some content in menu 1.</p>
+                </div>
+                <div class="tab-pane fade" id="elearning" role="tabpanel" aria-labelledby="elearning-tab">
+                    <h3 class="d-inline-block d-md-none text-center">eLearning Content</h3>
+                    <p>Some content in menu 1.</p>
+                </div>
             </div>
         </div>
         <div id="client-list" class="row">
