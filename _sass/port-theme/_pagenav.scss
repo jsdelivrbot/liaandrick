@@ -1,13 +1,12 @@
 /* Page Nav */
 
-.page-nav-wrapper {
+#page-nav-wrapper {
     background: darken($theme-color, 15%);
-    padding-top: 3rem;
-    padding-bottom: 3rem;
     position: absolute;
     width: 100%;
     left: 0;
-    // top: -80px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     @include box-shadow(0 4px 12px rgba(0, 0, 0, .2));
     &.fixed {
         position: fixed;
@@ -16,6 +15,15 @@
         width: 100%;
         z-index: 100;
         background: $theme-color;
+        @media (max-width: 700px) {
+            padding: .25rem 0;
+        }
+    }
+    .container {
+        @media (max-width: 700px) {
+            max-width: 80%;
+            margin-left: 17%;
+        }
     }
     a {
         color: $smoky-white;
