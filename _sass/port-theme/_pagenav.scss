@@ -11,7 +11,7 @@
     position: absolute;
     width: 100%;
     left: 0;
-    top: -80px;
+    // top: -80px;
     @include box-shadow(0 4px 12px rgba(0, 0, 0, .2));
     &.fixed {
         position: fixed;
