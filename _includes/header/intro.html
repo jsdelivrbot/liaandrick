@@ -1,65 +1,76 @@
 <div id="intro" class="intro full-frame">
-    <div class="bg"></div>
-    {% include header/topbar.html %}
-    <div class="container h-100">            
-        <div class="row flex-column flex-lg-row mx-auto col-12 col-sm-10 justify-content-center align-items-end vertical-center">
-            <div class="profile-image d-inline-block col-sm-8 col-lg-4 align-self-center justify-content-center">
-                <img id="intro-headshot" class="headshot d-block mx-auto mt-4 mb-4" src="assets/images/Catania_headshot_sq_bw.png" alt="My headshot!">
-                <ul class="social list-inline d-none d-sm-inline d-sm-flex justify-content-center pt-lg-3">
-                    <li class="list-inline-item">
-                        <a href="https://www.linkedin.com/in/jamiecatania/">
-                            <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="https://twitter.com/jamiecatania">
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="https://github.com/jamiecatania">
-                            <i class="fa fa-github-alt" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li class="email list-inline-item align-middle phone">
-                        <a href="mailto:jamie@cataniainteractive.com">
-                            <i class="fa fa-envelope"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item align-middle email">
-                        <a href="tel: 2192422687">
-                            <i class="fa fa-phone"></i>
-                        </a>
-                    </li>
-                </ul>
+    <div class="bg">
+        <div class="headshot d-none d-xl-block"></div>
+    </div>
+
+    <div id="intro" class="h-100 d-flex">
+
+        <!-- Start Social Buttons -->
+        <ul id="social-btns" class="social list-inline d-sm-flex pt-3">
+            <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/jamiecatania/">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="https://twitter.com/jamiecatania">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="https://github.com/jamiecatania">
+                    <i class="fa fa-github-alt" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="email list-inline-item align-middle phone">
+                <a href="mailto:jamie@cataniainteractive.com">
+                    <i class="fa fa-envelope"></i>
+                </a>
+            </li>
+            <li class="list-inline-item align-middle email">
+                <a href="tel: 2192422687">
+                    <i class="fa fa-phone"></i>
+                </a>
+            </li>
+        </ul>
+        <!-- /End Social Buttons -->
+
+        <!-- Start Row 1 -->
+        <div id="intro-row-1" class="row d-flex flex-column justify-content-center">
+            <div class="col-12 text-left">
+                <h3 id="my-name-is" class="d-inline-block mb-2">My name is</h3>
+                <br>
+                <h1 id="name" class="alternative-style name d-inline-block m-0">Jamie Catania.</h1>
             </div>
-            <div id="profile-info" class="profile-info col-12 col-lg-8 text-center text-lg-left pl-sm-4 align-self-center">
-                <h3 id="my-name-is" class="d-inline-block">Hi! My name is</h3><br class="d-lg-block">
-                <h2 id="name" class="name d-inline-block mb-sm-4">Jamie Catania<div class="d-none d-sm-inline-block">.</div></h2>
-                <h4 id="rotating-titles" class="cd-intro">
+        </div>
+        <!-- /End Row 1 -->
+
+
+        <!-- Start Row 2 -->
+        <div id="intro-row-2" class="row d-flex flex-column justify-content-center">
+            <div class="my-name-is col-12 text-left">
+                <h3 id="my-name-is" class="d-inline-block mb-2">My craft is</h3>
+                <br>
+                <h3 id="rotating-titles" class="cd-intro m-0">
                     <div class="cd-headline clip w-100 text-center d-inline mb-sm-3 text-nowrap">
-                        I'm a seasoned <br class="d-sm-none">
                         <div id="title" class="cd-words-wrapper">
-                            <b class="is-visible">Interaction Designer.</b>
-                            <b>Instructional Designer.</b>
-                            <b>UX Designer.</b>
-                            <b>Web Developer.</b>
+                            <b class="is-visible">Interaction Design.</b>
+                            <b>Instructional Design.</b>
+                            <b>UX Design.</b>
+                            <b>Web Development.</b>
                         </div>
                     </div>
-                </h4>
-                <!-- cd-intro -->
+                </h3>
             </div>
-            <!--//profile-->
         </div>
-        <!--//container-->
-        <!-- <h5 id="subline" class="subline d-inline-block text-center text-lg-left">
-            I create unique digital experiences that solve
-            <strong>BIG</strong>,
-            <em>hairy</em> problems.
-        </h5> -->
+        <!-- /End Row 2 -->
+
     </div>
-    <!--//intro-->
+    <!--//profile-->
     <a href="#" class="btn btn-primary btn-lg scroll-to" data-target="#overview" role="button">
-        <span class="fa fa-chevron-down"></span>
-    </a>
+            <span class="fa fa-chevron-down"></span>
+        </a>
+    </div>
+</div>
+<!--//container-->
 </div>
