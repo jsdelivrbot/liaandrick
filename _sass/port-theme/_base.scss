@@ -143,6 +143,57 @@ a.btn {
     }
 }
 
+.scroll-up, .scroll-down {
+    cursor: pointer;
+    position: absolute;
+    padding: 2px;
+    left: 7%;
+    @include transition (all 0.4s ease-in-out);
+    background: darken($theme-color, 10%);
+    border: none;
+    color: $smoky-white;
+    text-align: center;
+    display: inline-block;
+    z-index: 30;
+    width: 36px;
+    height: 36px;
+    @include border-radius(50%);
+    @include box-shadow(0px 6px 10px rgba(0, 0, 0, 0.3));
+    @media (min-width: 1200px) {
+        left: 10%;
+    }
+    &:hover {
+        background: darken($theme-color, 15%);
+    }
+    .fa {
+        position: absolute;
+        left: 18%;
+        top: 15%;
+        font-family: FontAwesome;
+        // top: 3px;
+        font-size: 25px;
+        font-weight: normal;
+    }
+    
+}
+
+.scroll-down {
+    bottom: 2%;
+    @media (min-width: 1200px) {
+        bottom: 2.5%;
+    }
+}
+
+.scroll-up {
+    top: 2%;
+    @media (min-width: 1200px) {
+        top: 2%;
+    }
+    &.nav-bar {
+        top: 25%;
+    }
+}
+
 .full-frame {
     width: calc(100vw);
     /*vw is viewport width*/

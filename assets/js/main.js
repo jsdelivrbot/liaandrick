@@ -75,43 +75,29 @@ $(document).ready(function () {
         });
     });
 
-    // // scroll body to overview on click
-    // $('.scroll-to').click(function () {
-    //     var target = $(this).data("target");
+    // scroll body to overview on click
+    $('.scroll-up, .scroll-down').click(function () {
+        var target = $(this).data("target");
 
-    //     $('body,html').animate({
-    //         scrollTop: $(target).offset().top,
-    //     }, 800);
-    //     return false;
-    // });
-
-    $('#scroll-down').click(function (e) {  
-        // var next = $('.page-section.active').next().find('a').attr('href');
-        var next = $('.page-section.active');
-        console.log(next);
-        $('html, body').animate({
-            scrollTop: $(next).offset().top
-        }, 500);
-    })
-    
-    $('#scroll-up').click(function (e) {
-        var prev = $('.page-section.active').prev().find('a').attr('href');
-        $('html, body').animate({
-            scrollTop: $(prev).offset().top
-        }, 500);
-    })
-
-    // Hide scroll-up button at top of page
-    $(window).on('scroll resize load', function () {
-        var scrollTop = $(this).scrollTop();
-
-      if (scrollTop < 956) {
-        $('#scroll-up').fadeOut();
-      } else {
-        $('#scroll-up').fadeIn();
-      }
-
+        $('body,html').animate({
+            scrollTop: $(target).offset().top,
+        }, 800);
+        return false;
     });
 
+    // // Overview button - scroll to first pagenav item
+    // $('#overview #scroll-down').click(function (e) {
+    //     var next = $('.page-section.active');
+    //     console.log(next);
+    //     $('html, body').animate({
+    //         scrollTop: $(next).offset().top
+    //     }, 500);
+    // })
 
+    // $('#scroll-up').click(function (e) {
+    //     var prev = $('.page-section.active').prev().find('a').attr('href');
+    //     $('html, body').animate({
+    //         scrollTop: $(prev).offset().top
+    //     }, 500);
+    // })
 });
