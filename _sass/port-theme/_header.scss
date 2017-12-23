@@ -59,7 +59,7 @@
             left: 10%;
             top: 45%;
 
-            @media (max-width: 450px) {
+            @media (max-width: 1200px) {
                 left: 5%;
                 top: 35%;
             }
@@ -70,7 +70,7 @@
             left: 10%;
             top: 65%;
 
-            @media (max-width: 450px) {
+            @media (max-width: 1200px) {
                 left: 5%;
                 top: 60%;
             }
@@ -130,7 +130,7 @@
             padding: 2px;
             bottom: 5%;
             transform: translate(-50%, 0);
-            left: 10%;
+            left: 7%;
             @include transition (all 0.4s ease-in-out);
             background: darken($theme-color, 10%);
             border: none;
@@ -142,6 +142,9 @@
             height: 36px;
             @include border-radius(50%);
             @include box-shadow(0px 6px 10px rgba(0, 0, 0, 0.3));
+            @media (min-width: 1200px) {
+                left: 10%;
+            }
             &:hover {
                 background: darken($theme-color, 15%);
             }
