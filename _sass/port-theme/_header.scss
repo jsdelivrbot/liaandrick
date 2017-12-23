@@ -8,6 +8,15 @@
         left: 10%;
         display: inline-block;
         margin-bottom: 0;
+        @media (max-width: 1200px) {
+            left: 5%;
+        }
+        @media (max-width: 667px) {
+            width: 100%;
+            left: 0;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
         a {
             color: $smoky-white;
             display: inline-block;
