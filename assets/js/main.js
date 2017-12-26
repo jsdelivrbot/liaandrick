@@ -75,7 +75,7 @@ $(document).ready(function () {
         });
     });
 
-    // scroll body to overview on click
+    // scroll body to target on click
     $('.scroll-up, .scroll-down').click(function () {
         var target = $(this).data("target");
 
@@ -85,19 +85,26 @@ $(document).ready(function () {
         return false;
     });
 
-    // // Overview button - scroll to first pagenav item
-    // $('#overview #scroll-down').click(function (e) {
-    //     var next = $('.page-section.active');
-    //     console.log(next);
-    //     $('html, body').animate({
-    //         scrollTop: $(next).offset().top
-    //     }, 500);
-    // })
+    // Show/hide buttons
+    $(window).on('scroll resize load', function () {
+        var scrollTop = $(this).scrollTop();
+        var wHeight = $(this).innerHeight();
 
-    // $('#scroll-up').click(function (e) {
-    //     var prev = $('.page-section.active').prev().find('a').attr('href');
-    //     $('html, body').animate({
-    //         scrollTop: $(prev).offset().top
-    //     }, 500);
-    // })
+        // Handle scroll-down on intro
+        if (scrollTop <= wHeight / 3) {
+            $('#intro .scroll-down').show();
+        } else {
+            $('#intro .scroll-down').hide();
+        }
+
+        // Handle scroll-up on overview
+        if (scrollTop >= (wHeight * 2) / 3) {
+            $('#overview .scroll-up').show();
+            $('#overview .scroll-down').show();
+        } else {
+            $('#overview .scroll-up').hide();
+            $('#overview .scroll-down').hide();
+        }
+    });
+
 });

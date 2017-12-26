@@ -145,6 +145,7 @@ a.btn {
 
 .scroll-up,
 .scroll-down {
+    display: none;
     cursor: pointer;
     position: absolute;
     padding: 2px;
@@ -154,7 +155,6 @@ a.btn {
     border: none;
     color: $smoky-white;
     text-align: center;
-    display: inline-block;
     z-index: 30;
     width: 36px;
     height: 36px;
