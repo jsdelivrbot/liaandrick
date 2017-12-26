@@ -161,7 +161,7 @@ a.btn {
     @include border-radius(50%);
     @include box-shadow(0px 6px 10px rgba(0, 0, 0, 0.3));
     @media (min-width: 1200px) {
-        left: 10%;
+        left: 3%;
     }
     &:hover {
         background: darken($theme-color, 15%);
@@ -179,7 +179,7 @@ a.btn {
 .scroll-down {
     bottom: 2%;
     @media (min-width: 1200px) {
-        bottom: 2.5%;
+        bottom: 3%;
     }
 }
 
