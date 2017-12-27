@@ -1,19 +1,22 @@
 @charset "utf-8";
-
+// Import bootstrap partials.
+@import 
+"bootstrap/functions",
+"bootstrap/variables",
+"bootstrap/mixins",
+"bootstrap/grid";
 // Import partials.
-@import
-  "port-theme/mixins",
-  "port-theme/theme-default",
-  "port-theme/base",
-  "port-theme/header",
-  "port-theme/footer",
-  "port-theme/pagenav",     
-  "port-theme/sections/experiences",
-  "port-theme/sections/education",
-  "port-theme/sections/skills",  
-  "port-theme/sections/testimonials",  
-  "port-theme/sections/portfolio",  
-  "port-theme/sections/getintouch",
-  "port-theme/sections/overview",   
-  "port-theme/responsive"
-;
+@import "port-theme/mixins",
+"port-theme/theme-default",
+"port-theme/base",
+"port-theme/header",
+"port-theme/footer",
+"port-theme/pagenav",
+"port-theme/sections/experiences",
+"port-theme/sections/education",
+"port-theme/sections/skills",
+"port-theme/sections/testimonials",
+"port-theme/sections/portfolio",
+"port-theme/sections/getintouch",
+"port-theme/sections/overview",
+"port-theme/responsive";
