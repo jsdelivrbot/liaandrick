@@ -1,34 +1,14 @@
 
-function scrollToID(id, speed) {
-    var offSet = 26;
-    var obj = $(id).offset();
-    var targetOffset = obj.top - offSet;
-    $('html,body').animate({ scrollTop: targetOffset }, speed);
-}
-
 $(document).ready(function () {
 
     /* ======= Handle page load from portfolio itmes ======= */
-    // var speed = 1000;
-
-    // // check for hash and if div exist... scroll to div
-    // var hash = window.location.hash;
-    // if ($(hash).length) {
-    //     scrollToID(hash, speed);
-    // }
-
-    // to top right away
-    if (window.location.hash) scroll(0, 0);
-    // void some browsers issue
-    setTimeout(function () { scroll(0, 0); }, 1);
-
     // *only* if we have anchor on the url
     if (window.location.hash) {
 
         // smooth scroll to the anchor id
         $('html, body').animate({
             scrollTop: $(window.location.hash).offset().top - 26
-        }, 1000, 'swing');
+        }, 0, 'swing');
     }
 
 
