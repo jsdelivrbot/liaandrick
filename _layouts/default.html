@@ -4,31 +4,10 @@
 {% include head.html %}
 
 <body>
-    {% include header.html %}
-    {% include section-overview.html %}
-    {% include header/pagenav.html %}                
 
-    <div class="wrapper container">
-        {% include section-experiences.html %}
-        {% include section-education.html %}
-        {% include section-skills.html %}
-        {% include section-portfolio.html %}
-        {% include section-getintouch.html %}
-    </div>
-    <!--//wrapper-->
+    {{ content }}
 
-    <!-- Javascript -->
-    <script type="text/javascript" src="assets/plugins/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/popper.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/imagesloaded.pkgd.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/isotope.pkgd.min.js"></script>
-    <script type="text/javascript" src="assets/js/header-scroll.js"></script>
-
-    <!-- custom js -->
-    <script type="text/javascript" src="assets/js/main.js"></script>
+   {% include foot.html %}
 
 
 </body>

@@ -1,0 +1,74 @@
+.portfolio-item {
+    .container {
+        width: 40%;
+        @include media-breakpoint-down(lg) {
+            width: 90%;
+        }
+        padding-top: 2.8rem;
+    }
+    .content {
+        margin: 0 auto;
+        padding: 0;
+    }
+    h2 {
+        border-bottom: 10px solid $green;
+        color: $teal;
+        line-height: 4.8rem;
+        margin-top: 0;
+        margin-bottom: 1.45rem;
+        @include media-breakpoint-down(md) {
+            line-height: 3.5rem;
+            font-size: 3.5em;
+        }
+        @include media-breakpoint-down(xs) {
+            line-height: 3rem;
+            font-size: 3em;
+        }
+    }
+    h3 {
+        margin-top: 0;
+        margin-bottom: 1.45rem;
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 1rem;
+        }
+    }
+    p {
+        font-size: 16px;
+        margin-top: 0;
+        margin-bottom: 1.9rem;
+        line-height: 1.68rem;
+        @include media-breakpoint-down(sm) {
+            line-height: 1.35rem;
+            font-size: 14px;
+        }
+    }
+    .back-btn {
+        cursor: pointer;
+        position: fixed;
+        padding: 2px;
+        left: 0;
+        top: 0;
+        @include transition (all 0.4s ease-in-out);
+        background: darken($theme-color, 10%);
+        border: none;
+        color: $smoky-white;
+        text-align: center;
+        z-index: 30;
+        width: 36px;
+        height: 36px;
+        @include border-radius(7px);
+        @include box-shadow(0px 6px 10px rgba(0, 0, 0, 0.3));
+     
+        &:hover {
+            background: darken($theme-color, 15%);
+        }
+        .fa {
+            position: absolute;
+            left: 18%;
+            top: 15%;
+            font-family: FontAwesome; // top: 3px;
+            font-size: 25px;
+            font-weight: normal;
+        }
+    }
+}
