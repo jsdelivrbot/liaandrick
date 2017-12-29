@@ -1,19 +1,6 @@
 
 $(document).ready(function () {
 
-    /* ======= Handle page load from portfolio itmes ======= */
-    // *only* if we have anchor on the url
-    if (window.location.hash) {
-
-        // smooth scroll to the anchor id
-        $('html, body').animate({
-            scrollTop: $(window.location.hash).offset().top - 26
-        }, 0, 'swing');
-    }
-
-
-
-
     /* ======= Scrollspy ======= */
     $('body').scrollspy({ target: '#page-nav-wrapper', offset: 100 });
 
