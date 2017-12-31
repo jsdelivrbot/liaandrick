@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="647px" height="364px" viewBox="0 0 647 364" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#4CA0B9" offset="0%"></stop>
+            <stop stop-color="#A5D491" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0.1" y="0.1" width="1439.9" height="1024"></rect>
+    </defs>
+    <g id="Header" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy" transform="translate(-448.000000, -416.000000)">
+            <g id="Rectangle">
+                <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                <rect stroke="#979797" stroke-width="1" x="0.6" y="0.6" width="1438.9" height="1023"></rect>
+            </g>
+            <g id="Group" transform="translate(448.000000, 416.000000)">
+                <rect id="Combined-Shape" fill="#444444" x="0" y="0" width="647" height="364"></rect>
+                <polygon id="Mask" fill="#8A8A8A" points="345.198786 181.584906 302 203.169811 302 160"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

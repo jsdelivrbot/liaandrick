@@ -42,8 +42,9 @@ h1 {
     font-size: 6.854em;
     font-weight: 700;
     &.alternative-style {
+        text-align: center;
         color: $header-text-color-secondary;
-        text-shadow: -3px 3px 0 #666666;
+        text-shadow: -2px 2px 0 #666666;
         line-height: 0.9;
     }
 }
@@ -87,8 +88,8 @@ a.btn {
     color: #fff;
     padding: 8px 15px;
     @include border-radius(2px);
-    @include box-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
-    text-transform: uppercase;
+    // @include box-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+    // text-transform: uppercase;
     font-weight: 500;
     font-size: 14px;
     &:hover {
@@ -149,23 +150,23 @@ a.btn {
     cursor: pointer;
     position: absolute;
     padding: 2px;
-    left: 7%;
+    @include translate(-50%, 0);
+    left: 50%;
     @include transition (all 0.4s ease-in-out);
-    background: darken($theme-color, 10%);
     border: none;
-    color: $smoky-white;
+    color: $text-grey;
     text-align: center;
     z-index: 30;
     width: 36px;
     height: 36px;
-    @include border-radius(50%);
-    @include box-shadow(0px 6px 10px rgba(0, 0, 0, 0.3));
-    @media (min-width: 1200px) {
-        left: 3%;
-    }
-    &:hover {
-        background: darken($theme-color, 15%);
-    }
+    // @include border-radius(50%);
+    // @include box-shadow(0px 6px 10px rgba(0, 0, 0, 0.3));
+    // @media (min-width: 1200px) {
+    //     left: 3%;
+    // }
+    // &:hover {
+    //     background: darken($text-color, 15%);
+    // }
     .fa {
         position: absolute;
         left: 18%;
@@ -176,30 +177,25 @@ a.btn {
     }
 }
 
-.scroll-down {
+#intro-down-btn {
     bottom: 2%;
-    @media (min-width: 1200px) {
-        bottom: 3%;
-    }
+    background: none;
+    color: $smoky-white;
+    opacity: .4;
 }
 
-.scroll-up {
-    top: 2%;
-    @media (min-width: 1200px) {
-        top: 2%;
-    }
-    &.nav-bar {
-        top: 19%;
-        @media (max-width: 700px) {
-            top: 27%;
-        }
+#nav-scroll-up-btn {
+    top: 19%;
+    left: 3%;
+    background: darken($text-color, 10%);        
+    @media (max-width: 700px) {
+        
+        top: 27%;
     }
 }
 
 .full-frame {
     width: calc(100vw);
-    /*vw is viewport width*/
     height: calc(100vh);
-    /*vw is viewport height*/
     position: absolute;
 }

@@ -1,70 +1,66 @@
 <div id="intro" class="intro full-frame">
-    <div class="bg">
-        <div class="headshot d-none d-md-block"></div>
-    </div>
+    <div class="bg"></div>
 
     <div class="h-100">
-
-        <!-- Start Social Buttons -->
-        <ul id="social-btns" class="social list-inline d-flex justify-content-around pt-3">
-            <li class="list-inline-item">
-                <a href="https://www.linkedin.com/in/jamiecatania/">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-            </li>
-            <li class="list-inline-item">
-                <a href="https://twitter.com/jamiecatania">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-            </li>
-            <li class="list-inline-item">
-                <a href="https://github.com/jamiecatania">
-                    <i class="fa fa-github-alt" aria-hidden="true"></i>
-                </a>
-            </li>
-            <li class="email list-inline-item align-middle phone">
-                <a href="mailto:jamie@cataniainteractive.com">
-                    <i class="fa fa-envelope"></i>
-                </a>
-            </li>
-            <li class="list-inline-item align-middle email">
-                <a href="tel: 2192422687">
-                    <i class="fa fa-phone"></i>
-                </a>
-            </li>
-        </ul>
-        <!-- /End Social Buttons -->
-
         <!-- Start Row 1 -->
-        <div id="intro-content">
-            <div id="content-row-1" class="text-left">
-                <h3 class="d-inline-block mb-2">My name is</h3>
-                <br>
-                <h1 id="name" class="alternative-style name d-inline-block m-0">Jamie Catania.</h1>
-            </div>
-            <div id="content-row-2" class="text-left">
-                <h3 class="d-inline-block mb-2">My craft is</h3>
-                <br>
-                <h3 id="rotating-titles" class="cd-intro m-0">
-                    <div class="cd-headline clip w-100 text-center d-inline mb-sm-3 text-nowrap">
+        <div id="intro-content" class="col-12 col-sm-8 mx-auto">
+
+            <!-- Start Social Buttons -->
+            <ul id="social-btns" class="social list-inline d-flex justify-content-around pt-3">
+                <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/jamiecatania/">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://twitter.com/jamiecatania">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://github.com/jamiecatania">
+                        <i class="fa fa-github-alt" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="email list-inline-item align-middle phone">
+                    <a href="mailto:jamie@cataniainteractive.com">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item align-middle email">
+                    <a href="tel: 2192422687">
+                        <i class="fa fa-phone"></i>
+                    </a>
+                </li>
+            </ul>
+            <!-- /End Social Buttons -->
+
+            <h3 id="my-name-is">My name is</h3>
+            <h1 id="name" class="alternative-style">Jamie Catania.</h1>
+            <img id="vid-placeholder" src="assets/images/vid_placeholder_lg.svg" class="img img-fluid d-inline-block" />
+            <h3 id="design-exp" class="mb-2">I design digital experiences.</h3>
+
+
+            <!-- <span id="rotating-titles" class="cd-intro">
+                    <div class="cd-headline clip text-center d-inline mb-sm-3 text-nowrap">
                         <div id="title" class="cd-words-wrapper">
-                            <b class="is-visible">Interaction Design.</b>
-                            <b>Instructional Design.</b>
-                            <b>UX Design.</b>
-                            <b>Web Development.</b>
+                            <b class="is-visible">easy-to-use</b>
+                            <b>beautiful</b>
+                            <b>authentic</b>
+                            <b>effective</b>
                         </div>
                     </div>
-                </h3>
-            </div>
+                </span>
+                <br>
+                <h3 class="d-inline-block mb-2">digital experiences.</h3> -->
+
         </div>
         <!-- /End Row 1 -->
 
     </div>
     <!--//profile-->
-    <a href="#" class="btn btn-primary btn-lg scroll-down" data-target="#overview" role="button">
+    <a href="#" id="intro-down-btn" class="btn btn-primary btn-lg scroll-down d-sm-none" data-target="#portfolio-section" role="button">
         <span class="fa fa-chevron-down"></span>
     </a>
-</div>
-</div>
-<!--//container-->
+    {% include header/pagenav.html %}                    
 </div>
