@@ -37,9 +37,17 @@
 
             <h3 id="my-name-is">My name is</h3>
             <h1 id="name" class="alternative-style">Jamie Catania.</h1>
-            <img id="vid-placeholder" src="assets/images/vid_placeholder_lg.svg" class="img img-fluid d-inline-block" />
-            <h3 id="design-exp" class="mb-2">I design digital experiences.</h3>
-
+            <h3 id="design-exp" class="mb-2">I design digital experiences.</h3>            
+            <!-- <img id="vid-placeholder" src="assets/images/vid_placeholder_lg.svg" class="img img-fluid d-inline-block" /> -->
+            <div id="vid-wrapper" class="embed-responsive col-12 col-xl-6 mx-auto">
+                <script src="https://fast.wistia.com/embed/medias/udh0ysuxt0.jsonp" async></script>
+                <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+                <div class="wistia_responsive_padding rounded" style="padding:56.25% 0 0 0;position:relative;">
+                    <div class="wistia_responsive_wrapper rounded" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                        <div class="wistia_embed wistia_async_udh0ysuxt0 seo=false videoFoam=true rounded" style="height:100%;width:100%">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
 
             <!-- <span id="rotating-titles" class="cd-intro">
                     <div class="cd-headline clip text-center d-inline mb-sm-3 text-nowrap">
@@ -62,5 +70,5 @@
     <a href="#" id="intro-down-btn" class="btn btn-primary btn-lg scroll-down d-sm-none" data-target="#portfolio-section" role="button">
         <span class="fa fa-chevron-down"></span>
     </a>
-    {% include header/pagenav.html %}                    
+    {% include header/pagenav.html %}
 </div>

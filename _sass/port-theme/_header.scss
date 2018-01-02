@@ -61,35 +61,50 @@
             }
             #my-name-is {
                 margin-top: 5%;
+                margin-bottom: .4rem;                
                 @media (min-width: 400px) {
                     margin-top: 25%;
+                    @media (orientation: landscape) {
+                        margin-top: 0;
+                        margin-bottom: .2rem;
+                    }
                 }
                 @media (min-width: 992px) {
                     margin-top: 15%;
                 }
                 @media (min-width: 1460px) {
-                    margin-top: 10%;
+                    margin-top: 5%;
                 }
-                margin-bottom: .4rem;
             }
 
             #name {
                 margin-top: 0;
                 margin-bottom: 2rem;
+                @media (orientation: landscape) {
+                    margin-bottom: .4rem;
+                }
             }
 
-            #vid-placeholder {
+            #design-exp {
+                margin-top: 0;
+                margin-bottom: 0;
+                @media (orientation: landscape) {
+                    display: none;
+                }
+            }
+
+            #vid-wrapper{
                 max-width: 100%;
                 margin-top: 0;
                 margin-bottom: 0;
                 border-radius: 7px;
-                @media (max-width: 414px) {
-                    border-radius: 0;
+                @media (orientation: landscape) {
+                    width: 40%;
                 }
             }
-            #design-exp {
-                margin-top: 0.5rem;
-                margin-bottom: 0;
+
+            .rounded {
+                border-radius: 7px;
             }
 
             // #rotating-titles {
