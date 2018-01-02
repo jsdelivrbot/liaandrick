@@ -148,10 +148,7 @@ a.btn {
 .scroll-down {
     display: none;
     cursor: pointer;
-    position: absolute;
     padding: 2px;
-    @include translate(-50%, 0);
-    left: 50%;
     @include transition (all 0.4s ease-in-out);
     border: none;
     color: $text-grey;
@@ -167,6 +164,18 @@ a.btn {
     // &:hover {
     //     background: darken($text-color, 15%);
     // }
+
+}
+
+#intro-down-btn {
+    position: absolute;
+    @include translate(-50%, 0);    
+    left: 50%;
+    bottom: 2%;
+    background: none;
+    color: $smoky-white;
+    opacity: .4;
+
     .fa {
         position: absolute;
         left: 18%;
@@ -175,13 +184,6 @@ a.btn {
         font-size: 25px;
         font-weight: normal;
     }
-}
-
-#intro-down-btn {
-    bottom: 2%;
-    background: none;
-    color: $smoky-white;
-    opacity: .4;
 
     @include media-breakpoint-up(sm) {
         display: none !important;
@@ -191,16 +193,6 @@ a.btn {
         // }
     }
 
-}
-
-#nav-scroll-up-btn {
-    top: 19%;
-    left: 3%;
-    background: darken($text-color, 10%);        
-    @media (max-width: 700px) {
-        
-        top: 27%;
-    }
 }
 
 .full-frame {
