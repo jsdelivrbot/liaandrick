@@ -6,18 +6,17 @@
     bottom: 0;
     width: 100%;
     left: 0;
-    padding-top: 1rem;
+    padding-top: .6rem;
     padding-bottom: 1rem;
     &.fixed {
         position: fixed;
-        // @include transition (all 0.4s ease-in-out);        
         @include box-shadow(0 4px 12px rgba(0, 0, 0, .2));        
         top: 0;
         left: 0;
         width: 100%;
         height: 60px;
         z-index: 100;
-        background: $theme-color;
+        background: linear-gradient(120deg, #4CA0B9 0%, #A5D491 100%);;
         @media (max-width: 700px) {
             padding: .25rem 0;
         }
@@ -42,6 +41,7 @@
         display: inline-block;
         li {
             margin-right: 30px;
+            padding: .25rem .5rem;
             display: inline-block;
             background: none;
             &:hover,
@@ -61,8 +61,8 @@
                 }
                 &.active {
                     color: $smoky-white;
-                    text-decoration: underline;
-                    background: none;
+                    background: $text-color;
+                    border-radius: 7px;
                 }
             }
             &:last-child {
