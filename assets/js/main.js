@@ -107,4 +107,11 @@ $(document).ready(function () {
             $('#overview .scroll-down').hide();
         }
     });
+
+    $(window).on('scroll resize load', function () {
+    if ($('body').hasClass('mobile')) {
+        var viewportHeight = $('#intro').outerHeight();
+        $('#intro').css({ height: viewportHeight });
+      }
+    });
 });
