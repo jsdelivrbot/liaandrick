@@ -114,7 +114,7 @@ $(document).ready(function () {
     //   }
     // });
 
-    $(window).on('load orientationchange', function () {
+    $(window).on('load resize orientationchange', function () {
     // if ($('body').hasClass('mobile')) {
         $('#intro').css({ height: window.innerHeight });
     // }
