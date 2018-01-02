@@ -108,10 +108,9 @@ $(document).ready(function () {
         }
     });
 
-    $(window).on('scroll resize load', function () {
+    $(window).on('load', function () {
     if ($('body').hasClass('mobile')) {
-        var viewportHeight = $('#intro').outerHeight();
-        $('#intro').css({ height: viewportHeight });
+        $('#intro').css({ height: window.innerHeight });
       }
     });
 });
