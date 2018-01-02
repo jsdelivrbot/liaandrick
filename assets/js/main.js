@@ -109,8 +109,8 @@ $(document).ready(function () {
     });
 
     $(window).on('load', function () {
-    if ($('body').hasClass('mobile')) {
+    // if ($('body').hasClass('mobile')) {
         $('#intro').css({ height: window.innerHeight });
-      }
+    // }
     });
 });
