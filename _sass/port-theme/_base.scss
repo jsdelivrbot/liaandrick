@@ -182,6 +182,15 @@ a.btn {
     background: none;
     color: $smoky-white;
     opacity: .4;
+
+    @include media-breakpoint-up(sm) {
+        display: none !important;
+
+        // @media screen and (max-width: 1200px) and (orientation: landscape) {
+        //     display: inline-block !important;
+        // }
+    }
+
 }
 
 #nav-scroll-up-btn {
