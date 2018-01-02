@@ -108,9 +108,16 @@ $(document).ready(function () {
         }
     });
 
+    // $(window).on('load', function () {
+    // if ($('body').hasClass('mobile')) {
+    //     $('#intro').css({ height: window.innerHeight });
+    //   }
+    // });
+
     $(window).on('load', function () {
     // if ($('body').hasClass('mobile')) {
         $('#intro').css({ height: window.innerHeight });
     // }
+
     });
 });
