@@ -54,27 +54,6 @@
         }
         .job-desc {
             color: $text-color-secondary;
-        } // &:after {
-        //   content: "";
-        //   position: absolute;
-        //   left: -37px;
-        //   top: 6px;
-        //   display: inline-block;
-        //   width: 10px;
-        //   height: 10px;
-        //   @include border-radius(50%);
-        //   background: $theme-color;
-        //   z-index: 10;
-        // }
-        .skill-tag {
-            @include box-shadow(0 1px 4px 0 rgba(0, 0, 0, 0.14));
-            padding: 6px 30px;
-            display: inline-block;
-            margin-right: 10px;
-            border: 1px solid $smoky-white;
-            font-weight: 500;
-            margin-bottom: 15px;
-            font-size: 16px;
         }
         table {
             margin-bottom: 0;
@@ -114,6 +93,10 @@
         position: absolute;
         right: 0;
         top: 2px;
+        @media (max-width: 992px) {
+            display: block;
+            position: relative;
+        }
         &:hover {
             color: darken($text-color-secondary, 15%);
         }
