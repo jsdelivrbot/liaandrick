@@ -7,7 +7,7 @@
     margin-left: 280px;
     .item {
         position: relative;
-        margin-bottom: 45px;
+        margin-bottom: 3rem;
         &:last-child {
             margin-bottom: 0;
         }
@@ -27,17 +27,16 @@
             position: relative;
         }
         .location {
-            position: absolute;
-            right: 0;
-            top: 2px;
+            position: relative;
             color: $text-grey;
+            margin-bottom: .5rem;
             .fa {
                 margin-right: 5px;
             }
         }
         .place {
             margin-top: 0;
-            margin-bottom: 15px;
+            margin-bottom: .25rem;
             font-size: 20px;
             font-weight: 300;
         }
@@ -83,11 +82,12 @@
         .card {
             border: none;
             padding: 0;
+            padding-top: .5rem;
+            border-top: 1px solid #e9ecef;
         }
         td {
             border-top: none;
             border-bottom: 1px solid #e9ecef;
-
             p {
                 margin-bottom: 0;
             }
@@ -109,28 +109,31 @@
         }
     }
     [data-toggle="collapse"] {
-        color: $text-color-secondary;
+        color: $text-grey;
         display: inline;
-
+        position: absolute;
+        right: 0;
+        top: 2px;
         &:hover {
             color: darken($text-color-secondary, 15%);
         }
         &.collapsed .more-info {
-            &:after {
-                font-weight: bold;
-                content: "Read more";
+            &:before {
+                // font-weight: bold;
+                content: "Read more ";
             }
             i:before {
-                content: "\f0fe";
+                content: "\f0d7";
+                font-weight: bold;
             }
         }
         .more-info {
-            &:after {
-                content: "Read less";
-                font-weight: bold;
+            &:before {
+                content: "Read less "; // font-weight: bold;
             }
             i:before {
-                content: "\f146";
+                content: "\f0d8";
+                font-weight: bold;                
             }
         }
     }
