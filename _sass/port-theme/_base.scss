@@ -149,7 +149,6 @@ a.btn {
 
 .scroll-up,
 .scroll-down {
-    display: none;
     cursor: pointer;
     padding: 2px;
     @include transition (all 0.4s ease-in-out);
@@ -171,6 +170,7 @@ a.btn {
 }
 
 #intro-down-btn {
+    display: none;    
     position: absolute;
     @include translate(-50%, 0);    
     left: 50%;
