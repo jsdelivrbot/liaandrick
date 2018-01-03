@@ -33,7 +33,7 @@
     .item-inner {
         background: $theme-color;
         color: #fff;
-        @include border-radius(2px);
+        @include border-radius(7px);
         position: relative;
         @include box-shadow(0 1px 4px 0 rgba(0, 0, 0, 0.14));
         &:hover {
