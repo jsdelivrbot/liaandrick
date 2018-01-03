@@ -18,27 +18,30 @@
     }
     .desc {
       color: $text-color-secondary;
+      max-width: 80%;
+      margin: 0 auto;
     }
-    .skill-tag {
-      @include box-shadow(0 1px 4px 0 rgba(0, 0, 0, 0.14));
-      padding: 6px 30px;
-      display: inline-block;
-      margin-right: 10px;
-      border: 1px solid $smoky-white;
-      font-weight: 500;
-      margin-bottom: 15px;
-      font-size: 16px;
-    }
-  
     .related-skills {
       margin-top: 11px;
+      border-top: 1px solid $text-grey;
   
       * {
         font-size: 12px;
-        padding: 6px 6px;
+        padding: .25rem;
         margin: 3px;
       }
     }
+    .skill-tag {
+      display: inline-block;
+      margin-right: 10px;
+      font-weight: 500;
+      // &:not(:last-child):after {
+      //   left: .5rem;
+      //   content: ' |';
+      // }
+    }
+  
+    
 
     .chart-easy-pie {
         position: relative;
