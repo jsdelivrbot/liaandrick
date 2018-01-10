@@ -59,14 +59,14 @@
                 border-radius: 7px;
                 &.active {
                     color: $smoky-white;
-                    background: $text-color;
+                    background: rgba(0, 0, 0, .2);
                 }
                 &:hover {
                     color: darken($text-color, 30%);
                 }
                 &:hover.active {
                     color: $smoky-white;
-                    background: darken($text-color, 30%);
+                    background: rgba(0, 0, 0, .5);
                 }
             }
             &:last-child {
