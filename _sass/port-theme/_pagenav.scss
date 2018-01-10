@@ -28,6 +28,14 @@
         #up-btn {
             display: inline-block;
         }
+        .name-brand {
+            display: inline-block;
+            font-family: Raleway, sans-serif;
+            font-weight: 900;
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            // text-align: right;
+        }
     }
     .container {
         @media (max-width: 700px) {
