@@ -16,10 +16,11 @@
         padding: 0;
     }
     h2 {
+        width: 90%;
         border-bottom: 10px solid $green;
         color: $teal;
         line-height: 4.8rem;
-        margin-top: 0;
+        margin: 0 auto;        
         margin-bottom: 1.45rem;
         @include media-breakpoint-between(xs, md) {
             line-height: 3.5rem;
@@ -32,7 +33,8 @@
         }
     }
     h3 {
-        margin-top: 0;
+        width: 90%;
+        margin: 0 auto;                
         margin-bottom: 1.45rem;
         @include media-breakpoint-down(xs) {
             margin-bottom: 1rem;
@@ -42,20 +44,58 @@
         }
     }
     ul {
-        margin-bottom: 2.82rem;
+        margin-bottom: 1.9rem;
         list-style-type: circle;
         list-style-position: inside;
-        padding-left: 5px;
+        padding-left: 3.1rem;
     }
     p {
+        width: 90%;
+        margin: 0 auto;        
         font-size: 16px;
-        margin-top: 0;
         margin-bottom: 1.9rem;
         line-height: 1.68rem;
         @include media-breakpoint-down(sm) {
             line-height: 1.45rem;
             font-size: 14px;
             margin-bottom: 2.82rem;
+        }
+    }
+    .carousel.slide {
+        width: 90%;
+        @include box-shadow(0 4px 12px rgba(0, 0, 0, .2));
+        margin-bottom: 2.45rem;
+        .carousel-indicators {
+            bottom: -2rem;
+        }
+        .carousel-indicators li {
+            background-color: rgba(0, 0, 0, .2);
+            &.active {
+                background-color: $teal;
+            }
+        }
+        .slide-control {
+            color: $teal;
+            background-color: none;
+            height: 100%;
+            opacity: .6;
+            font-size: 80px;
+            left: -50px;
+            padding: 0 10px;
+            position: absolute;
+            top: 0;
+            &:hover {
+                opacity: 1;
+            }
+            i {
+                transform: translate(0, -50%);                
+                position: relative;
+                top: 50%;
+            }
+        }
+        .slide-control.right {
+            left: auto;
+            right: -50px;
         }
     }
     .back-btn {
@@ -80,6 +120,8 @@
             position: relative;
             transform: translate(0, -50%);
             top: 50%;
+            width: 40%;
+            text-align: left;
             font-size: 20px;
             font-weight: normal;
             .back-text {
