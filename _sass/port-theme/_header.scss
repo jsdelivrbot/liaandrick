@@ -66,7 +66,8 @@
             }
             #my-name-is {
                 margin-top: 5%;
-                margin-bottom: .4rem;                
+                margin-bottom: .4rem;  
+                font-weight: 400;              
                 @media screen and (min-width: 400px) {
                     margin-top: 25%;
                     @media screen and (orientation: landscape) {
@@ -96,17 +97,24 @@
             #design-exp {
                 margin-top: 0;
                 margin-bottom: 0;
+                font-weight: 400;
                 @media screen and (max-width: 700px) and (orientation: landscape) {
                     display: none;
                 }
             }
 
             #vid-wrapper{
-                max-width: 100%;
+                width: 100%;
                 margin-top: 0;
                 margin-bottom: 0;
                 padding: 0;
+                @include border-radius(7px);
                 @include box-shadow(0 4px 12px rgba(0, 0, 0, .2));
+                @include transition (all 0.4s ease-in-out); 
+
+                &:hover { 
+                    @include box-shadow(0 8px 12px rgba(0, 0, 0, .2)); 
+                } 
 
                 @include media-breakpoint-up(sm) {
                     border-radius: 7px;                    
