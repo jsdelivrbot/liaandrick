@@ -57,6 +57,9 @@
         }
         table {
             margin-bottom: 0;
+            @include media-breakpoint-down(md) {
+                border-top: 1px solid #e9ecef;
+            }
         }
         .card {
             border: none;
@@ -69,11 +72,20 @@
             border-bottom: 1px solid #e9ecef;
             p {
                 margin-bottom: 0;
+                
+            }
+            @include media-breakpoint-down(md) {
+                display: block;
+                padding-left: 0;
             }
         }
         tr td:first-child {
             text-align: right;
             padding-left: 0;
+            @include media-breakpoint-down(md) {
+                text-align: left;
+                border-bottom: none;
+            }
         }
     }
     .related-clients {
