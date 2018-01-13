@@ -47,7 +47,7 @@ h1 {
     font-weight: 900;
     &.alternative-style {
         text-align: center;
-        color: $header-text-color-secondary;
+        color: $text-color;
         text-shadow: 0 4px 12px rgba(0, 0, 0, .2); 
         line-height: 0.9;
     }
@@ -177,14 +177,14 @@ a.btn {
     left: 50%;
     bottom: 2%;
     background: none;
-    color: $smoky-white;
+    color: $theme-color;
     opacity: .4;
 
     .fa {
         position: absolute;
         left: 18%;
         top: 15%;
-        font-family: FontAwesome; // top: 3px;
+        font-family: FontAwesome;
         font-size: 25px;
         font-weight: normal;
     }

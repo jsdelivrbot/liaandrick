@@ -1,5 +1,4 @@
 .header {
-    color: #fff;
 
     #social-btns {
         position: relative;
@@ -9,7 +8,7 @@
         display: inline-block;
         margin-bottom: 0;
         a {
-            color: $smoky-white;
+            color: $theme-color;
             display: inline-block;
             text-align: center;
             width: 3rem;
@@ -18,7 +17,6 @@
             opacity: 0.4;
             &:hover {
                 opacity: .8;
-                color: $smoky-white;
             }
         }
         @media screen and (max-width: 800px) and (orientation: landscape) {
@@ -31,7 +29,7 @@
         @include box-shadow(0 4px 12px rgba(0, 0, 0, .2));
         
         .bg {
-            background: linear-gradient(120deg, #4CA0B9 0%, #A5D491 100%);
+            // background: linear-gradient(120deg, #4CA0B9 0%, #A5D491 100%);
             position: absolute;
             z-index: -10;
             width: 100%;
@@ -56,6 +54,10 @@
             position: relative;
             text-align: center;
             padding: 0;
+            top: 10%;
+            @include media-breakpoint-up(sm) {
+                top: 20%;
+            }
             @include media-breakpoint-down(md) {
                 h1 {
                     font-size: 4.236rem;
@@ -89,21 +91,35 @@
             #name {
                 margin-top: 0;
                 margin-bottom: 1rem;
+                border-bottom: .3rem solid transparent;
+                border-image: linear-gradient(120deg, #4CA0B9 0%, #A5D491 100%);
+                border-image-slice: 1;
+
                 // @media screen and media-breakpoint-up(sm) {
                 //     margin-bottom: 1rem;
                 // }
                 @media screen and (orientation: landscape) {
                     margin-bottom: .4rem;
                 }
+                // &:after {
+                //     display: inline-block;
+                //     content: "";
+                //     border-top: .3rem solid transparent;
+                //     border-image: linear-gradient(120deg, #4CA0B9 0%, #A5D491 100%);
+                //     border-image-slice: 1;
+                //     width: 100%;
+                //     margin: 0;
+                //     transform: translateY(-1rem);
+                // }
             }
 
             #design-exp {
                 margin-top: 0;
                 margin-bottom: 1rem;
                 font-weight: 400;
-                @media screen and (max-width: 700px) and (orientation: landscape) {
-                    display: none;
-                }
+                // @media screen and (max-width: 700px) and (orientation: landscape) {
+                //     display: none;
+                // }
                 @media screen and (min-width: 400px) {
                     margin-top: 2rem;
                 }
@@ -174,7 +190,7 @@
                             right: 0;
                             width: 2px;
                             height: 100%;
-                            background-color: $smoky-white;
+                            background-color: $teal;
                             opacity: 0.6;
                         }
                     }
