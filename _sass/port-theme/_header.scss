@@ -93,6 +93,9 @@
                 margin-bottom: 1rem;
                 border-bottom: .3rem solid transparent;
                 border-image: linear-gradient(120deg, #4CA0B9 0%, #A5D491 100%);
+                border-top: none;
+                border-right: none;
+                border-left: none;
                 border-image-slice: 1;
 
                 // @media screen and media-breakpoint-up(sm) {
