@@ -86,27 +86,27 @@ $(document).ready(function () {
         return false;
     });
 
-    // Show/hide buttons
-    $(window).on('scroll resize load', function () {
-        var scrollTop = $(this).scrollTop();
-        var wHeight = $(this).innerHeight();
+    // // Show/hide buttons
+    // $(window).on('scroll resize load', function () {
+    //     var scrollTop = $(this).scrollTop();
+    //     var wHeight = $(this).innerHeight();
 
-        // Handle scroll-down on intro
-        if (scrollTop <= wHeight / 3) {
-            $('#intro .scroll-down').show();
-        } else {
-            $('#intro .scroll-down').hide();
-        }
+    //     // Handle scroll-down on intro
+    //     if (scrollTop <= wHeight / 3) {
+    //         $('#intro .scroll-down').show();
+    //     } else {
+    //         $('#intro .scroll-down').hide();
+    //     }
 
-        // Handle scroll-up on overview
-        if (scrollTop >= (wHeight * 2) / 3) {
-            $('#overview .scroll-up').show();
-            $('#overview .scroll-down').show();
-        } else {
-            $('#overview .scroll-up').hide();
-            $('#overview .scroll-down').hide();
-        }
-    });
+    //     // Handle scroll-up on overview
+    //     if (scrollTop >= (wHeight * 2) / 3) {
+    //         $('#overview .scroll-up').show();
+    //         $('#overview .scroll-down').show();
+    //     } else {
+    //         $('#overview .scroll-up').hide();
+    //         $('#overview .scroll-down').hide();
+    //     }
+    // });
 
     /**
      * jQuery.browser.mobile (http://detectmobilebrowser.com/)
@@ -118,7 +118,12 @@ $(document).ready(function () {
 
     //Don't allow intro banner's innerheight to resize when the URL bar shows/hides on mobile.
     if (jQuery.browser.mobile) {
-        var viewportHeight = $('.intro').outerHeight();
-        $('.intro').css({ height: window.innerHeight });
+        var viewportHeight = $('.intro').innerHeight();
+        $('.intro').css({ height: viewportHeight });
     }
+
+    $(window).on('orientationchange', function () {
+        var viewportHeight = $(window).height();
+        $('.intro').css({ height: viewportHeight });
+    });
 });

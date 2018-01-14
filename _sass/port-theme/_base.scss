@@ -159,19 +159,9 @@ a.btn {
     z-index: 30;
     width: 36px;
     height: 36px;
-    // @include border-radius(50%);
-    // @include box-shadow(0px 6px 10px rgba(0, 0, 0, 0.3));
-    // @media (min-width: 1200px) {
-    //     left: 3%;
-    // }
-    // &:hover {
-    //     background: darken($text-color, 15%);
-    // }
-
 }
 
 #intro-down-btn {
-    display: none;    
     position: absolute;
     @include translate(-50%, 0);    
     left: 50%;
