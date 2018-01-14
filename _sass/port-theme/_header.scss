@@ -27,11 +27,12 @@
         background-size: cover;
         position: relative;
         @include box-shadow(0 4px 12px rgba(0, 0, 0, .2));
+        height: 100vh;
         
         .bg {
             // background: linear-gradient(120deg, #4CA0B9 0%, #A5D491 100%);
             background-image: $hashed-background;
-            opacity: .4;
+            opacity: .6;
             position: absolute;
             z-index: -10;
             width: 100%;
