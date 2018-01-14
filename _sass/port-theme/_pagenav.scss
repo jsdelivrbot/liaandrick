@@ -66,14 +66,16 @@
                 text-decoration: none;                
                 color: $text-color;
                 padding: inherit;
+                z-index: 100;
                 &:after {
-                    @include transition (all 0.4s ease-in-out);     
+                    @include transition (all 0.4s ease-in-out);   
+                    z-index: 10;  
                     content: "";
                     position: absolute;
-                    bottom: 0;
-                    left: 0;
+                    top: 1.6rem;
+                    left: 7.5%;
                     height: .2rem;
-                    width: 100%;
+                    width: 85%;
                     opacity: 0;
                     background: #444;
                     background: linear-gradient(120deg, #4CA0B9 0%, #A5D491 100%);            
