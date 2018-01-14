@@ -1,7 +1,6 @@
 /* Page Nav */
 
 #page-nav-wrapper {
-    // background: darken($theme-color, 15%);
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -21,7 +20,7 @@
         height: 60px;
         z-index: 100;
         background-image: $hashed-background;
-        ;
+
         @media (max-width: 700px) {
             padding: .25rem 0;
         }
@@ -34,7 +33,6 @@
             font-weight: 900;
             font-size: 1.5rem;
             margin-right: 1rem;
-            // text-align: right;
         }
     }
     .container {
@@ -61,21 +59,35 @@
                 background: none;
             }
             a {
-                @include transition (all 0.4s ease-in-out);                
+                @include transition (all 0.4s ease-in-out);
+                position: relative;
+                font-family: Raleway, sans-serif;
+                font-weight: 600;
+                text-decoration: none;                
                 color: $text-color;
                 padding: inherit;
-                border-radius: 7px;
-                &.active {
-                    color: $smoky-white;
-                    background: rgba(0, 0, 0, .2);
+                &:after {
+                    @include transition (all 0.4s ease-in-out);     
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: .2rem;
+                    width: 100%;
+                    opacity: 0;
+                    background: #444;
+                    background: linear-gradient(120deg, #4CA0B9 0%, #A5D491 100%);            
+                }
+                &.active:after {
+                    opacity: .9;
                 }
                 &:hover {
-                    color: darken($text-color, 30%);
+                    color: darken($text-color, 100%);
                 }
-                &:hover.active {
-                    color: $smoky-white;
-                    background: rgba(0, 0, 0, .5);
-                }
+                // &:hover.active {
+                //     color: $smoky-white;
+                //     background: rgba(0, 0, 0, .5);
+                // }
             }
             &:last-child {
                 margin-right: 0;
