@@ -10,6 +10,11 @@
         @include media-breakpoint-down(md) {
             padding-top: 3.25rem;
         }
+
+        #portfolio-images {
+            padding: 0;
+            transition: height .5s ease-in-out;
+        }
     }
     .content {
         margin: 0 auto;
