@@ -38,14 +38,11 @@ $(document).ready(function () {
     /* ======= Chart ========= */
 
     $('.chart').easyPieChart({
-        barColor: '#00BCD4',//Pie chart colour
+        barColor: '#4ca0b9',//Pie chart colour
         trackColor: '#e8e8e8',
         scaleColor: false,
         lineWidth: 5,
         animate: 2000,
-        // onStep: function(from, to, percent) {
-        // 	$(this.el).find('span').text(Math.round(percent));
-        // }
     });
 
 
