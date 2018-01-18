@@ -1,29 +1,32 @@
 .portfolio-section {
-    .filters {
-        list-style: none;
-        margin: 0 auto;
-        margin-bottom: 60px;
-        text-align: center;
-        border-bottom: 1px solid $divider;
-        .type {
-            margin-right: 30px;
-            list-style: none;
-            display: inline-block;
-            padding: 8px 15px;
-            color: $text-grey;
-            cursor: pointer;
-            font-size: 14px;
-            text-transform: uppercase;
-            font-weight: 500;
-            &:last-child {
-                margin-right: 0;
-            }
-            &.active {
-                color: $theme-color;
-                border-bottom: 2px solid $theme-color;
-            }
-        }
-    }
+    // .filters {
+    //     list-style: none;
+    //     margin: 0 auto;
+    //     margin-bottom: 60px;
+    //     text-align: center;
+    //     border-bottom: 1px solid $divider;
+    //     .type {
+    //         margin-right: 30px;
+    //         list-style: none;
+    //         display: inline-block;
+    //         padding: 8px 15px;
+    //         color: $text-grey;
+    //         cursor: pointer;
+    //         font-size: 14px;
+    //         text-transform: uppercase;
+    //         font-weight: 500;
+    //         &:last-child {
+    //             margin-right: 0;
+    //         }
+    //         &.active {
+    //             color: $theme-color;
+    //             border-bottom: 2px solid $theme-color;
+    //         }
+    //     }
+    // }
+
+    padding-bottom: 0;
+    
     .item {
         margin-bottom: 30px;
         .figure {
@@ -31,23 +34,28 @@
         }
     }
     .item-inner {
-        background: $theme-color;
-        color: #fff;
+        color: $text-color;
         @include border-radius(7px);
         position: relative;
-        @include box-shadow(0 1px 4px 0 rgba(0, 0, 0, 0.14));
+        @include transition (all 0.4s ease-in-out);
+
+        img {
+            border-radius: 7px;
+            @include box-shadow(0 4px 12px rgba(0, 0, 0, .2));
+        }
         &:hover {
-            background: lighten($theme-color, 2%);
+            // background: lighten($theme-color, 2%);
+            @include scale(1.05);
             img {
                 @include opacity(0.9);
             }
         }
         .content {
-            padding: 30px;
-            padding-bottom: 75px;
+            padding: 1rem;
+            // padding-bottom: 75px;
             position: relative;
             a {
-                color: #fff;
+                // color: #fff;
             }
             .sub-title {
                 font-size: 16px;
