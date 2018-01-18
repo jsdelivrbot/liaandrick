@@ -19,35 +19,13 @@
         padding: 0;
     }
     
-    .portfolio-section .filters .type {
-        font-size: 12px;
-        margin-right: 5px;
-        padding: 8px 5px;
-    }
-    
     .portfolio-section .item-inner .content {
         padding: 15px;
     }
     
     .portfolio-section .item-inner .content .sub-title {
         font-size: 14px;
-        max-width: 120px;
-        overflow:hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-    
-    .portfolio-section .item-inner .content .meta {
-        margin-bottom: 30px;
-        max-width: 120px;
-        overflow:hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-    
-    .portfolio-section .item-inner .content .action {
-        position: static;
-        font-size: 12px;
+        // max-width: 120px;
     }
     
     .contact-section .intro {
