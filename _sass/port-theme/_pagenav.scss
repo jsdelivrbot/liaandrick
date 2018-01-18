@@ -64,15 +64,14 @@
                 color: $text-color;
                 padding: inherit;
                 &:after {
-                    // @include transition (all 0.4s ease-in-out);     
+                    @include transition (all 0.4s ease-in-out);     
                     content: "";
                     position: absolute;
-                    top: 1.5rem;
+                    top: 1.8rem;
                     left: 7.5%;
                     height: .2rem;
                     width: 85%;
                     opacity: 0;
-                    background: #444;
                     background: linear-gradient(120deg, #4CA0B9 0%, #A5D491 100%);            
                 }
                 &.active:after {
