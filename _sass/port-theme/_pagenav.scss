@@ -5,7 +5,7 @@
     bottom: 0;
     width: 100%;
     left: 0;
-    padding-top: .6rem;
+    padding-top: .8rem;
     padding-bottom: 1rem;
     background-image: $hashed-background;
     
@@ -42,11 +42,6 @@
             margin-left: 17%;
         }
     }
-    a {
-        color: $smoky-white;
-        text-decoration: none;
-        font-size: 18px;
-    }
     .page-nav {
         margin: 0 auto;
         display: inline-block;
@@ -64,6 +59,7 @@
                 position: relative;
                 font-family: Raleway, sans-serif;
                 font-weight: 600;
+                font-size: 1.2rem;
                 text-decoration: none;                
                 color: $text-color;
                 padding: inherit;

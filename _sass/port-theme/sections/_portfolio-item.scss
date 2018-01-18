@@ -22,7 +22,13 @@
     }
     h2 {
         width: 90%;
-        border-bottom: 10px solid $green;
+        // border-bottom: 10px solid linear-gradient(120deg, #5FABB0 0%, #A4D391 100%);
+        text-decoration: none;
+        background-image: linear-gradient(120deg, #4CA0B9 0%, #A5D491 100%);
+        background-position: bottom left;
+        background-repeat: no-repeat;
+        background-size: 100% .3rem;
+        
         color: $teal;
         line-height: 4.8rem;
         margin: 0 auto;        
@@ -103,44 +109,65 @@
             right: -50px;
         }
     }
-    .back-btn {
-        cursor: pointer;
+    .navbar {
         position: fixed;
         padding: 2px;
         left: 0;
         top: 0;
-        @include transition (all 0.4s ease-in-out);
-        background: linear-gradient(120deg, #5FABB0 0%, #A4D391 100%);
+        background-image: $hashed-background;
         border: none;
-        color: $text-color;
-        text-align: center;
         z-index: 30;
         width: 100%;
         height: 60px;
         @include box-shadow(0 4px 12px rgba(0, 0, 0, .2));
-        &:hover {
-            color: darken($text-color, 30%);
+        @media (max-width: 700px) {
+            padding: .25rem 0;
         }
-        .fa {
-            position: relative;
-            transform: translate(0, -50%);
-            top: 50%;
+        .content {
+            margin: 0 auto;
             width: 40%;
-            text-align: left;
-            font-size: 20px;
-            font-weight: normal;
-            .back-text {
-                font-family: Roboto, sans-serif;
-                font-size: 18px;
-                padding-left: 5px;
+            padding-top: .4rem;
+            @include media-breakpoint-down(lg) {
+                width: 80%;
             }
+            @include media-breakpoint-down(md) {
+                width: 70%;
+            }
+
+            .back {
+                cursor: pointer;
+                position: relative;
+                text-align: left;
+                font-size: 1.2rem;
+                font-weight: normal;
+                color: $text-color;
+                
+                &:hover {
+                    color: darken($text-color, 100%);
+                }
+                
+                .back-text {
+                    font-family: Raleway, sans-serif;
+                    font-weight: 600;
+                }
+            }
+
             .name-brand {
-                position: absolute;
-                right: 0;
+                position: relative;
+                @include transition (all 0.4s ease-in-out);            
+                transform: translate(0, -50%);
+                top: 50%;
                 font-family: Raleway, sans-serif;
+                color: $text-color;        
+                font-size: 24px;
                 font-weight: 900;
                 text-align: right;
+
+                &:hover {
+                    color: darken($text-color, 100%);
+                }
             }
         }
+        
     }
 }
