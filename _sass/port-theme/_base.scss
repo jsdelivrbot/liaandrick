@@ -176,7 +176,7 @@ a.btn {
     position: absolute;
     @include translate(-50%, 0);    
     left: 50%;
-    bottom: 2%;
+    bottom: -5%;
     background: none;
     color: $theme-color;
     opacity: .4;
