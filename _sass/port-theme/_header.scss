@@ -26,7 +26,6 @@
     .intro {
         background-size: cover;
         position: relative;
-        @include box-shadow(0 4px 12px rgba(0, 0, 0, .2));
         height: 100vh;
         
         .bg {

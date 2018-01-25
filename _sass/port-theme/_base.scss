@@ -114,6 +114,9 @@ a.btn {
     background: #fff;
     margin-bottom: 45px;
     @include border-radius(2px);
+    &:first-child {
+        margin-top: 4.224rem;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -148,7 +151,6 @@ a.btn {
     }
 }
 
-.scroll-up,
 .scroll-down {
     cursor: pointer;
     padding: 2px;
@@ -159,6 +161,15 @@ a.btn {
     z-index: 30;
     width: 36px;
     height: 36px;
+}
+
+.scroll-up {
+    cursor: pointer;
+    padding: 2px;
+    @include transition (all 0.4s ease-in-out);
+    border: none;
+    text-align: center;
+    z-index: 30;
 }
 
 #intro-down-btn {
