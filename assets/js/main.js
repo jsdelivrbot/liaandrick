@@ -57,11 +57,10 @@ $(document).ready(function () {
         barColor: '#4ca0b9',//Pie chart colour
         trackColor: '#e8e8e8',
         scaleColor: false,
+        size: 80,
         lineWidth: 5,
         animate: 2000,
     });
-
-
 
     /* ======= Isotope plugin ======= */
     /* Ref: http://isotope.metafizzy.co/ */
