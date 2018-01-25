@@ -1,6 +1,8 @@
 /* Page Nav */
 
-#page-nav-wrapper {
+.navbar {
+    height: 100%;
+    padding: 0 auto;
     position: absolute;
     bottom: -4.224rem;
     width: 100%;
@@ -8,63 +10,13 @@
     background-image: $hashed-background;
     height: 4.224rem;
     @include box-shadow(0 4px 4px rgba(0, 0, 0, .2));
-    .navbar {
-        height: 100%;
-        padding: 0 auto;
+    #collapsingNavbar {
+        // background-image: $hashed-background; 
+        // width: 100%;
+        // height: 100%;
+        // @include box-shadow(0 4px 4px rgba(0, 0, 0, .2));        
     }
-    #up-btn {
-        display: none;
-    }
-    #nav-scroll-up-btn {
-        position: absolute;
-        visibility: hidden;
-        opacity: 0;
-        @include transform(translate(75px, 0));
-        @include transition(visibility 0s, opacity 0.2s 0.1s ease-in, transform 0.2s 0.1s ease-in);
-        font-family: Raleway, sans-serif;
-        font-weight: 900;
-        font-size: 1.5rem;
-        color: $text-color;
-    }
-    button {
-        display: none;
-    }
-    #navbarNav {
-        transform: translateX(0);
-        @include transition(all 300ms);
-        width: 100%;
-    }
-    &.fixed {
-        position: fixed;
-        @include box-shadow(0 4px 4px rgba(0, 0, 0, .2));
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 4.224rem;
-        z-index: 100;
-        @media (max-width: 700px) {
-            padding: .25rem 0;
-        }
-        @include media-breakpoint-down(md) {
-            button {
-                display: inline-block;
-                position: relative;
-                margin-left: auto;
-                margin-right: 0;
-                border: none;
-                padding: 0;
-            }
-        }
-        #nav-scroll-up-btn {
-            display: inline-block;
-            visibility: visible;
-            opacity: 1;
-            @include transform(translate(0, 0));
-            &:hover {
-                color: darken($text-color, 100%);
-            }
-        }
-    }
+
     .container {
         padding-right: 15px;
         padding-left: 15px;
@@ -81,44 +33,124 @@
         @media (min-width: 1200px) {
             max-width: 1140px;
         }
-    }
-    .page-nav {
-        width: 100%;
-        position: absolute;
-        right: 0;
-        display: flex;
-        justify-content: space-between;
-        @include transition(width 0.2s ease-in);
-        li {
-            display: inline-block;
-            a {
-                position: relative;
-                font-family: Raleway, sans-serif;
-                font-weight: 600;
-                font-size: 1.2rem;
-                text-decoration: none;
-                color: $text-color;
-                &:after {
-                    @include transition(all 0.4s ease-in-out);
-                    content: "";
-                    position: absolute;
-                    top: 1.8rem;
-                    left: 7.5%;
-                    height: .2rem;
-                    width: 85%;
-                    opacity: 0;
-                    background: linear-gradient(120deg, #4CA0B9 0%, #A5D491 100%);
-                }
-                &.active:after {
-                    opacity: .9;
-                }
-                &:hover {
-                    color: darken($text-color, 100%);
+
+        button {
+            display: none;
+        }
+
+        #nav-scroll-up-btn {
+            position: absolute;
+            visibility: hidden;
+            opacity: 0;
+            @include transform(translate(75px, 0));
+            @include transition(visibility 0s, opacity 0.2s 0.1s ease-in, transform 0.2s 0.1s ease-in);
+            font-family: Raleway, sans-serif;
+            font-weight: 900;
+            font-size: 1.5rem;
+            color: $text-color;
+        }
+        #page-nav {
+            width: 100%;
+            position: relative;
+            right: 0;
+            margin-left: auto;
+            display: flex;
+            justify-content: space-between;
+            @include transition(width 0.2s ease-in);
+            li {
+                display: inline-block;
+                a {
+                    position: relative;
+                    font-family: Raleway, sans-serif;
+                    font-weight: 600;
+                    font-size: 1.2rem;
+                    text-decoration: none;
+                    color: $text-color;
+                    &:after {
+                        @include transition(all 0.4s ease-in-out);
+                        content: "";
+                        position: absolute;
+                        top: 1.8rem;
+                        left: 7.5%;
+                        height: .2rem;
+                        width: 85%;
+                        opacity: 0;
+                        background: linear-gradient(120deg, #4CA0B9 0%, #A5D491 100%);
+                    }
+                    &.active:after {
+                        opacity: .9;
+                    }
+                    &:hover {
+                        color: darken($text-color, 100%);
+                    }
                 }
             }
         }
     }
-    &.fixed .page-nav {
-        width: 70%;
+
+    &.fixed {
+        position: fixed;
+        @include box-shadow(0 4px 4px rgba(0, 0, 0, .2));
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4.224rem;
+        z-index: 100;
+        @media (max-width: 700px) {
+            padding: .25rem 0;
+        }
+        @include media-breakpoint-down(md) {
+            .navbar-toggler {
+                display: inline-block;
+                position: relative;
+                margin-left: auto;
+                margin-right: 0;
+                border: none;
+                padding: 0;
+                background-color: $text-color;
+                background: transparent !important;
+                &:hover {
+                    background: transparent !important;
+                }
+            }
+            .icon-bar {
+                width: 22px;
+                transition: all 0.2s;
+            }
+            .top-bar {
+                transform: rotate(45deg);
+                transform-origin: 10% 10%;
+            }
+            .middle-bar {
+                opacity: 0;
+            }
+            .bottom-bar {
+                transform: rotate(-45deg);
+                transform-origin: 10% 90%;
+            }
+            &.collapsed {
+                .top-bar {
+                    transform: rotate(0);
+                }
+                .middle-bar {
+                    opacity: 1;
+                }
+                .bottom-bar {
+                    transform: rotate(0);
+                }
+            }
+        }
+        #nav-scroll-up-btn {
+            display: inline-block;
+            visibility: visible;
+            opacity: 1;
+            @include transform(translate(0, 0));
+            &:hover {
+                color: darken($text-color, 100%);
+            }
+        }
+        #page-nav {
+            width: 70%;
+        }
     }
 }

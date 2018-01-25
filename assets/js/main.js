@@ -23,7 +23,7 @@ $(document).ready(function () {
     });
 
     /* ======= Scrollspy ======= */
-    $('body').scrollspy({ target: '#page-nav-wrapper', offset: 100 });
+    $('body').scrollspy({ target: '.navbar', offset: 100 });
 
     /* ======= ScrollTo ======= */
     $('.scrollto').on('click', function (e) {
@@ -38,7 +38,7 @@ $(document).ready(function () {
     });
 
     /* ======= Fixed page nav when scrolled ======= */  
-    var menu = $('#page-nav-wrapper');
+    var menu = $('.navbar');
     var origOffsetY = menu.offset().top;  
     $(window).on('scroll resize load', function() {
      
@@ -102,19 +102,5 @@ $(document).ready(function () {
     $(window).on('orientationchange', function () {
         var viewportHeight = $(window).height();
         $('.intro').css({ height: viewportHeight });
-    });
-
-    //navbar change from row to vertical
-    $('.navbar-toggle').click(function () {
-        var $navItems = $('#page-nav-wrapper .page-nav li');
-        var $pageNavBar = $('.page-nav');
-        if ($(this).hasClass('collapsed')) {
-            // $navItems.css("display", "block");
-            // $pageNavBar.css("height", "10rem");
-            
-        } else {
-            // $navItems.css("display", "inline-block");
-            // $pageNavBar.css("height", "4.224rem");            
-        }
     });
 });
