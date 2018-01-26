@@ -1,8 +1,11 @@
 .portfolio-item {
     padding-top: 4.35rem;
     padding-bottom: 1.5rem;
+    // .carousel-item {
+    //     max-height: 400px;        
+    // }
     .container {
-        width: 40%;
+        width: 70%;
         padding-top: 2.8rem;
         @include media-breakpoint-down(lg) {
             width: 90%;
@@ -19,6 +22,11 @@
     .content {
         margin: 0 auto;
         padding: 0;
+        @include media-breakpoint-up(lg) {
+            #write-up {
+                margin: 0 12%;
+            }
+        }
     }
     h2 {
         width: 90%;
