@@ -13,10 +13,20 @@ body {
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
     position: relative;
+
+    @include selection {
+        color: $purple;
+        background: $header-text-color-secondary;
+    }
 }
 
 p {
     margin-bottom: 1em;
+
+    a {
+        text-decoration: underline;
+        color: $teal;
+    }
 }
 
 .h1,
