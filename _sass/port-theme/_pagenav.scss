@@ -66,22 +66,30 @@
                     font-size: 1.2rem;
                     text-decoration: none;
                     color: $text-color;
-                    &:after {
+                    @include transition(all 0.4s ease-out);
+                    &:before {
                         @include transition(all 0.4s ease-in-out);
                         content: "";
+                        z-index: -10;
                         position: absolute;
                         top: 1.8rem;
                         left: 7.5%;
-                        height: .2rem;
+                        height: .15rem;
                         width: 85%;
                         opacity: 0;
                         background: linear-gradient(120deg, #4CA0B9 0%, #A5D491 100%);
                     }
-                    &.active:after {
+                    &.active {
+                        @include transform(scale(1.2));
+                    }
+                    &.active:before {
                         opacity: .9;
                     }
                     &:hover {
                         color: darken($text-color, 100%);
+                        &.active:after {
+                            opacity: .9;
+                        }
                     }
                 }
             }
