@@ -25,7 +25,7 @@ p {
 
     a {
         text-decoration: underline;
-        color: $teal;
+        color: $purple;
     }
 }
 
@@ -88,11 +88,11 @@ a {
     color: $theme-color;
     @include transition (all 0.4s ease-in-out);
     &:hover {
-        text-decoration: none;
-        color: darken($theme-color, 15%);
+        // text-decoration: none;
+        color: darken($purple, 30%);
     }
     &:focus {
-        text-decoration: none;
+        // text-decoration: none;
     }
 }
 
@@ -208,4 +208,14 @@ a.btn {
         // }
     }
 
+}
+
+.teal {
+    color: $teal;
+}
+.purple {
+    color: $purple;
+}
+.green {
+    color: $green;
 }

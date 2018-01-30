@@ -16,4 +16,11 @@
 {% if page.layout == "page" %}
 <!-- custom js for main page -->
 <script type="text/javascript" src="/assets/js/portfolio-items.js"></script>
+<script src="http://files.keyes.ie/things/baseliner/baseliner-latest.min.js">
+</script>
+<script>
+window.onload = function() {
+    baseliner = new Baseliner({ gridHeight: 25.6, gridOffset: 10});
+}
+</script>
 {% endif %}

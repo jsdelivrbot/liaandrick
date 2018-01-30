@@ -18,7 +18,7 @@ jQuery(document).ready(function ($) {
 
             var headline = $(this),
             spanWrapper = headline.find('.cd-words-wrapper'),
-            newWidth = spanWrapper.width() + 10;
+            newWidth = spanWrapper.width();
             spanWrapper.css('width', newWidth);
 
             // spanWrapper.css('max-width', window.innerWidth - 20);
@@ -40,7 +40,7 @@ jQuery(document).ready(function ($) {
 
     function showWord($word, $duration) {
 
-        $word.parents('.cd-words-wrapper').animate({ 'width': $word.width() + 10 }, revealDuration, function () {
+        $word.parents('.cd-words-wrapper').animate({ 'width': $word.width() }, revealDuration, function () {
             setTimeout(function () { hideWord($word) }, revealAnimationDelay);
         });
     }
