@@ -41,16 +41,10 @@ $baseline-height: 1.6rem;
         color: $text-color;
         line-height: 4.9rem;
         margin: 0 auto .7rem auto;
-                // margin-bottom: .7rem;
-        // @include media-breakpoint-between(xs, md) {
-        //     line-height: 3.5rem;
-        //     font-size: 3.5em;
-        // }
-        // @include media-breakpoint-down(xs) {
-        //     line-height: 2.935rem;
-        //     font-size: 3em;
-        //     margin-bottom: 2.25rem;
-        // }
+        
+        @include media-breakpoint-down(md) {
+            width: 100%;
+        }
     }
     h3 {
         width: 90%;
@@ -62,6 +56,9 @@ $baseline-height: 1.6rem;
         }
         @include media-breakpoint-down(sm) {
             margin-bottom: 1.25rem;
+        }
+        @include media-breakpoint-down(md) {
+            width: 100%;
         }
         &.title {
             width: 90%;
@@ -77,32 +74,52 @@ $baseline-height: 1.6rem;
         line-height: 1.6rem;
         margin: 0 auto 1.38rem;
         padding-top: 0.25rem;
+        @include media-breakpoint-down(md) {
+            width: 100%;
+        }
     }
     h5 {
         width: 70%;
         line-height: 2.6rem;
         margin: 0 auto 0.7rem;
+        @include media-breakpoint-down(md) {
+            width: 100%;
+        }
     }
     ul {
         margin: 0 auto 1.2rem;
         line-height: 1.65rem;
-        padding-left: 4rem;        
         font-size: 1rem;
         list-style-type: circle;
         list-style-position: outside;
         &.checkboxes li {
             list-style-type: none;
+            // width: 90%;
+            margin: 0 auto;
             i {
                 padding-right: 1rem;
             }
             p {
-                margin-bottom: $baseline-height;
-                margin-left: calc(1rem + 12.578px);
+                margin-bottom: 1.2rem;
                 color: $text-grey;
                 @include transition(all 0.2s ease-in-out);
+
+                &:before {
+                    font-family: FontAwesome;
+                    content: "\f096";
+                    position: absolute;
+                    left: 10px;
+                    @include media-breakpoint-down(md) {
+                        left: 0;
+                    }
+                 }
             }
             &:hover p {
                 color: $text-color;
+                &:before {
+                    content: "\f046";
+                    
+                 }
             }
         }
     }
@@ -112,14 +129,37 @@ $baseline-height: 1.6rem;
         padding-top: 0.4rem;
         font-size: 1rem;;
         line-height: 1.65rem;
-        // @include media-breakpoint-down(sm) {
-        //     line-height: 1.45rem;
-        //     font-size: 14px;
-        //     margin-bottom: 2.82rem;
-        // }
+        @include media-breakpoint-down(md) {
+            width: 100%;
+            font-size: 14px;
+        }
     }
     .questions {
-        width: 100%;
+        width: 90%;
+        margin: 0 auto 0.8rem;
+        @include media-breakpoint-down(md) {
+            width: 100%;
+            margin: 0 0 0.8rem;
+        }
+        .question {
+            padding: 0;
+            p {
+                margin: 0;
+
+                &.follow-up {
+                    padding-top: 0.1rem;
+                }
+            }
+            .count {
+                    color: $teal;
+                    float: left;
+                    font-size: 6rem;
+                    line-height: 60px;
+                    padding-top: 4px;
+                    padding-right: 0.85rem;
+                    // padding-left: 3px;
+            }
+        }
     }
     .carousel.slide {
         // width: 90%;
@@ -222,7 +262,7 @@ $baseline-height: 1.6rem;
     }
     .goals {
         width: 90%;
-        margin: 0 auto 2.2rem;
+        margin: 0 auto 2.5rem;
 
         .links {
             padding-top: .5rem;
@@ -234,31 +274,55 @@ $baseline-height: 1.6rem;
         }
 
         .list-group-item {
-            border: 1px solid black;
-            @include border-radius(7px);
+            border: none;
             display: inline;
             padding: 0 0.75rem;
+            @include transition(all 0.1s ease-in-out);
 
-            // a {
-            //     margin: 0 auto 1.2rem;
-            //     padding-top: 0.4rem;
-            //     font-size: 1rem;;
-            //     line-height: 1.65rem;
-            // }
+            &:hover {
+                background: none;
+                color: $teal;
+                font-weight: bold;
+            }
 
             &.active {
                 background: none;
                 color: $teal;
-            }
+                font-weight: bold;
+                text-decoration: underline solid $text-grey;            }
         }
 
         .tabs {
-            margin: 0 auto;
+            margin: 2rem auto 0;
             padding-top: 1.6rem;
             @include transition(height 0.2s east-out);
             h4 {
-                line-height: 2rem;
+                line-height: 2.35rem;
             }
+
+            .tab-content:before {
+                content: " ";
+                position: absolute;
+                border-left:2px solid #666;
+                border-top:2px solid #666;
+                border-bottom:2px solid #666;
+                padding:5px;
+                top:-10px;
+                bottom:-10px;
+                left: -5px;
+             }
+             .tab-content:after
+             {
+                content: " ";
+                position: absolute;
+                border-right:2px solid #666;
+                border-top:2px solid #666;
+                border-bottom:2px solid #666;
+                padding:5px;
+                top:-10px;
+                bottom:-10px;
+                right: -5px;
+             }
         }
     }
 }
