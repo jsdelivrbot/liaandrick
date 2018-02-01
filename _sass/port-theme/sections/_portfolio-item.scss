@@ -1,10 +1,16 @@
 $baseline-height: 1.6rem;
 
 .portfolio-item {
-    padding-top: $baseline-height * 5;
+    padding-top: 4rem;
+
+    @include media-breakpoint-down(md) {
+        padding-top: 7rem;
+    }
 
     .sub-section {
         padding-top: $baseline-height;
+        margin: 0 auto;
+        width: 90%;
     }
     .container {
         width: 50%;
@@ -26,11 +32,25 @@ $baseline-height: 1.6rem;
             }
         }
     }
+    .card {
+        margin: .5rem .5rem;
+        padding: 0;
+    }
     #portfolio-images {
         width: 90%;
         margin-bottom: 3.3rem;
         margin-top: $baseline-height;
         padding: 0;
+    }
+    .mission {
+        color: $purple;
+        border: 1px solid $text-color;
+        
+        // background-color: $purple;
+        // border-top: 1px solid $text-color;
+        // border-bottom: 1px solid $text-color;
+        text-align: center;
+        padding: 0 10%;
     }
     h2 {
         // width: 70%;
