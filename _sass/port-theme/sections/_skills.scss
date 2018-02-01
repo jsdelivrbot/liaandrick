@@ -29,7 +29,6 @@
             text-align: left;
         }
         .skill-name {
-            // margin: 0;
             margin: auto 0;
         }
         .chart{
@@ -39,12 +38,13 @@
             vertical-align: top;
             position: relative;
             padding-top: 1rem;
+            padding-right: .5rem;
             margin-right: 1rem;
           
             span {
               font-family: 'Roboto', sans-serif;                
               display: block;
-              font-size: 1.6em;
+              font-size: 1.1em;
               font-weight: 800;
             //   font-weight: normal;
               line-height: 1;
@@ -54,8 +54,6 @@
               position: absolute;
               left: 0;
               top: 0;
-              width: 80px;
-              height: 80px;
             }
           }
         // .chart {
