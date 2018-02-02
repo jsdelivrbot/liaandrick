@@ -42,7 +42,7 @@
             visibility: hidden;
             opacity: 0;
             @include transform(translate(75px, 0));
-            @include transition(visibility 0s, opacity 0.2s 0.1s ease-in, transform 0.2s 0.1s ease-in);
+            @include transition(visibility 0s, opacity 0.2s 0.2s ease-in, transform 0.2s 0.2s ease-in, color 0.2s ease-in-out);
             font-family: Raleway, sans-serif;
             font-weight: 900;
             font-size: 1.5rem;
@@ -137,7 +137,6 @@
             visibility: visible;
             opacity: 1;
             @include transform(translate(0, 0));
-            @include transition(color 0.2s ease-in-out);
             &:hover {
                 color: darken($text-color, 100%);
             }
