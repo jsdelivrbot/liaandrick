@@ -43,26 +43,26 @@ $baseline-height: 1.6rem;
         padding: 0;
     }
     .mission {
+        font-size: 1.618rem;
         color: $purple;
-        border: 1px solid $text-color;
-        
-        // background-color: $purple;
-        // border-top: 1px solid $text-color;
-        // border-bottom: 1px solid $text-color;
+        width: 100%;
+        border-left: 1px solid $text-color;
+        border-right: 1px solid $text-color;
         text-align: center;
-        padding: 0 10%;
+        padding: .5rem 2.5%;
     }
     h2 {
         // width: 70%;
         text-decoration: none;
         text-shadow: #fff 0 3px 1px;
+        text-align: center;
         background-image: linear-gradient(120deg, #4CA0B9 0%, #A5D491 100%);
         background-position: bottom left;
         background-repeat: no-repeat;
         background-size: 100% .3rem;
         color: $text-color;
         line-height: 4.9rem;
-        margin: 0 auto .7rem auto;
+        margin: 0 auto .7rem;
         
         @include media-breakpoint-down(md) {
             width: 100%;
@@ -70,7 +70,8 @@ $baseline-height: 1.6rem;
     }
     h3 {
         width: 90%;
-        margin: 0 auto 0.95rem;
+        margin-top: 0;
+        margin-bottom: .95rem;
         margin-bottom: 1rem;
         padding-top: 0.8rem;
         @include media-breakpoint-down(xs) {
@@ -94,22 +95,26 @@ $baseline-height: 1.6rem;
     h4 {
         width: 90%;
         line-height: 1.6rem;
-        margin: 0 auto 1.38rem;
+        margin-top: 0;
+        margin-bottom: 1.38rem;
         padding-top: 0.25rem;
         @include media-breakpoint-down(md) {
             width: 100%;
         }
     }
     h5 {
-        width: 90%;
+        // width: 90%;
         line-height: 2.6rem;
-        margin: 0 auto 0.7rem;
+        margin-top: 0;
+        margin-bottom: 0.7rem;
+        text-align: center;
         // @include media-breakpoint-down(md) {
         //     width: 100%;
         // }
     }
     ul {
-        margin: 0 auto 1.2rem;
+        margin-top: 0;
+        margin-bottom: 1.2rem;
         line-height: 1.65rem;
         font-size: 1rem;
         list-style-type: circle;
@@ -145,9 +150,23 @@ $baseline-height: 1.6rem;
             }
         }
     }
+    img {
+        @include box-shadow(0 4px 12px rgba(0, 0, 0, .2));
+        @include transition(all 0.2s ease-in-out);
+        cursor: zoom-in;
+        &:hover {
+            @include box-shadow(0 8px 12px rgba(0, 0, 0, .2));
+        }
+
+        +.img-desc {
+            font-size: 14px;
+            color: $text-grey;
+        }
+    }
     p {
-        width: 90%;
-        margin: 0 auto 1.2rem;
+        // width: 90%;
+        margin-top: 0;
+        margin-bottom: 1.2rem;
         padding-top: 0.4rem;
         font-size: 1rem;;
         line-height: 1.65rem;
@@ -183,10 +202,22 @@ $baseline-height: 1.6rem;
             }
         }
     }
+    .single-slide {
+        @include box-shadow(0 4px 12px rgba(0, 0, 0, .2));
+        margin-bottom: 2.45rem;
+        @include transition(all 0.2s ease-in-out);
+        &:hover {
+            @include box-shadow(0 8px 12px rgba(0, 0, 0, .2));
+        }
+    }
     .carousel.slide {
         // width: 90%;
         @include box-shadow(0 4px 12px rgba(0, 0, 0, .2));
         margin-bottom: 2.45rem;
+        @include transition(all 0.2s ease-in-out);
+        &:hover {
+            @include box-shadow(0 8px 12px rgba(0, 0, 0, .2));
+        }
         .carousel-indicators {
             bottom: -2rem;
         }

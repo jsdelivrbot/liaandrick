@@ -29,4 +29,11 @@ $(document).ready(function () {
       $(".tab-pane:not(" + getId + ")").hide();      
       $(getId).show().removeClass("d-none");
     });
+
+    	$('img').on('click', function() {
+        $('.enlargeImageModalSource').attr('src', $(this).attr('src'));
+        $('#enlargeImageModalDesc').text($(this).next().text());
+        $('#enlargeImageModal').modal('show');
+    });
+    
 });

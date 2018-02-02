@@ -42,11 +42,15 @@
         img {
             // border-radius: .25rem;
             @include box-shadow(0 4px 12px rgba(0, 0, 0, .2));
+            @include transition (all 0.4s ease-in-out);            
         }
         &:hover {
             // background: lighten($theme-color, 2%);
-            @include scale(1.05);
+            // @include scale(1.05);
+            
             img {
+                @include box-shadow(0 8px 12px rgba(0, 0, 0, .2));
+                
                 @include opacity(0.9);
             }
         }

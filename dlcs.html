@@ -3,106 +3,124 @@ layout: page
 title: Jamie Catania - Digital Leadership Challenge Simulation
 permalink: /dlcs/ 
 ---
-<div class="portfolio-item"> {% include portfolio-navbar.html %}
+<div class="portfolio-item"> 
+  {% include portfolio-navbar.html %}
   <div class="container section my-lg-5">
-    <div class="content col-12">
-      <h2>Digital Leadership Challenge Simulation</h2>
-      <h5 class="d-block">User Experience Design / Apr 2013 - Nov 2014</h5>
-      <div id="portfolio-images" class="carousel slide container py-auto" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#portfolio-images" data-slide-to="0" class="active"></li>
-          <li data-target="#portfolio-images" data-slide-to="1"></li>
-          <li data-target="#portfolio-images" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-          <div class="carousel-item my-auto active">
-            <img class="d-block img-fluid" src="/assets/images/portfolio/hcd/HCD_vid1.png" alt="First slide">
-          </div>
-          <div class="carousel-item">
-            <script src="https://fast.wistia.com/embed/medias/w5ye5xk7d2.jsonp" async></script>
-            <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
-            <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
-              <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
-                <div class="wistia_embed wistia_async_w5ye5xk7d2 seo=false videoFoam=true" style="height:100%;width:100%">&nbsp;</div>
-              </div>
-            </div>
-            <!-- <img class="d-block img-fluid" src="/assets/images/portfolio/hcd/HCD_demo1.gif" alt="Second slide">  -->
-          </div>
-          <div class="carousel-item">
-            <img class="d-block img-fluid" src="/assets/images/portfolio/hcd/HCD_learning_path_overview.png" alt="Third slide">
-          </div>
+  <div class="modal fade" id="enlargeImageModal" tabindex="-1" role="dialog" aria-labelledby="enlargeImageModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <span id="enlargeImageModalDesc"></span>            
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
         </div>
-        <a class="left slide-control" href="#portfolio-images" role="button" data-slide="prev">
-          <i class="fa fa-angle-left"></i>
-        </a>
-        <a class="right slide-control" href="#portfolio-images" role="button" data-slide="next">
-          <i class="fa fa-angle-right"></i>
-        </a>
+        <div class="modal-body">
+          <img src="" class="enlargeImageModalSource" style="width: 100%;">
+        </div>
       </div>
-      <div id="write-up">
-        <div class="sub-section">
-          <h3 class="mission">How might we improve executives' ability to lead teams through constant organizational change?</h3>
+    </div>
+  </div>
+  <div class="content col-12">
+    <h2>Digital Leadership Challenge Simulation</h2>
+    <h5 class="d-block">User Experience Design / 2013 - 2014</h5>
+    <div id="write-up">
+      <div class="sub-section align-middle">
+        <h3 class="mission mb-md-5">How might we improve executives' ability to lead teams through constant organizational change?</h3>
+      </div>
+      <div class="sub-section row">
+        <div class="col-12 col-md-5 pl-md-0">
+          <h3 class="pt-md-0">Objective</h3>
+          <p class="mb-md-0">Given an existing, successful tabletop leadership simulation, design and build a multiplayer, mobile digital experience
+            to achieve the same outcomes.</p>
         </div>
-        <div class="sub-section row">
-          <div class="col-12 col-md-7">
-            <h3>Objective</h3>
-            <p>Given an existing, successful tabletop leadership simulation, design and build a multiplayer, mobile digital
-              experience to achieve the same outcomes.</p>
+        <div class="col-12 col-md-7 mb-md-0 mt-md-auto">
+          <img class="img-fluid" src="/assets/images/portfolio/dlcs/final/tabletop.png" />
+          <span class="img-desc pull-right mt-2">Tabletop simulation playtest session.</span>
+        </div>
+      </div>
+      <div class="sub-section">
+        <div class="row">
+          <div class="col-8 mx-auto order-2 order-md-1 col-md-5 mb-md-4 mt-md-auto">
+            <img class="img-fluid" src="/assets/images/portfolio/dlcs/final/ux_process.png" />
+            <span class="img-desc mt-2">Waterfall user research and design process.</span>
           </div>
-          <img class="col-12 col-md-5" src="http://via.placeholder.com/350x197" />
-        </div>
-        <div class="sub-section">
-          <h3>My Role</h3>
-          <h4>User Experience (UX) Team Lead</h4>
-          <p>Throughout the life of this project, I led research and design activities for a 6-person multidisciplinary team consisting of a project manager,
-            two UX designers, a visual designer, and a game developer. This role consisted of coordination with internal stakeholders, building holisitic user research and testing strategies, and owning the design inputs to the final product.</p>
-          <p class="mb-0 text-grey">
-            <strong>Design Tools Used:</strong>
-            <br class="d-md-none">
-            <em>Balsamiq, Unity Engine, Mind Mapping, Focus Groups, Paper Prototyping</em>
-          </p>
-        </div>
-        <div class="sub-section">
-          <h3>The Story</h3>
-          <p>We started the project with two primary resources: (1) an existing, three-day in-person tabletop leadership simulation and (2) a team of experienced leadership coaches that have facilitated the simulation for several years. We leveraged these resources through playtesting, detailed task analysis, and user observation. As a result, the team grew to understand and appreciate every facet of the tabletop simulation that contributed to a successful user experience.</p>
-          <p>Our primary finding was that only about 23% of users reported a state of 'flow', where the balance of challenge and success created a sense of immersion and growth. Through discussion with stakeholders, we determined that number to be too low, and established the definition of success for our Digital Leadership Challenge Simulation to be closer to 40% of users reporting a state of flow.</p>
-          <h4>Key Design Insights</h4>
-          <p>Discussion is King. Every interaction in the simulation should contribute to group discussion.</p>
-          <p>The experience should be dynamic and unpredictable, just like change is in the real world.</p>
-          <p>The simulation should be designed to be modular, so that the experience can be easily customized per client.</p>
-          <div class="sub-section">
-              <p>With clear design goals established, the team set to work on execution.</p>
-              
-                  <div class="card-deck">
-                      <div class="card">
-                        <img class="card-img-top" src="http://via.placeholder.com/350x197" alt="Sketch concepts">
-                        <div class="card-body">
-                          <p class="card-text">Rough sketches by one of our UX designers.</p>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <img class="card-img-top" src="/assets/images/portfolio/dlcs/final/low-fi-mockup2.png" alt="Low-fidelity wireframe">
-                        <div class="card-body">
-                          <p class="card-text">Low-fidelity wireframes used to gather user feedback and stakeholder buy-in.</p>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <img class="card-img-top" src="/assets/images/portfolio/dlcs/final/hi-fi-mockup2.png" alt="High-fidelity mockup">
-                        <div class="card-body">
-                          <p class="card-text">High-fidelity mockups delivered to game developer.</p>
-                        </div>
-                      </div>
-                    </div>
+          <div class="col-12 order-1 order-md-2 col-md-7 ">
+            <h3>My Role</h3>
+            <h4>User Experience (UX) Team Lead</h4>
+            <p class="pt-md-0">Throughout the life of this project, I led research and design activities for a 6-person multidisciplinary team
+              consisting of a project manager, two UX designers, a visual designer, and a game developer. This role consisted
+              of coordination with internal stakeholders, building holisitic user research and testing strategies, and owning
+              the design inputs to the final product.</p>
           </div>
         </div>
-
-        <div class="sub-section">
-        <h3>Result</h3>
-
-        <p>Given the high visiblity of the project and the critical importance of the mission, we designed the courseware to
-          break the
+        <p class="mt-md-3 mb-md-0 text-grey">
+          <strong>Design Tools Used:</strong>
+          <br class="d-md-none">
+          <em>Balsamiq, Unity Engine, Mind Mapping, Focus Groups, Paper Prototyping</em>
         </p>
       </div>
+      <div class="sub-section">
+        <div class="row align-bottom">
+          <div class="col-12 col-md-8">
+            <h3 class="ml-md-0">The Story</h3>
+            <p class="ml-md-0">We started the project with two primary resources: (1) an existing, three-day in-person tabletop leadership simulation
+              and (2) a team of experienced leadership coaches that have facilitated the simulation for several years. We leveraged
+              these resources through playtesting, detailed task analysis, and user observation. As a result, the team grew
+              to understand and appreciate every facet of the tabletop simulation that contributed to a successful user experience.</p>
+          </div>
+          <div class="col-8 mx-auto col-md-4 mt-md-auto mb-md-4 pr-md-0">
+            <img class="img-fluid" src="/assets/images/portfolio/dlcs/final/task_analysis.png" />
+            <span class="img-desc mt-2 pull-right">Detailed interaction flow chart.</span>
+          </div>
+        </div>
+  
+        <p>Our primary finding was that only about 23% of users reported a state of 'flow', where the balance of challenge and
+          success created a sense of immersion and growth. Through discussion with stakeholders, we determined that number
+          to be too low, and established the definition of success for our Digital Leadership Challenge Simulation to be closer
+          to 40% of users reporting a state of flow.</p>
+        <h4>Key Design Insights</h4>
+        <p><i class="fa fa-caret-right mr-3"></i>Discussion is King. Every interaction in the simulation should contribute to group discussion.</p>
+        <p><i class="fa fa-caret-right mr-3"></i>The experience should be dynamic and unpredictable, just like change is in the real world.</p>
+        <p><i class="fa fa-caret-right mr-3"></i>The simulation should be designed to be modular, so that the experience can be customized per client.</p>
+        <div class="sub-section mx-0">  
+          <div class="card-deck">
+            <div class="card">
+              <img class="card-img-top" src="/assets/images/portfolio/dlcs/final/rough_sketch1.png" alt="Sketch concepts">
+              <div class="card-body">
+                <p class="card-text">Rough sketches by one of our UX designers.</p>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="/assets/images/portfolio/dlcs/final/low-fi-mockup2.png" alt="Low-fidelity wireframe">
+              <div class="card-body">
+                <p class="card-text">Low-fidelity wireframes used to gather user feedback and stakeholder buy-in.</p>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="/assets/images/portfolio/dlcs/final/hi-fi-mockup2.png" alt="High-fidelity mockup">
+              <div class="card-body">
+                <p class="card-text">High-fidelity mockups delivered to game developer.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+  
+      <div class="sub-section">
+        <h3>Result</h3>
+        <p>After eight months of research, design iterations, game development, and user testing, a fully-functioning Minimally Viable Product was completed and delivered to live clients during three daylong pilot sessions. Early feedback indicated a marked improvement in 'flow'-state for users.</p>
+  
+        <div id="portfolio-images" class="single-slide container py-auto" data-ride="carousel">
+          <script src="https://fast.wistia.com/embed/medias/w5ye5xk7d2.jsonp" async></script>
+          <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+          <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+            <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+              <div class="wistia_embed wistia_async_w5ye5xk7d2 seo=false videoFoam=true" style="height:100%;width:100%">&nbsp;</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
   </div>
