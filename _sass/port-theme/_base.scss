@@ -4,6 +4,7 @@ body {
     font-family: 'Roboto', sans-serif;
     color: $text-color;
     background: $smoky-white;
+    background-image: url('images/backgrounds/back-pattern.png');
     font-size: 16px;
     @include media-breakpoint-down(xs) {
         font-size: 14px;
