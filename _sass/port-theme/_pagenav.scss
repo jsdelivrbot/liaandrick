@@ -6,7 +6,8 @@
     bottom: -4.224rem;
     width: 100%;
     left: 0;
-    background-image: $header-bg, linear-gradient(90deg, #5FABB0 0%, #A4D391 100%);
+    background-image: $header-bg, linear-gradient(#eef1f5 0%, #eef1f5 100%);
+    @include transition(all 0.2s ease-in);    
     height: 4.224rem;
     @include box-shadow(0 4px 4px rgba(0, 0, 0, .2));
     #collapsingNavbar {
@@ -82,6 +83,7 @@
 
     &.fixed {
         position: fixed;
+        background-image: url("images/swirl.png"), linear-gradient(90deg, #5FABB0 0%, #A4D391 100%);
         @include box-shadow(0 4px 4px rgba(0, 0, 0, .2));
         top: 0;
         left: 0;
