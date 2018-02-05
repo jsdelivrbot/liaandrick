@@ -29,11 +29,7 @@
         height: 100vh;
         
         .bg {
-            // background-image: $header-bg, linear-gradient(90deg, #5FABB0 0%, #A4D391 100%) ; 
-            // background-image: $header-bg, linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-            background-image: $header-bg, linear-gradient(to bottom, #e6e9f0 0%, #eef1f5 100%);
-            // background: linear-gradient(90deg, #5FABB0 0%, #A4D391 100%);
-            
+            background-image: $header-bg, linear-gradient(to bottom, #e6e9f0 0%, #eef1f5 100%);            
             position: absolute;
             z-index: -10;
             width: 100%;
@@ -59,9 +55,6 @@
             text-align: center;
             padding: 0;
             top: 10%;
-            // @include media-breakpoint-up(sm) {
-            //     top: 10%;
-            // }
             @include media-breakpoint-up(md) {
                 top: 10%;
             }
@@ -111,9 +104,6 @@
                 background-repeat: no-repeat;
                 background-size: 100% .3rem;
 
-                // @media screen and media-breakpoint-up(sm) {
-                //     margin-bottom: 1rem;
-                // }
                 @media screen and (orientation: landscape) {
                     margin-bottom: .4rem;
                 }
