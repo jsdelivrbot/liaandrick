@@ -10,12 +10,6 @@
     @include transition(all 0.2s ease-in);    
     height: 4.224rem;
     @include box-shadow(0 4px 4px rgba(0, 0, 0, .2));
-    #collapsingNavbar {
-        // background-image: $hashed-background; 
-        // width: 100%;
-        // height: 100%;
-        // @include box-shadow(0 4px 4px rgba(0, 0, 0, .2));        
-    }
 
     .container {
         padding-right: 15px;
@@ -36,6 +30,21 @@
 
         button {
             display: none;
+        }
+
+        .navbar-collapse {
+            @include media-breakpoint-down(md) {
+                position: absolute;
+                left: 0;
+                top: 4.224rem;
+                @include box-shadow(0 4px 4px rgba(0, 0, 0, .2));
+                background-image: url("images/swirl.png"), linear-gradient(90deg, #5FABB0 0%, #A4D391 100%);
+                width: 100%;                
+                ul {
+                    margin: 0 auto;
+                    text-align: right;
+                }
+            }
         }
 
         #nav-scroll-up-btn {
