@@ -30,7 +30,14 @@ $(document).ready(function () {
       $(getId).show().removeClass("d-none");
     });
 
+    // Show enlarged images in modals on click.
     	$('img').on('click', function() {
+
+        //Bail on the modal for images that should link to external pages.
+        if ($(this).hasClass('no-modal')) {
+          return;
+        }
+        
         $('.enlargeImageModalSource').attr('src', $(this).attr('src'));
         $('#enlargeImageModalDesc').text($(this).next().text());
         $('#enlargeImageModal').modal('show');

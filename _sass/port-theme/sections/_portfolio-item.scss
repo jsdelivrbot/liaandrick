@@ -158,6 +158,10 @@ $baseline-height: 1.6rem;
         cursor: zoom-in;
         &:hover {
             @include box-shadow(0 8px 12px rgba(0, 0, 0, .2));
+            @include translate(.05rem, -.05rem);
+        }
+        &.external {
+            cursor: pointer;
         }
 
         +.img-desc {
