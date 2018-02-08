@@ -17,11 +17,12 @@
         &:hover {
             img {
                 box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                @include translate(.05rem, -.05rem);                
             }
             .sub-title {
                 @include translate(0.5rem, 0);
                 &:before {
-                    @include translate(-1.75rem, 0);                    
+                    @include translate(-18px, 0);                    
                     opacity: 1;                    
                 }
             }
@@ -42,7 +43,7 @@
                 font-family: FontAwesome;
                 content: "\f0da";
                 position: absolute;
-                left: 10px;
+                left: 0px;
                 color: $text-color;
                 @include transition (all 0.2s ease-in-out);
             }
