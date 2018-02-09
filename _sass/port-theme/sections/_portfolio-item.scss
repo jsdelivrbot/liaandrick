@@ -167,6 +167,16 @@ $baseline-height: 1.6rem;
         +.img-desc {
             font-size: 14px;
             color: $text-grey;
+        } 
+    }
+    .modal-body {
+        img {
+            cursor: default;
+            @include transition(none);
+            &:hover {
+                @include box-shadow(0 4px 12px rgba(0, 0, 0, .2));
+                @include translate(0px, 0px);
+            }
         }
     }
     p {
