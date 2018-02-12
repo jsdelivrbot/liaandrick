@@ -5,62 +5,52 @@ permalink: portfolio/learning-platform
 ---
 <div class="portfolio-item">
   {% include portfolio-navbar.html %}
-  <div class="container section">
+  <div class="container section my-lg-5">
+      <div class="modal fade" id="enlargeImageModal" tabindex="-1" role="dialog" aria-labelledby="enlargeImageModal" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                  <span id="enlargeImageModalDesc"></span>            
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="" class="enlargeImageModalSource" style="width: 100%;">
+              </div>
+            </div>
+          </div>
+        </div>
     <div class="content col-12">
       <h2>GovLoop Academy & Learning Platform</h2>
       <h5 class="d-block">Software Engineering & UX Design / Nov 2014 - Oct 2017</h5>
-      <div id="portfolio-images" class="carousel slide container py-auto" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#portfolio-images" data-slide-to="0" class="active"></li>
-          <li data-target="#portfolio-images" data-slide-to="1"></li>
-          <li data-target="#portfolio-images" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-          <div class="carousel-item my-auto active">
-            <img class="d-block img-fluid" src="/assets/images/portfolio/hcd/HCD_vid1.png" alt="First slide">
-          </div>
-          <div class="carousel-item">
-            <script src="https://fast.wistia.com/embed/medias/w5ye5xk7d2.jsonp" async></script>
-            <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
-            <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
-              <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
-                <div class="wistia_embed wistia_async_w5ye5xk7d2 seo=false videoFoam=true" style="height:100%;width:100%">&nbsp;</div>
+   <div id="write-up">
+            <div class="sub-section align-middle">
+                <h3 class="mission mb-md-5">How might we design a seamless user experience between learning platform and learning content?</h3>
               </div>
-            </div>
-            <!-- <img class="d-block img-fluid" src="/assets/images/portfolio/hcd/HCD_demo1.gif" alt="Second slide">  -->
-          </div>
-          <div class="carousel-item">
-            <img class="d-block img-fluid" src="/assets/images/portfolio/hcd/HCD_learning_path_overview.png" alt="Third slide">
-          </div>
-        </div>
-        <a class="left slide-control" href="#portfolio-images" role="button" data-slide="prev">
-          <i class="fa fa-angle-left"></i>
-        </a>
-        <a class="right slide-control" href="#portfolio-images" role="button" data-slide="next">
-          <i class="fa fa-angle-right"></i>
-        </a>
-      </div>
-      <div id="write-up">
-        <div class="sub-section">
-          <h3>The Brief</h3>
-          <p>As the saying goes, "Everyone hates their LMS" (Learning Management System). GovLoop needed to deliver and track
-            hundreds of microlearning experiences for their thousands of users. So rather than licensing an off-the-shelf
-            LMS we would grow to hate, we built our own.</p>
-        </div>
-        <div class="sub-section">
+        <div class="sub-section row">
+            <div class="col-12 col-md-7 pl-md-0 py-auto">
+                <h3>The Brief</h3>
+                <p>As the saying goes, "Everyone hates their LMS" (Learning Management System). GovLoop needed to deliver and track
+                  hundreds of microlearning experiences for their thousands of users. So rather than licensing an off-the-shelf
+                  LMS we would grow to hate, we built our own.</p>
+                <h3 class="pt-md-0">Objective</h3>
+                <p class="mb-md-0">Design and build a lightweight Learning Management System (LMS) to deliver and track hundreds of microlearning
+                    experiences for GovLoop's thousands of users and government clients alike.</p>
+              </div>
+              <div class="col-12 col-md-5 mb-md-0 mt-md-auto">
+                <img class="img-fluid" src="/assets/images/portfolio/gla/gla_homepage_full.png" />
+                <span class="img-desc d-none d-md-inline-block pull-right mt-2">GovLoop Academy's Homepage.</span>
+              </div>
+              </div>
 
-          <h3>Objective</h3>
 
-          <p>Design and build a lightweight Learning Management System (LMS) to deliver and track hundreds of microlearning
-            experiences for GovLoop's thousands of users and government clients alike.</p>
-        </div>
+
         <div class="sub-section">
           <h3>My Role</h3>
           <h4>Learning Experience Designer & Software Engineer</h4>
-          <p>I worked on the GovLoop Learning Platform over the course of three years. Initially, my contributions to the project
-            consisted of Learning Experience Design, working to answer key questions about our users and developing strategies
-            for pleasing them. After two years, I moved into a Software Engineering role, taking a more hands-on approach
-            to designing and developing features.</p>
+          <p>I worked on the GovLoop Learning Platform over the course of three years. Initially, my role on the project consisted of asking key questions about our users and forming strategies for answering those questions. With a better understanding of our users, I spent the next two years designing dozens of highly-interactive, bite-sized learning experiences hosted on our platform. Eventually, I moved into a Software Engineering role, taking a more hands-on approach
+            to designing and developing platform features like advanced reporting and content discovery.</p>
           <p class="mb-0 text-grey">
             <strong>Design Tools Used:</strong>
             <br class="d-md-none">
@@ -76,38 +66,39 @@ permalink: portfolio/learning-platform
         <div class="sub-section">
           <h3>The Story</h3>
           <p>At the outset of the project, we had to answer some foundational questions:</p>
-          <div class="questions d-flex flex-column flex-md-row text-left mx-auto">
-            <div class="question col-12 col-md-4">
-              <p class="inline-block">
-                <span class="count d-inline-block">1</span>
-                <strong> Who are our users and what do they need?</strong>
-              </p>
-              <p class="follow-up">
-                <em>What are their primary motivations, frustrations, and preferred modes of learning?</em>
-                <p>
+          <ul class="list-group">
+          <li class="list-group-item row gla-questions">
+            <div class="count col-2 col-md-1">
+                <p class="d-inline-block">1</p>
             </div>
-            <div class="question col-12 col-md-4">
-              <p>
-                <span class="count">2</span>
-                <strong>What is a 'GovLoop Learning Experience?'</strong>
-              </p>
-              <p class="follow-up">
-                <em>How do we build a uniform, consistent marriage between learning content and platform experiences?</em>
-                <p>
+            <div class="questions col-10 col-md-11">
+              <p class="question mb-1"><strong> Who are our users and what do they need?</strong></p>
+              <p class="question">What are their primary motivations, frustrations, and preferred modes of learning?</p>
             </div>
-            <div class="question col-12 col-md-4">
-              <p>
-                <span class="count">3</span>
-                <strong>How do we change users' expectations of elearning?</strong>
-              </p>
-              <p class="follow-up">
-                <em>Why is their view of online learning so poor, and what are we going to do differently to raise expectations?</em>
-                <p>
-            </div>
-          </div>
+          </li>
+          <li class="list-group-item row gla-questions">
+              <div class="count col-2 col-md-1">
+                  <p>2</p>
+              </div>
+              <div class="questions col-10 col-md-11">
+                <p class="question mb-1"><strong>What is a 'GovLoop Learning Experience?'</strong></p>
+                <p class="question">How do we build a uniform, consistent marriage between learning content and platform experiences?</p>
+              </div>
+            </li>
+          <li class="list-group-item row gla-questions">
+              <div class="count col-2 col-md-1">
+                  <p>3</p>
+              </div>
+              <div class="questions col-10 col-md-11">
+                <p class="question mb-1"><strong>How do we change users' expectations of elearning?</strong></p>
+                <p class="question">Why are our users' view of online learning so poor, and what are we going to do differently to raise expectations?</p>
+              </div>
+            </li>
+          </ul>
+
           <p>
             We took a service design approach to answering these questions, conducting user interviews & focus groups, structured design
-            thinking activities (i.e. "Gamestorming"), and rapid prototyping. While these activities were certainly a team-based
+            thinking activities (e.g. <a href="https://www.amazon.com/Gamestorming-Playbook-Innovators-Rulebreakers-Changemakers/dp/0596804172/ref=sr_1_1?ie=UTF8&qid=1518462858&sr=8-1&keywords=gamestorming" target="_blank">"Gamestorming"</a>), and rapid prototyping. While these activities were certainly a team-based
             effort, my contribution came primarily in the form of strategic planning and facilitation of many of the activities.
             In addition, I led the effort to distill our observations into actionalable design insights.</p>
             <div class="sub-section">
@@ -208,5 +199,6 @@ permalink: portfolio/learning-platform
         </p>
       </div>
     </div>
+  </div>
   </div>
 </div>
