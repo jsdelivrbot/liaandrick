@@ -1,12 +1,9 @@
 $baseline-height: 1.6rem;
-
 .portfolio-item {
     padding-top: 4rem;
-
     @include media-breakpoint-down(md) {
         padding-top: 7rem;
     }
-
     .sub-section {
         padding-top: $baseline-height;
         margin: 0 auto;
@@ -15,7 +12,6 @@ $baseline-height: 1.6rem;
     .container {
         width: 50%;
         padding-top: $baseline-height;
-        // padding-top: $baseline-height * 2;
         @include media-breakpoint-down(lg) {
             width: 90%;
         }
@@ -26,20 +22,13 @@ $baseline-height: 1.6rem;
     .content {
         margin: 0 auto;
         padding: 0;
-        @include media-breakpoint-up(lg) {
-            #write-up {
-                // margin: 0 1%;
-            }
-        }
     }
     .card {
         margin: .5rem .5rem;
         padding: 0;
-        // min-width: 33%;
     }
     #portfolio-images {
         width: 100%;
-        // margin-bottom: 3.3rem;
         margin-top: $baseline-height;
         padding: 0;
     }
@@ -53,7 +42,6 @@ $baseline-height: 1.6rem;
         padding: .5rem 2.5%;
     }
     h2 {
-        // width: 70%;
         text-decoration: none;
         text-shadow: #fff 0 3px 1px;
         text-align: center;
@@ -64,7 +52,6 @@ $baseline-height: 1.6rem;
         color: $text-color;
         line-height: 4.9rem;
         margin: 0 auto .7rem;
-        
         @include media-breakpoint-down(md) {
             width: 100%;
         }
@@ -105,14 +92,10 @@ $baseline-height: 1.6rem;
         }
     }
     h5 {
-        // width: 90%;
         line-height: 2.6rem;
         margin-top: 0;
         margin-bottom: 0.7rem;
         text-align: center;
-        // @include media-breakpoint-down(md) {
-        //     width: 100%;
-        // }
     }
     ul {
         margin-top: 0;
@@ -131,7 +114,6 @@ $baseline-height: 1.6rem;
                 margin-bottom: 1.2rem;
                 color: $text-grey;
                 @include transition(all 0.2s ease-in-out);
-
                 &:before {
                     font-family: FontAwesome;
                     content: "\f096";
@@ -140,14 +122,13 @@ $baseline-height: 1.6rem;
                     @include media-breakpoint-down(md) {
                         left: 0;
                     }
-                 }
+                }
             }
             &:hover p {
                 color: $text-color;
                 &:before {
                     content: "\f046";
-                    
-                 }
+                }
             }
         }
     }
@@ -162,11 +143,10 @@ $baseline-height: 1.6rem;
         &.external {
             cursor: pointer;
         }
-
         +.img-desc {
             font-size: 14px;
             color: $text-grey;
-        } 
+        }
     }
     .modal-body {
         img {
@@ -179,11 +159,11 @@ $baseline-height: 1.6rem;
         }
     }
     p {
-        // width: 90%;
         margin-top: 0;
         margin-bottom: 1.2rem;
         padding-top: 0.4rem;
-        font-size: 1rem;;
+        font-size: 1rem;
+        ;
         line-height: 1.65rem;
         @include media-breakpoint-down(md) {
             width: 100%;
@@ -193,9 +173,8 @@ $baseline-height: 1.6rem;
     .gla-questions {
         padding: 0.75rem 0;
         margin: 0;
-        position: relative;   
-        @include transition(all 0.2s ease-in-out);   
-
+        position: relative;
+        @include transition(all 0.2s ease-in-out);
         .count p {
             display: inline-block;
             color: $teal;
@@ -207,9 +186,8 @@ $baseline-height: 1.6rem;
             transform: translate(-25%, -50%);
             margin: 0;
             padding: 0;
-            @include transition(all 0.2s ease-in-out);               
+            @include transition(all 0.2s ease-in-out);
         }
-
         .question {
             padding: 0 1rem 0;
             margin-bottom: 0;
@@ -218,13 +196,11 @@ $baseline-height: 1.6rem;
             background-color: #f5f5f5;
             color: $purple;
             @include transform(scaleX(1.03));
-
             .count p {
                 color: $purple;
             }
         }
     }
-
     .single-slide {
         @include box-shadow(0 4px 12px rgba(0, 0, 0, .2));
         margin-bottom: 2.45rem;
@@ -272,7 +248,6 @@ $baseline-height: 1.6rem;
             left: auto;
             right: -50px;
         }
-
         .carousel-inner {
             height: 100%;
             .carousel-item {
@@ -300,7 +275,8 @@ $baseline-height: 1.6rem;
             width: 50%;
             @include media-breakpoint-down(lg) {
                 width: 90%;
-            }            padding-top: .4rem;
+            }
+            padding-top: .4rem;
             @include media-breakpoint-down(lg) {
                 width: 80%;
             }
@@ -344,35 +320,30 @@ $baseline-height: 1.6rem;
     .goals {
         width: 90%;
         margin: 0 auto 2.5rem;
-
         .links {
             padding-top: .5rem;
             margin-bottom: -.255rem;
         }
-
         .collapse.show {
             display: inline;
         }
-
         .list-group-item {
             border: none;
             display: inline;
             padding: 0 0.75rem;
             @include transition(all 0.1s ease-in-out);
-
             &:hover {
                 background: none;
                 color: $teal;
                 font-weight: bold;
             }
-
             &.active {
                 background: none;
                 color: $teal;
                 font-weight: bold;
-                text-decoration: underline solid $text-grey;            }
+                text-decoration: underline solid $text-grey;
+            }
         }
-
         .tabs {
             margin: 2rem auto 0;
             padding-top: 1.6rem;
@@ -380,50 +351,47 @@ $baseline-height: 1.6rem;
             h4 {
                 line-height: 2.35rem;
             }
-
             .tab-content:before {
                 content: " ";
                 position: absolute;
-                border-left:2px solid #666;
-                border-top:2px solid #666;
-                border-bottom:2px solid #666;
-                padding:5px;
-                top:-10px;
-                bottom:-10px;
+                border-left: 2px solid #666;
+                border-top: 2px solid #666;
+                border-bottom: 2px solid #666;
+                padding: 5px;
+                top: -10px;
+                bottom: -10px;
                 left: -5px;
-             }
-             .tab-content:after
-             {
+            }
+            .tab-content:after {
                 content: " ";
                 position: absolute;
-                border-right:2px solid #666;
-                border-top:2px solid #666;
-                border-bottom:2px solid #666;
-                padding:5px;
-                top:-10px;
-                bottom:-10px;
+                border-right: 2px solid #666;
+                border-top: 2px solid #666;
+                border-bottom: 2px solid #666;
+                padding: 5px;
+                top: -10px;
+                bottom: -10px;
                 right: -5px;
-             }
+            }
         }
     }
     .card-columns {
         @include media-breakpoint-up(lg) {
-          column-count: 3;
+            column-count: 3;
         }
         @include media-breakpoint-down(md) {
-          column-count: 2;
+            column-count: 2;
         }
         @include media-breakpoint-down(sm) {
             column-count: 1;
-          }
-      }
+        }
+    }
     .insight {
         @include transition(all 0.2s ease-in-out);
         cursor: default;
         .card-title {
             @include transition(all 0.2s ease-in-out);
         }
-
         &:hover {
             background-color: #f5f5f5;
             color: $purple;
@@ -431,10 +399,5 @@ $baseline-height: 1.6rem;
                 color: $purple;
             }
         }
-
-        // .card-text {
-        //     padding: 0 auto;
-
-        // }
     }
 }

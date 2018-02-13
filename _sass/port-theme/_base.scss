@@ -59,7 +59,6 @@ h1 {
     &.alternative-style {
         text-align: center;
         color: $text-color;
-        // text-shadow: 0 4px 12px rgba(0, 0, 0, .2); 
         line-height: 0.9;
     }
 }
@@ -89,11 +88,7 @@ a {
     color: $theme-color;
     @include transition (all 0.4s ease-in-out);
     &:hover {
-        // text-decoration: none;
         color: darken($purple, 30%);
-    }
-    &:focus {
-        // text-decoration: none;
     }
 }
 
@@ -103,8 +98,6 @@ a.btn {
     color: #fff;
     padding: 8px 15px;
     @include border-radius(2px);
-    // @include box-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
-    // text-transform: uppercase;
     font-weight: 500;
     font-size: 14px;
     &:hover {
@@ -203,10 +196,6 @@ a.btn {
 
     @include media-breakpoint-up(sm) {
         display: none !important;
-
-        // @media screen and (max-width: 1200px) and (orientation: landscape) {
-        //     display: inline-block !important;
-        // }
     }
 
 }
