@@ -1,14 +1,13 @@
 .contact-section {
 
-    // background-color: #000; /*Default bg, similar to the background's base color*/
     background-image: url("images/Catania_headshot_sq.png");
     background-size: 40%;
     background-position: right bottom; /*Positioning*/
     background-repeat: no-repeat; /*Prevent showing multiple background images*/
+    padding-bottom: 1rem;
 
     .dialog {
       position: relative;
-      padding-left: 5%;
       color: $text-color-secondary;
       p {
         margin-bottom: .5rem;
@@ -28,15 +27,9 @@
   
     .social {
       margin-bottom: 0;
-      li {
-        margin-right: 10px;
-        &:last-child {
-          margin-right: 0;
-        }
-      }
+      width: 100%;
       a {
         display: inline-block;
-        // text-align: center;
         font-size: 24px;
         color: $text-grey;
         &:hover {
@@ -44,4 +37,23 @@
         }
       }
     }
+
+    #pdf-download {
+      position: relative;
+      font-size: 1.1rem;
+      width: 100%;
+      min-width: 212px;
+      background: linear-gradient(45deg, $green 0%, $teal 100%);              
+      color: $smoky-white;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      @include transition (all 0.4s ease-in-out);            
+      &:hover {
+              box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+              background: linear-gradient(45deg, $green 0%, $teal 100%);              
+      }
+      &:active {
+        box-shadow: 0 5px 9px rgba(0, 0, 0, 0.2), 0 5px 9px rgba(0, 0, 0, 0.22);
+        background-image: linear-gradient(45deg, $green 0%, $teal 100%);    
+      }
   }
+}
