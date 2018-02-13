@@ -24,10 +24,29 @@ body {
 p {
     margin-bottom: 1em;
 
-    a {
-        text-decoration: underline;
-        color: $purple;
-    }
+    a,a:visited,a:hover,a:active{
+        -webkit-backface-visibility:hidden;
+                backface-visibility:hidden;
+          position:relative;
+        transition:0.5s color ease;
+          text-decoration:none;
+          color: $teal;
+      }
+      a:after{
+        content: "";
+        transition:0.5s all ease;
+        -webkit-backface-visibility:hidden;
+                backface-visibility:hidden;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height:1px;
+        width:0;
+        background: $teal; 
+      }
+      a:hover:after{
+        width:100%;
+      }
 }
 
 .h1,
@@ -86,11 +105,13 @@ h5 {
 
 a {
     color: $theme-color;
+    text-decoration: none;
     @include transition (all 0.4s ease-in-out);
     &:hover {
         color: darken($purple, 30%);
     }
 }
+
 
 .btn,
 a.btn {

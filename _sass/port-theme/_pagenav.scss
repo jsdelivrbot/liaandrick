@@ -68,24 +68,58 @@
             @include transition(width 0.2s ease-in);
             li {
                 display: inline-block;
-                a {
-                    position: relative;
+
+                a,a:visited,a:hover,a:active{
                     font-family: Raleway, sans-serif;
                     font-weight: 600;
                     font-size: 1.2rem;
-                    text-decoration: none;
-                    color: $text-color;
-                    @include transition(all 0.4s ease-out);
-                    &.active {
-                        color: $smoky-white;
-                    }
-                    &:hover {
-                        color: $purple;
-                        &.active:after {
-                            opacity: .9;
-                        }
-                    }
-                }
+                    -webkit-backface-visibility:hidden;
+                            backface-visibility:hidden;
+                      position:relative;
+                      transition:0.3s all ease;
+                      text-decoration:none;
+                      color: $text-color;
+                  }
+                  a:hover {
+                    color: darken($text-color, 100%);                                        
+                  }
+                  a:before {
+                    font-family: FontAwesome;
+                    content: "\f0da";
+                    position: absolute;
+                    left: -.5em;
+                    opacity: 0;
+                    transition:0.3s opacity ease;
+                  }
+                  a.active:before {
+                    opacity: 1;
+                  }
+                  a:after{
+                    content: "";
+                    transition:0.3s all ease-in-out;
+                    -webkit-backface-visibility:hidden;
+                            backface-visibility:hidden;
+                    position: absolute;
+                    bottom: .5rem;
+                    left:50%;
+                    -webkit-transform:translateX(-50%);
+                            transform:translateX(-50%);
+                    height:0.12rem;
+                    width:0;
+                    background: linear-gradient(
+                        to right,
+                        rgba(164,211,145,0),
+                        $green 15%,
+                        $teal 85%,
+                        rgba(95,171,176,0)
+                      ); 
+                  }
+                  a.active {
+                      color: darken($text-color, 100%);  
+                  }
+                  a:hover:after{
+                    width:100%;
+                  }
             }
         }
     }
@@ -154,6 +188,14 @@
         }
         #page-nav {
             width: 70%;
+
+            li a:hover:after {
+                width: 0;
+            }
+
+            // li a.active:after{
+            //     width: 100%;         
+            // }
         }
     }
 }
