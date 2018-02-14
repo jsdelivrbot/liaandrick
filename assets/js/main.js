@@ -92,6 +92,6 @@ $(document).ready(function () {
 
     // On mobile devices, hide the expanded menu when scrolling to new section.
     $(window).on('activate.bs.scrollspy', function () {
-        $('#navbarText').removeClass('show');        
-      });
+        $('#navbarText').removeClass('show');
+    });
 });
