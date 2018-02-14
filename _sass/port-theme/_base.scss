@@ -16,15 +16,15 @@ body {
     position: relative;
 
     @include selection {
-        color: $purple;
-        background: $header-text-color-secondary;
+        color: #546A76;
+        background: $green;
     }
 }
 
 p {
     margin-bottom: 1em;
 
-    a,a:visited,a:hover,a:active{
+    a,a:visited,a:hover,a:active {
         -webkit-backface-visibility:hidden;
                 backface-visibility:hidden;
           position:relative;
@@ -32,21 +32,24 @@ p {
           text-decoration:none;
           color: $teal;
       }
-      a:after{
-        content: "";
-        transition:0.5s all ease;
-        -webkit-backface-visibility:hidden;
-                backface-visibility:hidden;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height:1px;
-        width:0;
-        background: $teal; 
-      }
-      a:hover:after{
-        width:100%;
-      }
+
+    @include media-breakpoint-up(md) {
+        a:after{
+            content: "";
+            transition:0.5s all ease;
+            -webkit-backface-visibility:hidden;
+                    backface-visibility:hidden;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height:1px;
+            width:0;
+            background: $teal; 
+          }
+          a:hover:after{
+            width:100%;
+          }
+    }
 }
 
 .h1,
