@@ -17,8 +17,8 @@ title: Jamie Catania Design Portfolio
 email: catania.jamie@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Leveraging a background in learning to generate unique insights into users' minds and behaviors.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "http://www.cataniainteractive.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jamiecatania
 github_username:  jamiecatania
 
