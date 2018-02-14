@@ -75,7 +75,7 @@
                     font-size: 1.2rem;
                     -webkit-backface-visibility:hidden;
                             backface-visibility:hidden;
-                      position:relative;
+                      position: relative;
                       transition:0.3s all ease;
                       text-decoration:none;
                       color: $text-color;
@@ -104,7 +104,7 @@
                             backface-visibility:hidden;
                     position: absolute;
                     bottom: .5rem;
-                    left:50%;
+                    left: 50%;
                     -webkit-transform:translateX(-50%);
                             transform:translateX(-50%);
                     height:0.12rem;
@@ -193,8 +193,8 @@
             width: 70%;
 
             @include media-breakpoint-down(md) {
-                margin-right: 15px;
-                width: 20%;
+                margin-right: 0;
+                // width: 20%;
             }
 
             li a:hover:after {
