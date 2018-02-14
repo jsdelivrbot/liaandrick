@@ -54,6 +54,8 @@ $baseline-height: 1.6rem;
         margin: 0 auto .7rem;
         @include media-breakpoint-down(md) {
             width: 100%;
+            font-size: 2.618em;
+            line-height: 3rem;
         }
     }
     h3 {
