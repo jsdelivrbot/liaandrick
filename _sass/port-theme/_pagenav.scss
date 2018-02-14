@@ -90,6 +90,9 @@
                     left: -.5em;
                     opacity: 0;
                     transition:0.3s opacity ease;
+                    @include media-breakpoint-down(md) {
+                        position: relative;
+                    }
                   }
                   a.active:before {
                     opacity: 1;
@@ -189,13 +192,14 @@
         #page-nav {
             width: 70%;
 
+            @include media-breakpoint-down(md) {
+                margin-right: 15px;
+                width: 20%;
+            }
+
             li a:hover:after {
                 width: 0;
             }
-
-            // li a.active:after{
-            //     width: 100%;         
-            // }
         }
     }
 }
