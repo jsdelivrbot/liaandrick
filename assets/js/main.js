@@ -60,6 +60,7 @@ $(document).ready(function () {
         } else {
             menu.removeClass('fixed');
             $('body').removeClass('sticky-page-nav');
+            $('#navbarText').removeClass('show');
         }
     });
 
@@ -72,32 +73,6 @@ $(document).ready(function () {
         size: 70,
         lineWidth: 5,
         animate: 2000,
-    });
-
-    /* ======= Isotope plugin ======= */
-    /* Ref: http://isotope.metafizzy.co/ */
-    // init Isotope    
-    var $container = $('.isotope');
-
-    $container.imagesLoaded(function () {
-        $('.isotope').isotope({
-            itemSelector: '.item'
-        });
-    });
-
-    // filter items on click
-    $('#filters').on('click', '.type', function () {
-        var filterValue = $(this).attr('data-filter');
-        $container.isotope({ filter: filterValue });
-    });
-
-    // change is-checked class on buttons
-    $('.filters').each(function (i, typeGroup) {
-        var $typeGroup = $(typeGroup);
-        $typeGroup.on('click', '.type', function () {
-            $typeGroup.find('.active').removeClass('active');
-            $(this).addClass('active');
-        });
     });
 
     // scroll body to target on click
@@ -114,4 +89,9 @@ $(document).ready(function () {
         var viewportHeight = $(window).height();
         $('.intro').css({ height: viewportHeight });
     });
+
+    // On mobile devices, hide the expanded menu when scrolling to new section.
+    $(window).on('activate.bs.scrollspy', function () {
+        $('#navbarText').removeClass('show');        
+      });
 });

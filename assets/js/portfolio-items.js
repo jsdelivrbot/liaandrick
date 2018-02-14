@@ -19,17 +19,6 @@ $(document).ready(function () {
       }
     });
 
-    //Hide partial sentence completions once on load
-    // $(".tab-pane:not(:first-child)").hide();      
-
-    // Handle partial sentence completion using bootstrap list-groups
-    $('.list-group-item').on('click', function (e) {
-      e.preventDefault();
-      var getId = $(this).attr('href');
-      $(".tab-pane:not(" + getId + ")").hide();      
-      $(getId).show().removeClass("d-none");
-    });
-
     // Show enlarged images in modals on click.
     	$('#write-up img').on('click', function() {
 
