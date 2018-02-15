@@ -24,9 +24,12 @@ body {
 p {
     margin-bottom: 1em;
 
-    a,a:visited,a:hover,a:active {
+    a,a:visited,a:active {
         color: $text-color-secondary;
           text-decoration: underline;
+          &:hover {
+            color: darken($text-color-secondary, 30%);
+        }
       }
 }
 
@@ -84,12 +87,13 @@ h5 {
     font-size: 1em;
 }
 
-a {
-    color: $theme-color;
-    text-decoration: none;
-    @include transition (all 0.4s ease-in-out);
-    &:hover {
-        color: darken($purple, 30%);
+a,a:visited,a:active {
+    color: $text-color-secondary;
+      text-decoration: underline;
+      @include transition (all 0.4s ease-in-out);
+      
+      &:hover {
+        color: darken($text-color-secondary, 30%);
     }
 }
 
