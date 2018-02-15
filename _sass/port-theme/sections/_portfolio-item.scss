@@ -263,7 +263,7 @@ $baseline-height: 1.6rem;
         padding: 2px;
         left: 0;
         top: 0;
-        background-image: $header-bg, linear-gradient(90deg, #5FABB0 0%, #A4D391 100%);
+        background-image: url("images/swirl.png"), linear-gradient(90deg, #5FABB0 0%, #A4D391 100%);
         border: none;
         z-index: 30;
         width: 100%;
