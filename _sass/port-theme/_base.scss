@@ -200,7 +200,7 @@ a.btn {
         font-weight: normal;
     }
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(lg) {
         display: none !important;
     }
 

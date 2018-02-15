@@ -33,7 +33,7 @@
         }
 
         .navbar-collapse {
-            @include media-breakpoint-down(md) {
+            @include media-breakpoint-down(lg) {
                 position: absolute;
                 left: 0;
                 top: 4.224rem;
@@ -90,7 +90,7 @@
                     left: -.5em;
                     opacity: 0;
                     transition:0.3s opacity ease;
-                    @include media-breakpoint-down(md) {
+                    @include media-breakpoint-down(lg) {
                         position: relative;
                     }
                   }
@@ -139,7 +139,7 @@
         @media (max-width: 700px) {
             padding: .25rem 0;
         }
-        @include media-breakpoint-down(md) {
+        @include media-breakpoint-down(lg) {
             .navbar-toggler {
                 display: inline-block;
                 position: relative;
@@ -184,6 +184,7 @@
             display: inline-block;
             visibility: visible;
             opacity: 1;
+            text-decoration: none;
             @include transform(translate(0, 0));
             &:hover {
                 color: darken($text-color, 100%);
@@ -192,7 +193,7 @@
         #page-nav {
             width: 70%;
 
-            @include media-breakpoint-down(md) {
+            @include media-breakpoint-down(lg) {
                 margin-right: 0;
                 // width: 20%;
             }
