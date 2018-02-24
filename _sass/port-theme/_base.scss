@@ -60,7 +60,8 @@ h6 {
 h1 {
     font-size: 4.236em;
     font-family: 'Fredericka the Great', sans-serif;
-    color: #343942;
+    color: $blue;;
+    // color: #343942;
     line-height: .75;
 }
 
@@ -221,7 +222,7 @@ a.btn {
 
 #map {
     border-radius: 5px;
-    min-height: 200px;
+    min-height: 300px;
 }
 
 .row {

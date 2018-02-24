@@ -64,13 +64,10 @@ $(document).ready(function () {
         $('.intro').css({ height: viewportHeight });
     });
 
-    // // On mobile devices, hide the expanded menu when scrolling to new section.
-    // $(window).on('activate.bs.scrollspy', function () {
-    //     $('#navbarText').removeClass('show');
-    // });
 
+    //Google maps api integration
     $(window).on('load', function() {
-        var location = new google.maps.LatLng(39.3625606,-77.1111069);
+        var location = new google.maps.LatLng(39.2494977,-77.1893159);
 
         var mapCanvas = document.getElementById('map');
         var mapOptions = {
@@ -289,6 +286,21 @@ $(document).ready(function () {
             map: map,
             icon: bwi,
             title: 'BWI Airport'
+          });
+
+        //Dulles pin
+        var bwi = {
+            url: 'assets/images/bwi-01.png', // url
+            scaledSize: new google.maps.Size(25, 25), // scaled size
+            origin: new google.maps.Point(0,0), // origin
+            anchor: new google.maps.Point(25,25) // anchor
+        };
+        var dullesLocation = new google.maps.LatLng(38.9531,-77.4565);   
+        var venue = new google.maps.Marker({
+            position: dullesLocation,
+            map: map,
+            icon: bwi,
+            title: 'Dulles Airport'
           });
 
         var hotel = {
