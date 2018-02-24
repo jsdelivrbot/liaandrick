@@ -1,16 +1,26 @@
 ---
 layout: default
-title: home
+title: Lia And Rick Are Getting Married
 ---
-<div class="home">
-    
+<div class="home"> 
         {% include header.html %}
-    
-        <div class="wrapper container">
-            {% include section-portfolio.html %}                
-            {% include section-experiences.html %}
-            {% include section-skills.html %}
-            {% include section-education.html %}            
-            {% include section-getintouch.html %}
+
+<div class="wrapper container">
+        <h1 class="section-title">THE VENUE</h1>                
+        <div id="wedding-details" class="section mt-0">
+                {% include location.html %}
         </div>
+        <h1 class="section-title text-md-right">THE LODGING</h1> 
+        <div class="section mt-0">                       
+                {% include accomodations.html %}                
+        </div>
+        <h1 class="section-title">THE REGISTRY</h1>                                
+        <div class="section mt-0">
+                {% include registry.html %}
+        </div>
+        <h1 class="section-title text-md-right">THE RSVP</h1>                                
+        <div class="section mt-0">
+                {% include rsvp.html %}
+        </div>
+</div>
 </div> 

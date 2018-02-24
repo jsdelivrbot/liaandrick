@@ -1,10 +1,12 @@
 /* ======= Base ======= */
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: $text-color;
-    background: $smoky-white;
-    background-image: url('images/back-pattern.png');
+    // background: #E6E9ED;
+    // background-image: url('images/back-pattern.png');
+    background-color: #E6E9ED;
+    background-image: url("https://www.transparenttextures.com/patterns/textured-stripes.png");
     font-size: 16px;
     @include media-breakpoint-down(xs) {
         font-size: 14px;
@@ -17,12 +19,12 @@ body {
 
     @include selection {
         color: #546A76;
-        background: $green;
+        background: $yellow;
     }
 }
 
 p {
-    margin-bottom: 1em;
+    margin-bottom: 1.6em;
 
     a,a:visited,a:active {
         color: $text-color-secondary;
@@ -47,33 +49,41 @@ h5,
 h6 {
     font-family: 'Raleway', sans-serif;
     font-feature-settings: "liga" off;
-    font-weight: 700;
     color: $text-color-secondary;
     font-style: normal;
     line-height: 1.2;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+    margin-bottom: 0;
+    // margin-top: 1rem;
 }
 
 .h1,
 h1 {
-    font-size: 6.854em;
-    font-weight: 900;
-    &.alternative-style {
-        text-align: center;
-        color: $text-color;
-        line-height: 0.9;
+    font-size: 4.236em;
+    font-family: 'Fredericka the Great', sans-serif;
+    color: #343942;
+    line-height: .75;
+}
+
+.section-title {
+    // display: inline-block;
+    vertical-align: bottom;
+    position: relative;
+    text-align: left;
+    overflow: visible;
+    @media (max-width: 700px) {
+        font-size: 2.618rem;
     }
 }
 
 .h2,
 h2 {
-    font-size: 4.236em;
-    font-weight: 700;
+    font-family: 'Amatic SC', sans-serif;
+    color: #826265;
+    font-size: 3.2em;
 }
 
 .h3,
-h3 {
+h3 {  
     font-size: 2.618em;
 }
 
@@ -101,19 +111,26 @@ a,a:visited,a:active {
 .btn,
 a.btn {
     background: darken($theme-color, 10%);
+    border: none;
     color: #fff;
     padding: 8px 15px;
     @include border-radius(2px);
     font-weight: 500;
     font-size: 14px;
-    &:hover {
+    text-decoration: none;
+    @include transition(all 0.4s ease-in-out);
+    &:hover, &:active {
         color: #fff;
         background: darken($theme-color, 5%);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, .2);        
     }
+    &:focus {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, .2);
+    }
+
 }
 
 .wrapper {
-    padding-top: 60px;
     padding-bottom: 60px;
     @include drop-shadow(0 4px 12px rgba(0, 0, 0, .2));
 }
@@ -122,21 +139,17 @@ a.btn {
     @include box-shadow(0 1px 4px 0 rgba(0, 0, 0, 0.14));
     padding: 45px;
     background: #fff;
-    margin-bottom: 45px;
+    margin-bottom: 6rem;
     @include border-radius(2px);
-    &:first-child {
-        margin-top: 4.224rem;
-    }
+    // &:first-child {
+    //     margin-top: 2rem;
+    // }
     &:last-child {
         margin-bottom: 0;
     }
-}
-
-.section-title {
-    margin-top: 0;
-    margin-bottom: 45px;
-    font-size: 24px;
-    text-align: center;
+    @media (max-width: 700px) {
+        padding: 15px;
+    }
 }
 
 #topcontrol {
@@ -173,37 +186,24 @@ a.btn {
     height: 36px;
 }
 
-.scroll-up {
-    cursor: pointer;
-    padding: 2px;
-    @include transition (all 0.4s ease-in-out);
-    border: none;
-    text-align: center;
-    z-index: 30;
-}
-
 #intro-down-btn {
     position: absolute;
-    @include translate(-50%, 0);    
+    @include translate(-50%, 0); 
     left: 50%;
-    bottom: -5%;
-    background: none;
-    color: $theme-color;
-    opacity: .4;
+    bottom: 3%;
+    opacity: 0;
 
     .fa {
         position: absolute;
-        left: 18%;
-        top: 15%;
+        display: inline-block;
+        @include translate(-50%, -50%);            
+        left: 50%;
+        top: 50%;
         font-family: FontAwesome;
         font-size: 25px;
         font-weight: normal;
+        opacity: 1;
     }
-
-    @include media-breakpoint-up(lg) {
-        display: none !important;
-    }
-
 }
 
 .teal {
@@ -217,4 +217,53 @@ a.btn {
 }
 .text-grey {
     color: $text-color-secondary;
+}
+
+#map {
+    border-radius: 5px;
+    min-height: 200px;
+}
+
+.row {
+    // margin-bottom: 4rem;
+    @media (max-width: 1340px) {
+        margin-bottom: 2rem;
+    }
+    @media (max-width: 700px) {
+        margin-bottom: 2rem;        
+    }
+}
+
+.hotel {
+    padding-top: 1rem;    
+    filter: grayscale(80%);
+    width: 50%;
+    @include transition(all .4s ease-in-out);
+
+    &:hover {
+        filter: grayscale(0%);
+    }
+}
+
+.registry-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+    .registry-item {
+        // width: 35%;
+        flex-basis: 35%; 
+        
+        img {
+            width: 100%;
+            height: auto;
+        }
+        opacity: .3;
+        @include transition(all .4s ease-in-out);
+    
+        &:hover {
+            opacity: 1;
+        }
+    }
 }

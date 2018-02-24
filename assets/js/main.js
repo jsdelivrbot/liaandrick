@@ -27,60 +27,34 @@ $(document).ready(function () {
         }
     });
 
-    /* ======= Scrollspy ======= */
-    $('body').scrollspy({ target: '.navbar', offset: 100 });
-
-    /* ======= ScrollTo ======= */
-    $('.scrollto').on('click', function (e) {
-
-        //store hash
-        var target = this.hash;
-
-        e.preventDefault();
-
-        $('body').scrollTo(target, 800, { offset: -60, 'axis': 'y' });
-
-    });
-
     /* ======= Fixed page nav when scrolled ======= */
-    var menu = $('.navbar');
-    var origOffsetY = menu.offset().top;
-    $(window).on('scroll resize load', function () {
-        var $menuToTopHeight;
+    // var menu = $('.navbar');
+    // var origOffsetY = menu.offset().top;
+    // $(window).on('scroll resize load', function () {
+    //     var $menuToTopHeight;
 
-        if ($('body').hasClass('mobile')) {
-            $menuToTopHeight = origOffsetY;
-        } else {
-            $menuToTopHeight = origOffsetY - menu.height() - 16;
-        }
+    //     if ($('body').hasClass('mobile')) {
+    //         $menuToTopHeight = origOffsetY;
+    //     } else {
+    //         $menuToTopHeight = origOffsetY - menu.height() - 16;
+    //     }
 
-        if ($(window).scrollTop() >= $menuToTopHeight) {
-            menu.addClass('fixed');
-            $('body').addClass('sticky-page-nav');
-        } else {
-            menu.removeClass('fixed');
-            $('body').removeClass('sticky-page-nav');
-            $('#navbarText').removeClass('show');
-        }
-    });
+    //     if ($(window).scrollTop() >= $menuToTopHeight) {
+    //         menu.addClass('fixed');
+    //         $('body').addClass('sticky-page-nav');
+    //     } else {
+    //         menu.removeClass('fixed');
+    //         $('body').removeClass('sticky-page-nav');
+    //         $('#navbarText').removeClass('show');
+    //     }
+    // });
 
-    /* ======= Chart ========= */
-
-    $('.chart').easyPieChart({
-        barColor: '#4ca0b9',//Pie chart colour
-        trackColor: '#e8e8e8',
-        scaleColor: false,
-        size: 70,
-        lineWidth: 5,
-        animate: 2000,
-    });
-
-    // scroll body to target on click
+    //scroll body to target on click
     $('.scroll-up, .scroll-down').click(function () {
         var target = $(this).data("target");
 
         $('body,html').animate({
-            scrollTop: $(target).offset().top,
+            scrollTop: $(target).offset().top - 85,
         }, 800);
         return false;
     });
@@ -90,8 +64,254 @@ $(document).ready(function () {
         $('.intro').css({ height: viewportHeight });
     });
 
-    // On mobile devices, hide the expanded menu when scrolling to new section.
-    $(window).on('activate.bs.scrollspy', function () {
-        $('#navbarText').removeClass('show');
+    // // On mobile devices, hide the expanded menu when scrolling to new section.
+    // $(window).on('activate.bs.scrollspy', function () {
+    //     $('#navbarText').removeClass('show');
+    // });
+
+    $(window).on('load', function() {
+        var location = new google.maps.LatLng(39.3625606,-77.1111069);
+
+        var mapCanvas = document.getElementById('map');
+        var mapOptions = {
+            center: location,
+            zoom: 9,
+            panControl: false,
+            mapTypeControl: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            styles: [
+                {
+                  "elementType": "geometry",
+                  "stylers": [
+                    {
+                      "color": "#f7f7f2"
+                    }
+                  ]
+                },
+                {
+                  "elementType": "geometry.fill",
+                  "stylers": [
+                    {
+                      "color": "#c9c9c9"
+                    }
+                  ]
+                },
+                {
+                  "elementType": "geometry.stroke",
+                  "stylers": [
+                    {
+                      "color": "#425370"
+                    }
+                  ]
+                },
+                {
+                  "elementType": "labels.icon",
+                  "stylers": [
+                    {
+                      "color": "#3f2837"
+                    },
+                    {
+                      "visibility": "off"
+                    }
+                  ]
+                },
+                {
+                  "elementType": "labels.text.fill",
+                  "stylers": [
+                    {
+                      "color": "#616161"
+                    }
+                  ]
+                },
+                {
+                  "elementType": "labels.text.stroke",
+                  "stylers": [
+                    {
+                      "color": "#f5f5f5"
+                    }
+                  ]
+                },
+                {
+                  "featureType": "administrative.land_parcel",
+                  "elementType": "labels.text.fill",
+                  "stylers": [
+                    {
+                      "color": "#bdbdbd"
+                    }
+                  ]
+                },
+                {
+                  "featureType": "poi",
+                  "elementType": "geometry",
+                  "stylers": [
+                    {
+                      "color": "#eeeeee"
+                    }
+                  ]
+                },
+                {
+                  "featureType": "poi",
+                  "elementType": "labels.text.fill",
+                  "stylers": [
+                    {
+                      "color": "#757575"
+                    }
+                  ]
+                },
+                {
+                  "featureType": "poi.park",
+                  "elementType": "geometry",
+                  "stylers": [
+                    {
+                      "color": "#e5e5e5"
+                    }
+                  ]
+                },
+                {
+                  "featureType": "poi.park",
+                  "elementType": "labels.text.fill",
+                  "stylers": [
+                    {
+                      "color": "#9e9e9e"
+                    }
+                  ]
+                },
+                {
+                  "featureType": "road",
+                  "elementType": "geometry",
+                  "stylers": [
+                    {
+                      "color": "#ffffff"
+                    }
+                  ]
+                },
+                {
+                  "featureType": "road.arterial",
+                  "elementType": "labels.text.fill",
+                  "stylers": [
+                    {
+                      "color": "#757575"
+                    }
+                  ]
+                },
+                {
+                  "featureType": "road.highway",
+                  "elementType": "geometry",
+                  "stylers": [
+                    {
+                      "color": "#dadada"
+                    }
+                  ]
+                },
+                {
+                  "featureType": "road.highway",
+                  "elementType": "labels.text.fill",
+                  "stylers": [
+                    {
+                      "color": "#616161"
+                    }
+                  ]
+                },
+                {
+                  "featureType": "road.local",
+                  "elementType": "labels.text.fill",
+                  "stylers": [
+                    {
+                      "color": "#9e9e9e"
+                    }
+                  ]
+                },
+                {
+                  "featureType": "transit.line",
+                  "elementType": "geometry",
+                  "stylers": [
+                    {
+                      "color": "#e5e5e5"
+                    }
+                  ]
+                },
+                {
+                  "featureType": "transit.station",
+                  "elementType": "geometry",
+                  "stylers": [
+                    {
+                      "color": "#eeeeee"
+                    }
+                  ]
+                },
+                {
+                  "featureType": "water",
+                  "elementType": "geometry",
+                  "stylers": [
+                    {
+                      "color": "#c9c9c9"
+                    }
+                  ]
+                },
+                {
+                  "featureType": "water",
+                  "elementType": "labels.text.fill",
+                  "stylers": [
+                    {
+                      "color": "#9e9e9e"
+                    }
+                  ]
+                }
+              ]
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+
+        //Linganore pin
+        var linganore = {
+            url: 'assets/images/wedding_icon-01.png', // url
+            scaledSize: new google.maps.Size(50, 50), // scaled size
+            origin: new google.maps.Point(0,0), // origin
+            anchor: new google.maps.Point(25,50) // anchor
+        };
+        var linganoreLocation = new google.maps.LatLng(39.423381,-77.192645);   
+        var venue = new google.maps.Marker({
+            position: linganoreLocation,
+            map: map,
+            icon: linganore,
+            title: 'The Venue'
+          });
+
+        //BWI pin
+        var bwi = {
+            url: 'assets/images/bwi-01.png', // url
+            scaledSize: new google.maps.Size(25, 25), // scaled size
+            origin: new google.maps.Point(0,0), // origin
+            anchor: new google.maps.Point(25,25) // anchor
+        };
+        var bwiLocation = new google.maps.LatLng(39.177404,-76.668392);   
+        var venue = new google.maps.Marker({
+            position: bwiLocation,
+            map: map,
+            icon: bwi,
+            title: 'BWI Airport'
+          });
+
+        var hotel = {
+            url: 'assets/images/hotel-01.png', // url
+            scaledSize: new google.maps.Size(30, 30), // scaled size
+            origin: new google.maps.Point(0,0), // origin
+            anchor: new google.maps.Point(15,15) // anchor
+        };
+        //Fairfield pin
+        var fairfieldLocation = new google.maps.LatLng(39.379075, -77.412595);   
+        var fairfield = new google.maps.Marker({
+            position: fairfieldLocation,
+            map: map,
+            icon: hotel,
+            title: 'Fairfield Inn & Suites'
+          });
+        //Hampton ping
+        var hamptonLocation = new google.maps.LatLng(39.378852,-77.408380);   
+        var fairfield = new google.maps.Marker({
+            position: hamptonLocation,
+            map: map,
+            icon: hotel,
+            title: 'Hampton Inn'
+          });
     });
 });

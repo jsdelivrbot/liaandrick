@@ -3,24 +3,15 @@
 <script type="text/javascript" src="/assets/plugins/popper.min.js"></script>
 <script type="text/javascript" src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
-<script type="text/javascript" src="/assets/plugins/easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
 <script type="text/javascript" src="/assets/plugins/imagesloaded.pkgd.min.js"></script>
-<script type="text/javascript" src="/assets/plugins/isotope.pkgd.min.js"></script> 
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-QiNWsDSAfi4dohBmH1r38sT8YRF7okU"></script>
 
 {% if page.layout == "home" %}
     <!-- custom js for main page -->
     <script type="text/javascript" src="/assets/js/main.js"></script>
-    <script type="text/javascript" src="/assets/js/header-scroll.js"></script>
 {% endif %}
 
 {% if page.layout == "page" %}
 <!-- custom js for main page -->
 <script type="text/javascript" src="/assets/js/portfolio-items.js"></script>
-<!-- <script src="http://files.keyes.ie/things/baseliner/baseliner-latest.min.js">
-</script>
-<script>
-window.onload = function() {
-    baseliner = new Baseliner({ gridHeight: 25.6, gridOffset: 10});
-}
-</script> -->
 {% endif %}
