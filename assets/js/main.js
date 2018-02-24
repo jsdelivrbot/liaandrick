@@ -16,14 +16,18 @@ $(document).ready(function () {
 
     //Don't allow intro banner's innerheight to resize when the URL bar shows/hides on mobile.
     if (jQuery.browser.mobile) {
-        var viewportHeight = $('.intro').height() - (4.224 * 16);
+        var viewportHeight = $('.intro').height();
         $('.intro').css({ height: viewportHeight });
+        $('.header').css({ height: viewportHeight });
+        $('.jumbotron').css({ height: viewportHeight });
     }
 
     $(window).on('scroll resize load', function () {
         if (!jQuery.browser.mobile) {
-            var viewportHeight = $(window).height() - (4.224 * 16);
+            var viewportHeight = $(window).height();
             $('.intro').css({ height: viewportHeight });
+            $('.header').css({ height: viewportHeight });            
+            $('.jumbotron').css({ height: viewportHeight });            
         }
     });
 
