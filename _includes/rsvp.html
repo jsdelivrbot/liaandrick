@@ -1,1 +1,43 @@
-    <h4 class="text-center mb-0">Invitations coming soon!</h4>
+<div class="row rsvp">
+  <h4 class="d-block w-100 mb-5 text-center">Please kindly respond by Aug 1.</h4>
+  <br>
+  <form class="d-block col-12" id="gform" method="POST" action="https://script.google.com/macros/s/AKfycby1_b4OmfwMNDWceg6P1C63JNRisssw1t6yhc2wn3uM2yob0MNn/exec">
+    <!-- change the form action to your script url -->
+
+    <fieldset class="form-group">
+      <!-- <label for="first-name">First Name: </label> -->
+      <input class="form-field-50" id="first-name" name="first-name" placeholder="First Name" />
+      <!-- <label for="last-name">Last Name: </label> -->
+      <input class="form-field-50" id="last-name" name="last-name" placeholder="Last Name" />
+    </fieldset>
+
+    <fieldset class="form-group">
+      <!-- <label for="adult-count">Number of Adults Attending: </label> -->
+      <input class="form-field-50" id="adult-count" name="adult-count" type="number" placeholder="# of children" />
+      <!-- <label for="child-count">Number of Children Attending: </label> -->
+      <input class="form-field-50" id="child-count" name="child-count" type="number" placeholder="# of adults" />
+    </fieldset>
+
+    <fieldset class="form-group">
+      <!-- <label for="email"> -->
+      <!-- <em>Your</em> Email Address:</label> -->
+      <input class="w-100" id="email" name="email" type="email" value="" required placeholder="Email address" />
+      <span id="email-invalid" style="display:none">
+        Email Address is required</span>
+    </fieldset>
+
+    <fieldset class="form-group">
+      <!-- <label for="comments">Additional comments:</label> -->
+      <textarea class="w-100" id="comments" name="comments" placeholder="Anything special diet considerations or other accomodations needed?"></textarea>
+    </fieldset>
+
+    <button class="w-100 text-center">
+      <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+  </form>
+
+  <!-- Customise the Thankyou Message People See when they submit the form: -->
+  <div style="display:none;" id="thankyou_message">
+    <h2>
+      <em>Thanks</em> for RSVPing! We look forward to celebrating with you!</h2>
+  </div>
+</div>

@@ -330,4 +330,11 @@ $(document).ready(function () {
             title: 'Hampton Inn'
           });
     });
+     //Google maps api integration
+     $(window).on('load', function() {
+       var imageCount = $('.carousel-inner').children().length;
+       var randomItemIndex = Math.ceil(Math.random() * imageCount);
+        $(`.carousel-item:nth-child(${randomItemIndex})`).addClass('active');
+        $(`.carousel-indicators:nth-child(${randomItemIndex})`).addClass('active');
+     })
 });

@@ -2,26 +2,34 @@
 layout: default
 title: Lia And Rick Are Getting Married
 ---
-<div class="home"> 
+<div class="home">
         {% include header.html %}
 
-<div class="wrapper container">
-        <h1 class="section-title">THE VENUE</h1>                
-        <div id="wedding-details" class="section mt-0">
-                {% include location.html %}
+        <div class="wrapper container">
+                <h1 class="section-title text-center">THE BIG DAY</h1>
+                <div id="event-details" class="section mt-0">
+                        {% include event-details.html %}
+                </div>
+                <h1 class="section-title text-center">THE VENUE</h1>
+                <div id="wedding-details" class="section mt-0">
+                        {% include location.html %}
+                </div>
+                <h1 class="section-title text-center">THE LODGING</h1>
+                <div class="section mt-0">
+                        {% include accomodations.html %}
+                </div>
+                <h1 class="section-title text-center">THE MEMORIES</h1>
+                <div id="photos" class="section mt-0">
+                        {% include photos.html %}
+                </div>
+                <h1 class="section-title text-center">THE REGISTRY</h1>
+                <div class="section mt-0">
+                        {% include registry.html %}
+                </div>
+                <h1 class="section-title text-center">THE RSVP</h1>
+                <div class="section mt-0 col-6 mx-auto">
+                        {% include rsvp.html %}
+                </div>
         </div>
-        <h1 class="section-title text-md-right">THE LODGING</h1> 
-        <div class="section mt-0">                       
-                {% include accomodations.html %}                
-        </div>
-        <h1 class="section-title">THE REGISTRY</h1>                                
-        <div class="section mt-0">
-                {% include registry.html %}
-        </div>
-        <h1 class="section-title text-md-right">THE RSVP</h1>                                
-        <div class="section mt-0">
-                {% include rsvp.html %}
-        </div>
+        {% include footer.html %}
 </div>
-{% include footer.html %}        
-</div> 
