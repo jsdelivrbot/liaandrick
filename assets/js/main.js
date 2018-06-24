@@ -330,11 +330,16 @@ $(document).ready(function () {
             title: 'Hampton Inn'
           });
     });
-     //Google maps api integration
-     $(window).on('load', function() {
-       var imageCount = $('.carousel-inner').children().length;
-       var randomItemIndex = Math.ceil(Math.random() * imageCount);
-        $(`.carousel-item:nth-child(${randomItemIndex})`).addClass('active');
-        $(`.carousel-indicators:nth-child(${randomItemIndex})`).addClass('active');
-     })
-});
+      var imageCount = $('.carousel-inner').children().length;
+      var randomItemIndex = Math.ceil(Math.random() * imageCount);
+      $(`.carousel-item:nth-child(${randomItemIndex})`).addClass('active');
+      $(`.carousel-indicators:nth-child(${randomItemIndex})`).addClass('active');
+    
+    [].forEach.call(document.querySelectorAll('img[data-src]'),    function(img) {
+      img.setAttribute('src', img.getAttribute('data-src'));
+      img.onload = function() {
+        img.removeAttribute('data-src');
+      };
+    });
+  });
+ 
