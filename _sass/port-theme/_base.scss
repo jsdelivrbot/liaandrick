@@ -292,11 +292,31 @@ a.btn {
 }
 
 .rsvp {
+    margin-bottom: 0;
     input {
         @include border-radius(4px);
     }
+    .btn-form-submit {
+        background-color: $blue;
+        color: #ffffff;
+        transition: background-color 250ms;
+        &:hover {
+            background-color: lighten($blue, 10%);
+        }
+    }
+
+    .form-control:focus {
+        border-color: $blue;
+        box-shadow: 0 0 0 0.2rem rgba(84,103,131,.25);
+    }
+
+    #thankyou_message {
+        margin: 2rem auto 0;
+    }
+
     .thank-you-message {
         margin: 0 auto;
+        text-align: center;
     }
 }
 
