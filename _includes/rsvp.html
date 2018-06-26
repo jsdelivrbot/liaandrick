@@ -1,43 +1,65 @@
 <div class="row rsvp">
   <h4 class="d-block w-100 mb-5 text-center">Please kindly respond by Aug 1.</h4>
   <br>
-  <form class="d-block col-12" id="gform" method="POST" action="https://script.google.com/macros/s/AKfycby1_b4OmfwMNDWceg6P1C63JNRisssw1t6yhc2wn3uM2yob0MNn/exec">
-    <!-- change the form action to your script url -->
 
-    <fieldset class="form-group">
-      <!-- <label for="first-name">First Name: </label> -->
-      <input class="form-field-50" id="first-name" name="first-name" placeholder="First Name" />
-      <!-- <label for="last-name">Last Name: </label> -->
-      <input class="form-field-50" id="last-name" name="last-name" placeholder="Last Name" />
-    </fieldset>
-
-    <fieldset class="form-group">
-      <!-- <label for="adult-count">Number of Adults Attending: </label> -->
-      <input class="form-field-50" id="adult-count" name="adult-count" type="number" placeholder="# of children" />
-      <!-- <label for="child-count">Number of Children Attending: </label> -->
-      <input class="form-field-50" id="child-count" name="child-count" type="number" placeholder="# of adults" />
-    </fieldset>
-
-    <fieldset class="form-group">
-      <!-- <label for="email"> -->
-      <!-- <em>Your</em> Email Address:</label> -->
-      <input class="w-100" id="email" name="email" type="email" value="" required placeholder="Email address" />
-      <span id="email-invalid" style="display:none">
-        Email Address is required</span>
-    </fieldset>
-
-    <fieldset class="form-group">
-      <!-- <label for="comments">Additional comments:</label> -->
-      <textarea class="w-100" id="comments" name="comments" placeholder="Anything special diet considerations or other accomodations needed?"></textarea>
-    </fieldset>
-
-    <button class="w-100 text-center">
+    <form class="d-block col-12" id="gform" method="POST" action="https://script.google.com/macros/s/AKfycby1_b4OmfwMNDWceg6P1C63JNRisssw1t6yhc2wn3uM2yob0MNn/exec">
+      <div class="form-row">
+        <div class="form-group col-10 mx-auto">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="attending" id="attending" value="yes" required>
+            <label class="form-check-label" for="attending">I'm looking forward to celebrating with you!</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="attending" id="not-attending" value="no" required>
+            <label class="form-check-label" for="not-attending">Unfortunately, I can't make it.</label>
+          </div>
+        </div>
+      </div> 
+      <div class="form-row my-2">
+          <div class="form-group col-md-6">
+            <label for="first-name">First Name</label>
+            <input class="form-control" name="first-name" id="first-name" placeholder="First Name" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="last-name">Last Name</label>
+            <input class="form-control" name="last-name" id="last-name" placeholder="Last Name" required>
+          </div>
+      </div>
+      <div class="form-row my-2">
+          <div class="form-group col-md-4">
+              <label for="toddler-count">Children Under 2</label>
+              <input id="toddler-count" class="form-control" name="toddler-count" type="number" placeholder="Toddlers" />
+          </div>
+          <div class="form-group col-md-4">
+              <label for="child-count">Children Under 11</label>
+              <input id="child-count" class="form-control" name="child-count" type="number" placeholder="Children" />
+          </div>
+          <div class="form-group col-md-4">
+              <label for="adult-count">Adults</label>
+              <input id="adult-count" class="form-control" name="adult-count" type="number" placeholder="Adults" />
+          </div>
+      </div>
+      <div class="form-row my-2">
+        <div class="form-group col-12 mx-auto">
+            <label for="email">Email Address</label>
+          <input class="form-control" id="email" name="email" type="email" value="" />
+          <span id="email-invalid" style="display:none">
+            Email Address is required</span>
+        </div>
+      </div>
+      <div class="form-row my-2">
+        <div class="form-group col-12 mx-auto">
+            <label for="comments">Special Requests</label>
+          <textarea class="form-control" id="comments" name="comments" placeholder="Any special diet considerations or other accomodations needed?"></textarea>
+        </div>
+      </div>
+    <button class="form-control text-center">
       <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
   </form>
 
   <!-- Customise the Thankyou Message People See when they submit the form: -->
   <div style="display:none;" id="thankyou_message">
-    <h2>
-      <em>Thanks</em> for RSVPing! We look forward to celebrating with you!</h2>
+    <h3 class="thank-you-message">
+      Thanks for RSVPing!</h3>
   </div>
 </div>
